@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="52.916664mm"
+   height="52.91666mm"
+   viewBox="0 0 52.916664 52.916661"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="bouba.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-2.9169989e-4,3.268835e-4)">
+    <path
+       d="M 43.363861,0.63136135 26.604194,10.441508 8.762182,0.6019537 11.527513,17.460664 0.23147189,20.398801 9.2001317,33.485524 1.0931622,51.11526 22.095317,45.044412 l 14.792034,7.720892 3.914945,-10.13894 11.081989,4.550288 -4.055016,-14.200394 5.047624,-8.557503 -11.251148,-7.406881 z"
+       style="fill:#000000;stroke:#000000;stroke-width:0;stroke-miterlimit:6"
+       id="path2"
+       sodipodi:nodetypes="ccccccccccccccc"
+       inkscape:export-filename="kiki.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>

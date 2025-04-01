@@ -1,0 +1,118 @@
+.search {
+    all: revert;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #334;
+    position: relative;
+    overflow: hidden;
+    font-size: medium;
+
+    &.loading .material-symbols-outlined {
+        display: none;
+
+        &:nth-child(2) {
+            display: unset;
+        }
+    }
+
+    .test {
+        position: absolute;
+        left: 64px;
+        right: 20px;
+        overflow: hidden;
+        white-space: pre-wrap;
+        text-wrap: wrap;
+        width: calc(100% - 84px);
+        overflow-wrap: break-word;
+    }
+
+    .material-symbols-outlined {
+        position: absolute;
+        left: 20px;
+        pointer-events: none;
+        transition: margin-top 200ms ease-out;
+        margin-top: 0px;
+
+        &:has(~ .info.visible) {
+            margin-top: -1rem;
+        }
+
+        &:nth-child(2) {
+            display: none;
+            animation: hourglass-rotate 2s ease-in-out infinite 50ms;
+            height: 23px;
+        }
+    }
+
+    textarea {
+        overflow: hidden;
+        min-height: 1em;
+        flex-grow: 1;
+        border: none;
+        resize: none;
+        background-color: transparent;
+        padding: 20px;
+        padding-left: calc(24px + 40px);
+        font-size: inherit;
+        font-family: inherit;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        transition: padding-bottom 200ms ease-out;
+
+        &:has(~ .info.visible) {
+            padding-bottom: calc(1em + 20px);
+        }
+
+        &:focus-visible {
+            border: none;
+            outline: none;
+        }
+
+        &::placeholder {
+            font-family: "Whitney", Arial, Helvetica, sans-serif, "Material Symbols Outlined";
+            color: #778;
+            user-select: none;
+        }
+    }
+
+    .info {
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        margin-top: 0px !important;
+        padding-left: 64px;
+        padding-right: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        pointer-events: none;
+        white-space: pre-wrap;
+        transition: opacity 200ms ease-out;
+        opacity: 0;
+        color: #99a;
+        margin-bottom: 10px;
+
+        b {
+            color: #ccd;
+        }
+
+        &.visible {
+            opacity: 1;
+        }
+    }
+}
+
+@keyframes hourglass-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}

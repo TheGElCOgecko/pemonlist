@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---->
+    {% include "template/meta.html" %}
+    <!---->
+    <link rel="stylesheet" href="/static/css/min/settings.min.css">
+    <link rel="stylesheet" href="/static/css/min/decorations.min.css">
+</head>
+<body>
+    <!---->
+    {% include "template/nav.html" %}
+    <!---->
+    <main>
+        <div class="container">
+            <div class="main">
+                <h1>{{ translation.settings.settings }}</h1>
+                <!---->
+                <div class="update">
+                    <h2>{{ translation.settings.update }}</h2>
+                    <form action="/account/settings" method="post">
+                        <input type="hidden" name="method" value="update">
+
+                        <label for="name">{{ translation.settings.name }}</label>
+                        <input type="text" name="name" id="name" value="{{ account.player.name }}" autocomplete="username">
+                        <label for="device">{{ translation.settings.device }}</label>
+                        <select name="device" id="device">
+                            <option value="desktop"
+                                {%- if account.player.device == "Desktop" -%}
+                                    selected
+                                {%- endif -%}
+                            >{{ translation.settings.desktop }}</option>
+                            <option value="mobile"
+                                {%- if account.player.device == "Mobile" -%}
+                                    selected
+                                {%- endif -%}
+                            >{{ translation.settings.mobile }}</option>
+                            <option value="both"
+                                {%- if account.player.device == "Both" -%}
+                                    selected
+                                {%- endif -%}
+                            >{{ translation.settings.both }}</option>
+                        </select>
+                        <span class="profile">
+                            <div class="select">
+                                <label for="profileshape">{{ translation.settings.shape }}</label>
+                                <select name="profileshape" id="profileshape">
+                                    <option value="circle"
+                                        {%- if account.profile_shape == "Circle" -%}
+                                            selected
+                                        {%- endif -%}
+                                    >Circle</option>
+                                    <option value="squircle"
+                                        {%- if account.profile_shape == "Squircle" -%}
+                                            selected
+                                        {%- endif -%}
+                                    >Squircle</option>
+                                    <option value="square"
+                                        {%- if account.profile_shape == "Square" -%}
+                                            selected
+                                        {%- endif -%}
+                                    >Square</option>
+                                    <!-- <option value="cube"
+                                        {%- if account.profile_shape == "Cube" -%}
+                                            selected
+                                        {%- endif -%}
+                                    >Cube</option>
+                                    <option value="ball"
+                                        {%- if account.profile_shape == "Ball" -%}
+                                            selected
+                                        {%- endif -%}
+                                    >Ball</option>
+                                    <option value="cat"
+                                        {%- if account.profile_shape == "Cat" -%}
+                                            selected
+                                        {%- endif -%}
+                                    >Cat</option>
+                                    <option value="bouba"
+                                        {%- if account.profile_shape == "Bouba" -%}
+                                            selected
+                                        {%- endif -%}
+                                    >Bouba</option>
+                                    <option value="kiki"
+                                        {%- if account.profile_shape == "Kiki" -%}
+                                            selected
+                                        {%- endif -%}
+                                    >Kiki</option> -->
+                                </select>
+                            </div>
+                            <div class="img">
+                                <img src="{{ account.image }}=s64-c" referrerpolicy="no-referrer" alt="{{ translation.settings.profileAlt }}" class="pfp {{ account.profile_shape }}">
+                            </div>
+                        </span>
+                        <span>
+                            <label for="snow">{{ translation.settings.snow }}</label>
+                            <input type="checkbox" name="snow" id="snow" checked>
+                            <label for="snow" class="checkbox"></label>
+                        </span>
+                        <input type="submit" value="{{ translation.settings.update }}">
+                    </form>
+                </div>
+                <!---->
+                <div class="actions">
+                    <h2>{{ translation.settings.actions }}</h2>
+                    <span>
+                        <form action="/account/settings" method="post">
+                            <input type="hidden" name="method" value="logout">
+                            <input type="submit" value="{{ translation.settings.logout }}" class="logout">
+                        </form>
+                        <form action="/account/settings" method="post">
+                            <input type="hidden" name="method" value="delete">
+                            <input type="submit" value="{{ translation.settings.delete }}" class="delete">
+                        </form>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!---->
+    {% include "template/footer.html" %}
+    <!---->
+</body>
+
+<!---->
+{% include "template/include.html" %}
+<!---->
+<script src="/static/js/settings.js"></script>
+<script src="/static/js/jump.js"></script>
+
+</html>

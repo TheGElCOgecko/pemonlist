@@ -1,0 +1,440 @@
+{
+    "nav": {
+        "list": "List",
+        "leaderboard": "Leaderboard",
+        "submit": "Submit Record",
+        "rules": "Rules",
+        "credits": "Credits",
+        "discord": "Discord",
+
+        "account": "Account",
+        "logout": "Log Out",
+        "settings": "Settings",
+        "login": "Log In"
+    },
+
+    "search": {
+        "search": "Search",
+
+        "results": {
+            "s": "{} result",
+            "p": "{} results"
+        },
+        "seconds": {
+            "s": " in {} second",
+            "p": " in {} seconds"
+        },
+
+        "empty": "No results."
+    },
+    
+    "scroll": "Scroll to Top",
+
+    "agreement": {
+        "text": [
+            "By using this website, you agree to the use of cookies, and to the {} and {}.",
+            "We will never intentionally track you or sell your data, no matter what."
+        ],
+        "terms": "Terms & Conditions",
+        "privacy": "Privacy Policy",
+
+        "confirm": "Got it"
+    },
+
+    "footer": {
+        "attribution": "This site is in no way affiliated with RobTop Games AB, all rights reserved.",
+        "privacy": "Privacy Policy",
+        "terms": "Terms & Conditions",
+        "rules": "Submission Rules",
+        "credits": "Credits",
+        "docs": "API Docs"
+    },
+
+    "list": {
+        "list": "List",
+        "extended": "Extended List",
+        "legacy": "Legacy List",
+
+        "thumbnailAlt": "{}'s thumbnail",
+        "crownAlt": "First place crown"
+    },
+
+    "level": {
+        "creator": "Creator",
+        "verifier": "Verifier",
+        "records": "Records",
+        "points": "Points when Completed",
+        "id": "ID"
+    },
+
+    "login": {
+        "login": "Log In",
+        "google": "Google",
+        "discord": "Discord"
+    },
+
+    "leaderboard": {
+        "processing": "The leaderboard is still currently processing records, please try again later.",
+        "empty": "The leaderboard is currently empty.",
+        "points": "points"
+    },
+
+    "player": {
+        "score": "Score",
+        "completions": "Completions",
+        "verifications": "Verifications",
+        "video": "Video Link",
+        "records": "Records"
+    },
+
+    "submit": {
+        "submit": "Submit",
+
+        "reminder": "Be sure to {} before submitting!",
+        "rules": "read the rules",
+
+        "time": "Time",
+        "timeError": "Please enter a valid time format.",
+        
+        "level": "Level",
+        "levelError": "Please input a valid level name.",
+        "levelPlaceholder": "Level Name",
+
+        "youtube": "YouTube URL",
+        "youtubeError": "Please enter a valid YouTube URL.",
+        "raw": "Raw Footage URL",
+        "noVideos": "Please enter at least one video.",
+
+        "videoSwitch": "Video",
+        "rawSwitch": "Raw",
+
+        "noVideo": "Your video will appear here.",
+        "processing": "Processing...",
+        "invalidVideo": "Sorry, that's not a valid YouTube video.",
+
+        "device": "Device",
+        "desktop": "Desktop",
+        "mobile": "Mobile",
+
+        "notes": "Additional Notes (optional)",
+        "finish": "Submit Record"
+    },
+
+    "submitted": {
+        "submitted": "Congrats!",
+
+        "text": [
+            "Your record has been submitted for review, and will be gotten to by a list mod shortly.",
+            "Please remember records may take upwards of a week to verify completely, and we have the right to deny your record if we suspect you of cheating or disobeying the {}.",
+            "Keep an eye on your DMs for any questions a list mod may have about your record.",
+            "To view your in-progress records and their current status, go to your account page."
+        ],
+
+        "rules": "rules",
+
+        "account": "Go to account",
+        "submit": "Submit another record"
+    },
+
+    "duplicate": {
+        "duplicate": "Oops!",
+
+        "text": [
+            "Your record has already been submitted for review, and will be gotten to by a list mod shortly.",
+            "Please remember records may take upwards of a week to verify completely.",
+            "To view your in-progress records and their current status, go to your account page."
+        ],
+
+        "account": "Go to account",
+        "submit": "Submit another record"
+    },
+    
+    "account": {
+        "pictureAlt": "Your profile picture",
+
+        "unregistered": "Unregistered User",
+
+        "score": "Score",
+        "completions": "Completions",
+        "verifications": "Verifications",
+        "records": "Records",
+
+        "migration": {
+            "migration": "Migration Status",
+            "requested": "Requested",
+            "id": "Request ID"
+        },
+
+        "pending": {
+            "pending": "Pending Records",
+            
+            "status": {
+                "waiting": "Record is waiting for approval.",
+                "investigating": "Record is being investigated.",
+                "approved": "Record has been approved.",
+                "denied": "Record has been denied."
+            },
+
+            "denial": {
+                "denial": "Reason for Denial",
+                "empty": "No reason was provided.",
+                "confirm": "Got it",
+                "delete": "Delete record"
+            }
+        },
+        
+        "video": "Video Link",
+
+        "copied": "Copied!"
+    },
+
+    "mods": {
+        "records": {
+            "records": "Records",
+
+            "results": {
+                "s": "{} record",
+                "p": "{} records"
+            },
+            "seconds": {
+                "s": " in {} second",
+                "p": " in {} seconds"
+            },
+
+            "profileAlt": "{}'s profile picture",
+            "discordAlt": "{}'s Discord profile picture",
+
+            "video": "Video",
+            "raw": "Raw",
+            "view": "View video",
+
+            "emptyNotes": "No notes were provided...",
+
+            "desktop": "Desktop",
+            "mobile": "Mobile",
+
+            "status": {
+                "waiting": "Waiting",
+                "investigating": "Investigating",
+                "denied": "Denied",
+                "approved": "Approved"
+            },
+
+            "reason": "Reason for Denial",
+            "update": "Update Record"
+        },
+
+        "users": {
+            "users": "Users",
+
+            "results": {
+                "s": "{} request",
+                "p": "{} requests"
+            },
+            "seconds": {
+                "s": " in {} second",
+                "p": " in {} seconds"
+            },
+
+            "profileAlt": "{}'s profile picture",
+            "discordAlt": "{}'s Discord profile picture",
+
+            "accept": "Accept",
+            "deny": "Deny"
+        },
+
+        "levels": {
+            "levels": "Levels",
+
+            "placeholder": "Select Level",
+
+            "placement": "Placement",
+            "level": "Level Name",
+            "creator": "Creator",
+            "verifier": "Verifier",
+            "video": "Video",
+            "youtube": "YouTube URL",
+            "videoError": "Please enter a valid YouTube video.",
+            "id": "ID",
+            "levelID": "Level ID",
+
+            "submit": "Submit Changes",
+            "add": "Add level",
+
+            "side": [
+                "Edit a Level",
+                "or",
+                "Add a New Level"
+            ],
+
+            "modal": {
+                "head": "Confirmation",
+
+                "confirmation": [
+                    "Are you sure you want to create a new user?",
+                    "\"{}\" does not seem to be an existing player."
+                ],
+
+                "confirm": "I'm sure",
+                "deny": "Nevermind"
+            }
+        }
+    },
+
+    "settings": {
+        "settings": "Account Settings",
+
+        "update": "Update Account",
+        "name": "Name",
+        "device": "Device",
+        "desktop": "Desktop",
+        "mobile": "Mobile",
+        "both": "Both",
+        "shape": "Profile Shape",
+        "profileAlt": "Your profile picture",
+        "snow": "December Snow",
+
+        "actions": "Account Actions",
+        "logout": "Log Out",
+        "delete": "Delete Account",
+
+        "nameError": [
+            "Your username must be between 1 and 25 characters.",
+            "Preceding or trailing spaces will be trimmed."
+        ],
+
+        "modal": {
+            "head": "Confirmation",
+
+            "confirmation": [
+                "Are you sure you want to delete your account?",
+                "It will be lost for a very long time!"
+            ],
+            "disclaimer": "All current records will be kept.",
+
+            "confirm": "I'm sure",
+            "deny": "Nevermind"
+        }
+    },
+
+    "setup": {
+        "setup": "Finish Account Setup",
+
+        "username": "Username",
+
+        "shape": "Profile Shape",
+        "profileAlt": "Your profile picture",
+
+        "device": "Device",
+        "desktop": "Desktop",
+        "mobile": "Mobile",
+        "both": "Both",
+
+        "nameError": [
+            "Your username must be between 1 and 25 characters.",
+            "Preceding or trailing spaces will be trimmed."
+        ],
+
+        "continue": "Continue",
+        
+        "bottom": "Already on the list? {}.",
+        "migrate": "Migrate your account"
+    },
+
+    "migrate": {
+        "migrate": "Migrate Account",
+
+        "username": "Username",
+
+        "shape": "Profile Shape",
+        "profileAlt":"Your profile picture",
+
+        "device": "Device",
+        "desktop": "Desktop",
+        "mobile": "Mobile",
+        "both": "Both",
+
+        "discord": "Link Discord Account",
+
+        "continue": "Continue",
+        
+        "bottom": "Not on the list yet? {}.",
+        "setup": "Set up your account"
+    },
+
+    "oauth": [
+        "Account Linked Successfully",
+        "You may now close this window."
+    ],
+
+    "rules": {
+        "rules": [
+            "Rules",
+            "General Submission Guidelines",
+            "When submitting a time, you must make sure that it is formatted properly. (e.g {} — putting a colon instead of a point for milliseconds may lead to a 502 error)",
+            "Ensure the correct level ID or correct level is chosen on the pop-up menu. (This is specifically the case with levels that have the same/similar names)",
+            "The \"YouTube URL\" field refers to the video you would like to be displayed on the website.",
+            "The \"Raw Footage URL\" refers to an uncut recording of the entire completion, keep in mind this is only required for extreme demon completions. If you are submitting a completion for a non extreme demon and don't have raw footage please leave this field empty.",
+            "If you have submitted a record and realised you have made a mistake (e.g inputted the wrong time or wrong device), contact a helper who will help you to fix the mistake.",
+            "Raw Footage",
+            "(Note: Raw footage is {} for extreme demons but can be submitted for non extremes, the following only apply to extreme demon completions)",
+            "You must include a recording of your completion showing the full run with the completion of each checkpoint and the endscreen.",
+            "A full recording is ideal, but at least 5 minutes for each checkpoint is required. (Or the full recording from starting attempts at the checkpoint)",
+            "You cannot edit your raw footage in any way other than combining multiple clips into one video.",
+            "The footage must include microphone audio with audible clicks.",
+            "Uploading to sites such as Google Drive / MEGA / Gofile is ideal so the records team can download the video — only if requested.",
+            "Sites such as YouTube are acceptable, but you must keep the file(s) of the video for at least 2 weeks in case the records team requests it.",
+            "Quality",
+            "The following are reasons a record could be unverifiable due to issues with the footage:",
+            "Extremely Low Resolution",
+            "Severe Framerate Drops",
+            "Covered Gameplay",
+            "Inaudible Clicks (For Extremes)",
+            "If you are unsure if your footage is of acceptable quality, contact a member of the helper team or in the support channel on the discord server.",
+            "If it is hard for you to record clicks, using a phone or similar device to record audio while you play is recommended, and if you are a mobile or controller player we will not be as strict about audibility of clicks.",
+            "While input overlay is NOT a replacement for clicks, using it could help verify the legitimacy of your record (e.g quiet clicks) but isn’t required.",
+            "Usage of \"Click Sounds\" or \"Click Bot\" to replace real clicks is prohibited and will deem your record illegitimate",
+            "Modding",
+            "The use of hacks, exploits, and external programs that change physics or inputs, modify hitboxes, show information not otherwise available, adjust the games speed, or fundamentally alter gameplay mechanics is not allowed other than the following exceptions:",
+            "Show Hitbox On Death (However your record may be denied if this is used to give a significant advantage on a levels gameplay e.g Invisible/Memory gameplay)",
+            "Custom Keybinds",
+            "Globed (No Player Collision)",
+            "If you are unsure about the legitimacy of a mod, contact a member of the records team.",
+            "Pause Buffering",
+            "Pause buffering is an exploit involving rapid pausing and unpausing in order to effectively play in slow motion.",
+            "Records that make use of this exploit will not be accepted.",
+            "Any normal use of pausing will not be suspected as pause buffering. It is only banned in cases where it is being deliberately used to gain an advantage, you are allowed to pause during timed sections to think during runs.",
+            "Miscellaneous",
+            "Your completion(s) must be done by you (the single owner of the account), having someone physically complete a level or section of a level for you will result in that record being invalidated.",
+            "Two-player levels or levels utilising two-player mechanics must be completed solo.",
+            "Playing on a copy of a level is allowed, but you cannot make any changes. Contact a member of the records team if you want to have a LDM approved for use and added to the in game \"Pemonlist LDM\" list.",
+            "Including a cut down version of your footage gives the record team an easier time reviewing your completion.",
+            "The video you submit will be publicly linked to your record. It must contain footage of your completion that accurately reflects your raw footage.",
+            "You must use the same account name for all records you submit. Intentionally submitting records under multiple accounts will result in your records being removed.",
+            "These guidelines apply equally to all devices. (Mobile, PC, etc.)",
+            "If the video to-be displayed on the website contains any NSFW material, your record may be rejected as we do not want to link to NSFW on our website.",
+            "Completions utilising large skips or secret ways may invalidate your record. (Small skips are fine) — If you are unsure whether a skip is allowed for use, contact a member of the staff team.",
+            "Final Note:",
+            "If you are unsure that your record follows these guidelines, you can utilise the \"Additional Notes\" when submitting your record or ask a member of the helper team for guidance in the support channel in the discord server - exceptions can be made in some cases.",
+            "If you would like to suggest any changes or additions to these rules please contact a member of the staff team.",
+            "HUGE Credits to TPL."
+        ],
+
+        "time": "0:00:00.000",
+        "required": "required"
+    },
+
+    "credits": {
+        "programming": "Programming",
+        "owner": "List Owner",
+        "admins": "List Admins",
+        "helpers": "List Helpers",
+        "translators": "Translators"
+    },
+
+    "fallback": [
+        "Whoops!",
+        "The requested URL could not be properly retrieved. If you entered an incorrect URL, please check your spelling and try again.",
+        "Not your fault? Feel free to message the developer!"
+    ]
+}

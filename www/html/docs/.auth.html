@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---->
+    {% include "template/meta.html" %}
+    <!---->
+    <link rel="stylesheet" href="/static/css/min/api.min.css">
+</head>
+<body>
+    <!---->
+    {% include "template/nav.html" %}
+    <!---->
+    <main>
+        <div class="container">
+            <div>
+                <h1>Authentication</h1>
+                <span>
+                    <p>To use the API, you must send a valid User Agent along with the request. This is used to identify the service to track usage as well as detect spam and bad actors.</p>
+                    <p>We reccomend using a main User Agent along with a client-specific uuid.</p>
+                </span>
+                <span>
+                    <h2>Specifics</h2>
+                    <p>To create a proper User Agent that will not get blocked, it must have the following:</p>
+                    <ul>
+                        <li>sex</li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+    </main>
+    <!---->
+    {% include "template/footer.html" %}
+    <!---->
+</body>
+
+<!---->
+{% include "template/include.html" %}
+<!---->
+
+</html>

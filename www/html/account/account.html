@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---->
+    {% include "template/meta.html" %}
+    <!---->
+    <link rel="stylesheet" href="/static/css/min/player.min.css">
+    <link rel="stylesheet" href="/static/css/min/account.min.css">
+    <link rel="stylesheet" href="/static/css/min/decorations.min.css">
+</head>
+<body>
+    <!---->
+    {% include "template/nav.html" %}
+    <!---->
+    <main>
+        <div class="container">
+            <div class="player">
+                <div class="pages">
+                    {% if account.mod %}
+                        <a href="/mod" class="material-symbols-outlined">shield_person</a>
+                    {% endif %}
+                    {% if account.player %}
+                        <a href="/account/settings" class="material-symbols-outlined">manage_accounts</a>
+                    {% endif %}
+                </div>
+                {% if account.player %}
+                    <h1>
+                        <img src="{{ account.image }}=s72-c" referrerpolicy="no-referrer" alt="{{ translation.account.pictureAlt }}" class="pfp {{ account.profile_shape }}">
+                        <span title="
+                            {% if account.player.rank <= 25 %}
+                                #{{ account.player.rank }}
+                            {% endif %}
+                        " class="rank">
+                            {% if account.player.rank <= 1 %}
+                                <img title="#{{ account.player.rank }}" src="/static/img/diamondTrophy.png">
+                            {% elif account.player.rank <= 5 %}
+                                <img title="#{{ account.player.rank }}" src="/static/img/goldTrophy.png">
+                            {% elif account.player.rank <= 10 %}
+                                <img title="#{{ account.player.rank }}" src="/static/img/silverTrophy.png">
+                            {% elif account.player.rank <= 25 %}
+                                <img title="#{{ account.player.rank }}" src="/static/img/bronzeTrophy.png">
+                            {% else %}
+                                #{{ account.player.rank }}
+                            {% endif %}
+
+                            {% if account.player.rank <= 25 %}
+                                <p class="
+                                    {% if account.player.rank <= 1 %}
+                                        diamond
+                                    {% elif account.player.rank <= 5 %}
+                                        gold
+                                    {% elif account.player.rank <= 10 %}
+                                        silver
+                                    {% elif account.player.rank <= 25 %}
+                                        bronze
+                                    {% endif %}
+                                ">#{{ account.player.rank }}</p>
+                            {% endif %}
+                        </span>
+                        <hr>
+                        <span class="name">
+                            {{ account.player.name }}
+                            <span class="device material-symbols-outlined">
+                                {% if account.player.device == 'Desktop' %}
+                                    computer
+                                {% elif account.player.device == 'Mobile' %}
+                                    smartphone
+                                {% elif account.player.device == 'Both' %}
+                                    devices
+                                {% endif %}
+                            </span>
+                        </span>
+                    </h1>
+                    <hr>
+                    <div class="stats">
+                        <span>
+                            <h3>{{ translation.account.score }}</h3>
+                            <p>{{ account.player.points }}</p>
+                        </span>
+                        <span>
+                            <h3>{{ translation.account.completions }}</h3>
+                            <p>{{ account.player.records | length }}</p>
+                        </span>
+                        <span>
+                            <h3>{{ translation.account.verifications }}</h3>
+                            <p>{{ account.player.verifications | length }}</p>
+                        </span>
+                    </div>
+                {% else %}
+                    <h1>
+                        <img src="{{ account.image }}=s48-c" referrerpolicy="no-referrer" alt="{{ translation.account.pictureAlt }}">
+                        <hr>
+                        <span class="name">
+                            {{ translation.account.unregistered }}
+                        </span>
+                    </h1>
+                {% endif %}
+            </div>
+            {% if account.status == "Migrating" %}
+                <div class="migration">
+                    <h1>{{ translation.account.migration.migration }}</h1>
+                    <div class="content">
+                        <span class="info">
+                            <span>
+                                <h3>{{ translation.account.migration.requested }}</h3>
+                                <p>{{ migration.requested }}</p>
+                            </span>
+                            <span class="id">
+                                <h3>{{ translation.account.migration.id }}</h3>
+                                <p>{{ migration.id }}<span class="material-symbols-outlined">content_paste</span></p>
+                            </span>
+                        </span>
+                        <div class="discord 
+                            {% if migration.discord.banner != "" %}
+                                nitro
+                            {% endif %}"
+                            >
+                            <span class="banner" style="
+                                background-color: #{{ migration.discord.accent_color }};
+                                background-image:
+                                    url('https://cdn.discordapp.com/banners/{{ migration.discord.user_id }}/{{ migration.discord.banner }}.gif?size=600'),
+                                    url('https://cdn.discordapp.com/banners/{{ migration.discord.user_id }}/{{ migration.discord.banner }}.png?size=600');
+                            "></span>
+                            <img src="https://cdn.discordapp.com/avatars/{{ migration.discord.user_id }}/{{ migration.discord.avatar }}.webp?size=80" alt="{{ migration.discord.global_name }}">
+                            <span class="inner">
+                                <h1>{{ migration.discord.global_name }}</h1>
+                                <p>{{ migration.discord.username }}</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+            {% if account.player %}
+                {% if account.player.unverified_records | length %}
+                    <div class="unverified">
+                        <h1>{{ translation.account.pending.pending }}</h1>
+                        <div class="table">
+                            {% for record in account.player.unverified_records %}
+                                <div>
+                                    {% if record.status == 'Denied' %}
+                                        <span class="reason material-symbols-outlined" data-reason="
+                                            {%- if record.reason -%}
+                                                {{ record.reason }}
+                                            {%- endif -%}
+                                        " data-id="{{ record.id }}">
+                                            question_mark
+                                        </span>
+                                    {% endif %}
+                                    <a href="/level/{{ record.level.level_id }}">
+                                        <span class="placement">#{{ record.level.placement }}</span>
+                                        <span class="level">{{ record.level.name }}</span>
+                                    </a>
+                                    <hr class="divider">
+                                    <a href="
+                                        {% if 'https://' in record.video_id %}
+                                            {{ record.video_id }}
+                                        {% else %}
+                                            https://youtu.be/{{ record.video_id }}
+                                        {% endif %}
+                                    " target="_blank">
+                                        <span class="time">
+                                            {{ record.time_format }}<span class="ms">.{{ record.time_ms }}</span>
+                                        </span>
+                                    </a>
+                                    <span class="
+                                        {% if record.status == 'Denied' %}
+                                            denied
+                                        {% endif %}
+                                    status material-symbols-outlined">
+                                        {% if record.status == 'Submitted' %}
+                                            schedule
+                                        {% elif record.status == 'Waiting' %}
+                                            schedule
+                                        {% elif record.status == 'Investigating' %}
+                                            search
+                                        {% elif record.status == 'Approved' %}
+                                            check
+                                        {% elif record.status == 'Denied' %}
+                                            close
+                                        {% endif %}
+                                        <div class="tooltip">
+                                            {% if record.status == 'Submitted' %}
+                                                {{ translation.account.pending.status.waiting }}
+                                            {% elif record.status == 'Waiting' %}
+                                                {{ translation.account.pending.status.waiting }}
+                                            {% elif record.status == 'Investigating' %}
+                                                {{ translation.account.pending.status.investigating }}
+                                            {% elif record.status == 'Approved' %}
+                                                {{ translation.account.pending.status.approved }}
+                                            {% elif record.status == 'Denied' %}
+                                                {{ translation.account.pending.status.denied }}
+                                            {% endif %}
+                                        </div>
+                                    </span>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+                {% if account.player.verifications | length %}
+                    <div class="verifications">
+                        <h1>{{ translation.account.verifications }}</h1>
+                        <div class="table">
+                            {% for verification in account.player.verifications %}
+                                <div>
+                                    <a href="/level/{{ verification.level_id }}">
+                                        <span class="placement">#{{ verification.placement }}</span>
+                                        <span class="level">{{ verification.name }}</span>
+                                    </a>
+                                    <hr class="divider">
+                                    <a href="
+                                        {% if 'https://' in verification.video_id %}
+                                            {{ verification.video_id }}
+                                        {% else %}
+                                            https://youtu.be/{{ verification.video_id }}
+                                        {% endif %}
+                                    " target="_blank">
+                                        <span class="link">
+                                            {{ translation.account.video }}
+                                        </span>
+                                        <span class="open material-symbols-outlined">
+                                            open_in_new
+                                        </span>
+                                    </a>
+                                    </span>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+                {% if account.player.records | length %}
+                    <div class="records">
+                        <h1>{{ translation.account.records }}</h1>
+                        <div class="table">
+                            {% for record in account.player.records %}
+                                <div>
+                                    <a href="/level/{{ record.level.level_id }}">
+                                        <span class="placement">#{{ record.level.placement }}</span>
+                                        <span class="level">{{ record.level.name }}</span>
+                                    </a>
+                                    <hr class="divider">
+                                    <a href="
+                                        {% if 'https://' in record.video_id %}
+                                            {{ record.video_id }}
+                                        {% else %}
+                                            https://youtu.be/{{ record.video_id }}
+                                        {% endif %}
+                                    " target="_blank">
+                                        <span class="time">
+                                            {{ record.time_format }}<span class="ms">.{{ record.time_ms }}</span>
+                                        </span>
+                                        <span class="rank">#{{ record.rank }}</span>
+                                    </a>
+                                    </span>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endif %}
+        </div>
+    </main>
+    <!---->
+    {% include "template/footer.html" %}
+    <!---->
+</body>
+
+<!---->
+{% include "template/include.html" %}
+<!---->
+<script src="/static/js/account.js"></script>
+<script src="/static/js/jump.js"></script>
+
+</html>

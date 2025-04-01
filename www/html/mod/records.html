@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---->
+    {% include "template/meta.html" %}
+    <!---->
+    <link rel="stylesheet" href="/static/css/min/mod.min.css">
+    <link rel="stylesheet" href="/static/css/min/modrecords.min.css">
+</head>
+<body>
+    <!---->
+    {% include "template/nav.html" %}
+    <!---->
+    <main>
+        <div class="container">
+            <div class="select">
+                <a href="/mod/records">{{ translation.mods.records.records }}</a>
+                <a href="/mod/users">{{ translation.mods.users.users }}</a>
+                <a href="/mod/levels">{{ translation.mods.levels.levels }}</a>
+            </div>
+            <div class="stats">
+                <span>
+                    <button class="material-symbols-outlined" page="1"                     {% if stats.page <= 1 %} disabled {% endif %}>skip_previous</button>
+                    <button class="material-symbols-outlined" page="{{ stats.prev_page }}" {% if stats.page <= 1 %} disabled {% endif %}>chevron_left</button>
+                </span>
+                <span>
+                    {%- if records | length == 1 -%}
+                        {{ translation.mods.records.results.s | sandwich(0) }}<b>{{ records | length }}{% if stats.last_page != 0 %} <font style="color: #ccd">({{ stats.total }})</font>{% endif %}</b>{{ translation.mods.records.results.s | sandwich(1) }}
+                    {%- else -%}
+                        {{ translation.mods.records.results.p | sandwich(0) }}<b>{{ records | length }}{% if stats.last_page != 0 %} <font style="color: #ccd">({{ stats.total }})</font>{% endif %}</b>{{ translation.mods.records.results.p | sandwich(1) }}
+                    {%- endif -%}{%- if elapsed == 1 -%}
+                        {{ translation.mods.records.seconds.s | sandwich(0) }}<b>{{ elapsed }}</b>{{ translation.mods.records.seconds.s | sandwich(1) }}
+                    {%- else -%}
+                        {{ translation.mods.records.seconds.p | sandwich(0) }}<b>{{ elapsed }}</b>{{ translation.mods.records.seconds.p | sandwich(1) }}
+                    {%- endif -%}
+                </span>
+                <span>
+                    <button class="material-symbols-outlined" page="{{ stats.next_page }}" {% if stats.page >= stats.last_page %} disabled {% endif %}>chevron_right</button>
+                    <button class="material-symbols-outlined" page="{{ stats.last_page }}" {% if stats.page >= stats.last_page %} disabled {% endif %}>skip_next</button>
+                </span>
+            </div>
+            {% for record in records %}
+                <div class="record">
+                    <span>
+                        <div class="user">
+                            <a href="/player/{{ record.player.name }}" target="_blank" class="player">
+                                {% if record.player.account %}
+                                    <img src="{{ record.player.account.image }}=s48-c" referrerpolicy="no-referrer" alt="{{ translation.mods.records.profileAlt | replace("{}", record.player.name) }}" class="{{ record.player.account.profile_shape }}" loading="lazy">
+                                {% endif %}
+                                <p>{{ record.player.name }}</p>
+                            </a>
+                            {% if record.player.account.discord %}
+                                <a href="https://discordapp.com/users/{{ record.player.account.discord.user_id }}" target="_blank" class="discord">
+                                    <img src="https://cdn.discordapp.com/avatars/{{ record.player.account.discord.user_id }}/{{ record.player.account.discord.avatar }}.webp?size=48" referrerpolicy="no-referrer" alt="{{ translation.mods.records.discordAlt | replace("{}", record.player.account.discord.global_name) }}" loading="lazy">
+                                    <p>{{ record.player.account.discord.global_name }} <span class="username">@{{ record.player.account.discord.username }}</span></p>
+                                </a>
+                            {% endif %}
+                        </div>
+                        <div class="video">
+                            {% if record.raw_video and record.raw_video != record.video_id %}
+                                <span class="select">
+                                    <button data-url="
+                                        {% if 'https://' in record.video_id %}
+                                            {{ record.video_id }}
+                                        {% else %}
+                                            https://www.youtube-nocookie.com/embed/{{ record.video_id }}?autoplay=1
+                                        {% endif %}
+                                    " class="selected">{{ translation.mods.records.video }}</button>
+                                    <button data-url="{{ record.raw_video }}">{{ translation.mods.records.raw }}</button>
+                                </span>
+                            {% endif %}
+                            <span class="preview">
+                                {% if not record.raw_video %}
+                                    {% if 'https://' in record.video_id %}
+                                        <a href="{{ record.video_id }}" target="_blank">{{ translation.mods.records.view }}<span class="material-symbols-outlined">open_in_new</span></a>
+                                    {% else %}
+                                        <iframe src="https://www.youtube-nocookie.com/embed/{{ record.video_id }}?autoplay=1" frameborder="0" autoplay allow="fullscreen" allowfullscreen="allowfullscreen" loading="lazy" style="display: none"></iframe>
+                                        <img src="https://i1.ytimg.com/vi/{{ record.video_id }}/hqdefault.jpg" alt="Video preview" loading="lazy">
+                                    {% endif %}
+                                {% else %}
+                                    {% if 'https://' in record.video_id %}
+                                        <a href="{{ record.video_id }}" target="_blank">{{ translation.mods.records.view }}<span class="material-symbols-outlined">open_in_new</span></a>
+                                    {% else %}
+                                        <img src="https://i1.ytimg.com/vi/{{ record.video_id }}/hqdefault.jpg" alt="Video preview" loading="lazy">
+                                        <a href="" target="_blank" style="display: none">{{ translation.mods.records.view }}<span class="material-symbols-outlined">open_in_new</span></a>
+                                        <iframe src="" frameborder="0" autoplay allow="fullscreen" allowfullscreen="allowfullscreen" loading="lazy" style="display: none"></iframe>
+                                    {% endif %}
+                                {% endif %}
+                                {% if not 'https://' in record.video_id %}
+                                    <img src="/static/img/youtube.svg" alt="YouTube" class="open">
+                                {% endif %}
+                            </span>
+                        </div>
+                    </span>
+                    <form action="/mod/records?page={{ stats.page }}" method="post">
+                        <input type="hidden" name="entryid" value="{{ record.id }}">
+                        <div class="info">
+                            <a href="/level/{{ record.level.level_id }}" target="_blank" class="level">
+                                <h1>{{ record.level.name }}</h1>
+                                <p>#{{ record.level.placement }} - {{ record.level.level_id }}</p>
+                            </a>
+                            <input type="text" name="time" value="{{ record.time_format }}.{{ record.time_ms }}" id="time" required autocomplete="none">
+                            <select name="device">
+                                <option value="desktop"
+                                    {% if not record.mobile %}
+                                        selected
+                                    {% endif %}
+                                >{{ translation.mods.records.desktop }}</option>
+                                <option value="mobile"
+                                    {% if record.mobile %}
+                                        selected
+                                    {% endif %}
+                                >{{ translation.mods.records.mobile }}</option>
+                            </select>
+                            <textarea name="notes" id="notes" placeholder="{{ translation.mods.records.emptyNotes }}" disabled rows="3">{{ record.notes }}</textarea>
+                        </div>
+                        <div class="submit">
+                            <select name="status">
+                                <option value="waiting"
+                                    {% if record.status == "Waiting" %}
+                                        selected
+                                    {% endif %}
+                                >{{ translation.mods.records.status.waiting }}</option>
+                                <option value="investigating"
+                                    {% if record.status == "Investigating" %}
+                                        selected
+                                    {% endif %}
+                                >{{ translation.mods.records.status.investigating }}</option>
+                                <option value="denied"
+                                    {% if record.status == "Denied" %}
+                                        selected
+                                    {% endif %}
+                                >{{ translation.mods.records.status.denied }}</option>
+                                <option value="approved"
+                                    {% if record.status == "Approved" %}
+                                        selected
+                                    {% endif %}
+                                >{{ translation.mods.records.status.approved }}</option>
+                            </select>
+                            <input type="hidden" name="reason" placeholder="{{ translation.mods.records.reason }}" required autocomplete="off">
+                            <input type="submit" value="{{ translation.mods.records.update }}" disabled>
+                        </div>
+                    </form>
+                </div>
+            {% endfor %}
+            {% if records | length > 0 %}
+                <div class="stats">
+                    <span>
+                        <button class="material-symbols-outlined" page="1"                     {% if stats.page <= 1 %} disabled {% endif %}>skip_previous</button>
+                        <button class="material-symbols-outlined" page="{{ stats.prev_page }}" {% if stats.page <= 1 %} disabled {% endif %}>chevron_left</button>
+                    </span>
+                    <span>
+                        {%- if records | length == 1 -%}
+                            {{ translation.mods.records.results.s | sandwich(0) }}<b>{{ records | length }}{% if stats.last_page != 0 %} <font style="color: #ccd">({{ stats.total }})</font>{% endif %}</b>{{ translation.mods.records.results.s | sandwich(1) }}
+                        {%- else -%}
+                            {{ translation.mods.records.results.p | sandwich(0) }}<b>{{ records | length }}{% if stats.last_page != 0 %} <font style="color: #ccd">({{ stats.total }})</font>{% endif %}</b>{{ translation.mods.records.results.p | sandwich(1) }}
+                        {%- endif -%}
+                    </span>
+                    <span>
+                        <button class="material-symbols-outlined" page="{{ stats.next_page }}" {% if stats.page >= stats.last_page %} disabled {% endif %}>chevron_right</button>
+                        <button class="material-symbols-outlined" page="{{ stats.last_page }}" {% if stats.page >= stats.last_page %} disabled {% endif %}>skip_next</button>
+                    </span>
+                </div>
+            {% endif %}
+        </div>
+    </main>
+    <!---->
+    {% include "template/footer.html" %}
+    <!---->
+</body>
+
+<!---->
+{% include "template/include.html" %}
+<!---->
+<script src="/static/js/modrecords.js"></script>
+<script src="/static/js/jump.js"></script>
+
+<script>
+    const url = new URL(window.location.href);
+    url.searchParams.set('page', {{ stats.page }});
+    window.history.replaceState({}, '', url);
+</script>
+
+</html>

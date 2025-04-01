@@ -1,0 +1,32 @@
+.container {
+    h1, h2, h4 {
+        color: #eef;
+    }
+
+    h4 {
+        margin: 0px;
+        margin-bottom: -10px;
+    }
+
+    h3 {
+        color: #889;
+        margin: 0px;
+        font-weight: 500;
+        font-size: small;
+    }
+
+    >:first-child {
+        margin-top: 0px;
+    }
+
+    >:last-child {
+        margin-bottom: 0px;
+    }
+
+    code {
+        font-family: "Droid Sans Mono", "Courier New", Courier, monospace;
+        padding: 3px 4px;
+        border-radius: 3px;
+        background-color: #1128;
+    }
+}

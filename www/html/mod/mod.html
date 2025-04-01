@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---->
+    {% include "template/meta.html" %}
+    <!---->
+    <link rel="stylesheet" href="/static/css/min/mod.min.css">
+</head>
+<body>
+    <!---->
+    {% include "template/nav.html" %}
+    <!---->
+    <main>
+        <div class="container">
+            <div class="select">
+                <a href="/mod/records">{{ translation.mods.records.records }}</a>
+                <a href="/mod/users">{{ translation.mods.users.users }}</a>
+                <a href="/mod/levels">{{ translation.mods.levels.levels }}</a>
+            </div>
+        </div>
+    </main>
+    <!---->
+    {% include "template/footer.html" %}
+    <!---->
+</body>
+
+<!---->
+{% include "template/include.html" %}
+<!---->
+
+</html>

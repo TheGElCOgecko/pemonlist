@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---->
+    {% include "template/meta.html" %}
+    <!---->
+    <link rel="stylesheet" href="/static/css/min/level.min.css">
+</head>
+<body>
+    <!---->
+    {% include "template/nav.html" %}
+    <!---->
+    <main>
+        <div class="container">
+            <div class="level">
+                <h1>
+                    <span>#{{ level.placement }}</span>
+                    <hr>
+                    <span>{{ level.name }}</span>
+                </h1>
+                <hr>
+                <div class="users">
+                    <span>
+                        <h3>{{ translation.level.creator }}</h3>
+                        <p>{{ level.creator }}</p>
+                    </span>
+                    <a href="/player/{{ level.verifier.name }}" target="_blank">
+                        <h3>{{ translation.level.verifier }}</h3>
+                        <p>{{ level.verifier.name }}</p>
+                    </a>
+                </div>
+                <section>
+                    <iframe src="https://www.youtube-nocookie.com/embed/{{ level.video_id }}/" frameborder="0" allow="fullscreen" allowfullscreen="allowfullscreen"></iframe>
+                    <div class="info">
+                        <span>
+                            <h3>{{ translation.level.records }}</h3>
+                            <p>{{ level.records | length }}</p>
+                        </span>
+                        <span>
+                            <h3>{{ translation.level.points }}</h3>
+                            <p>{{ level.points }}</p>
+                        </span>
+                        <span>
+                            <h3>{{ translation.level.id }}</h3>
+                            <p>{{ level.level_id }}</p>
+                        </span>
+                    </div>
+                </section>
+            </div>
+            <!---->
+            {% if level.records | length > 0 %}
+                <div class="records">
+                    <h1>{{ translation.level.records }}</h1>
+                    <div class="table">
+                        {% for record in level.records %}
+                            <div>
+                                <a href="/player/{{ record.name }}">
+                                    <span  title="
+                                        {% if loop.index <= 4 %}
+                                            #{{ record.rank }}
+                                        {% endif %}
+                                    " class="rank">
+                                        {% if loop.index == 1 %}
+                                            <img src="/static/img/diamondTrophy.png">
+                                        {% elif loop.index == 2 %}
+                                            <img src="/static/img/goldTrophy.png">
+                                        {% elif loop.index == 3 %}
+                                            <img src="/static/img/silverTrophy.png">
+                                        {% elif loop.index == 4 %}
+                                            <img src="/static/img/bronzeTrophy.png">
+                                        {% else %}
+                                            #{{ record.rank }}
+                                        {% endif %}
+                                        {% if loop.index <= 4 %}
+                                            <p>#{{ record.rank }}</p>
+                                        {% endif %}
+                                    </span>
+                                    <span class="holder">{{ record.name }}</span>
+                                </a>
+                                <hr class="divider"></hr>
+                                <a href="
+                                    {% if 'https://' in record.video_id %}
+                                        {{ record.video_id }}
+                                    {% else %}
+                                        https://youtu.be/{{ record.video_id }}
+                                    {% endif %}
+                                " target="_blank">
+                                    <span class="time">
+                                        {{ record.time_format }}<span class="ms">.{{ record.time_ms }}</span>
+                                    </span>
+                                    <span class="device material-symbols-outlined">
+                                        {% if record.mobile %}
+                                            smartphone
+                                        {% else %}
+                                            computer
+                                        {% endif %}
+                                    </span>
+                                </a>
+                                </span>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </main>
+    <!---->
+    {% include "template/footer.html" %}
+    <!---->
+</body>
+
+<!---->
+{% include "template/include.html" %}
+<!---->
+<script src="/static/js/level.js"></script>
+<script src="/static/js/jump.js"></script>
+
+</html>

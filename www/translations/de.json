@@ -1,0 +1,440 @@
+{
+    "nav": {
+        "list": "Liste",
+        "leaderboard": "Rangliste",
+        "submit": "Rekord einreichen",
+        "rules": "Regeln",
+        "credits": "Credits",
+        "discord": "Discord",
+
+        "account": "Account",
+        "logout": "Ausloggen",
+        "settings": "Einstellungen",
+        "login": "Einloggen"
+    },
+
+    "search": {
+        "search": "Suchen",
+
+        "results": {
+            "s": "{} Ergebnis",
+            "p": "{} Ergebnisse"
+        },
+        "seconds": {
+            "s": " in {} Sekunde",
+            "p": " in {} Sekunden"
+        },
+
+        "empty": "Keine Ergebnisse."
+    },
+    
+    "scroll": "Zum Anfang scrollen",
+
+    "agreement": {
+        "text": [
+            "Durch die Nutzung dieser Website stimmst du der Verwendung von Cookies sowie den {} und der {} zu.",
+            "Wir werden dich niemals absichtlich verfolgen oder deine Daten verkaufen, egal was passiert."
+        ],
+        "terms": "Allgemeinen Geschäftsbedingungen",
+        "privacy": "Datenschutzrichtlinie",
+
+        "confirm": "Verstanden"
+    },
+
+    "footer": {
+        "attribution": "Diese Website ist in keinster Weise mit RobTop Games AB verbunden, alle Rechte vorbehalten.",
+        "privacy": "Datenschutzrichtlinie",
+        "terms": "Geschäftsbedingungen",
+        "rules": "Einreichungsregeln",
+        "credits": "Credits",
+        "docs": "API Docs"
+    },
+
+    "list": {
+        "list": "Liste",
+        "extended": "Erweiterte Liste",
+        "legacy": "Legacy-Liste",
+
+        "thumbnailAlt": "{}s Thumbnail",
+        "crownAlt": "Krone des ersten Platzes"
+    },
+
+    "level": {
+        "creator": "Creator",
+        "verifier": "Verifizierer",
+        "records": "Rekorde",
+        "points": "Punkte wenn abgeschlossen",
+        "id": "ID"
+    },
+
+    "login": {
+        "login": "Einloggen",
+        "google": "Google",
+        "discord": "Discord"
+    },
+
+    "leaderboard": {
+        "processing": "Die Bestenliste verarbeitet gerade die Rekorde, bitte versuche es später noch einmal",
+        "empty": "Die Bestenliste ist momentan leer.",
+        "points": "Punkte"
+    },
+
+    "player": {
+        "score": "Punktzahl",
+        "completions": "Completions",
+        "verifications": "Verifizierungen",
+        "video": "Videolink",
+        "records": "Rekorde"
+    },
+
+    "submit": {
+        "submit": "Einreichen",
+
+        "reminder": "{} vorm Einreichen!",
+        "rules": "Les die Regeln",
+
+        "time": "Zeit",
+        "timeError": "Bitte gib ein gültiges Zeitformat ein.",
+        
+        "level": "Level",
+        "levelError": "Bitte gib einen gültigen Levelnamen ein.",
+        "levelPlaceholder": "Levelname",
+
+        "youtube": "YouTube URL",
+        "youtubeError": "Bitte gib eine gültige YouTube URL ein.",
+        "raw": "Uneditierte Aufnahme URL",
+        "noVideos": "Bitte füge mindestens ein Video bei.",
+
+        "videoSwitch": "Video",
+        "rawSwitch": "Uneditiert",
+
+        "noVideo": "Hier wird dein Video erscheinen.",
+        "processing": "Verarbeiten...",
+        "invalidVideo": "Sorry, das ist kein gültiges YouTube Video.",
+
+        "device": "Gerät",
+        "desktop": "Desktop",
+        "mobile": "Handy",
+
+        "notes": "Zusätzliche Notizen (optional)",
+        "finish": "Rekord einreichen"
+    },
+
+    "submitted": {
+        "submitted": "Glückwunsch!",
+
+        "text": [
+            "Dein Rekord wurde zur Überprüfung eingereicht und wird in Kürze von einem List Mod bearbeitet.",
+            "Bitte beachte, dass die vollständige Überprüfung der Rekorde bis zu einer Woche dauern kann. Wir haben das Recht, deine(n) Rekord(e) abzulehnen, wenn wir den Verdacht haben, dass du betrügst oder gegen die {} verstößt.",
+            "Behalte deine DMs im Auge, wenn ein List Mod Fragen zu deinem Rekord hat.",
+            "Um deinen in Bearbeitung-befindlichen Rekord und dessen aktuellen Status anzuzeigen, gehe zu deiner Accountseite."
+        ],
+
+        "rules": "Regeln",
+
+        "account": "Zur Accountseite",
+        "submit": "Einen weiteren Rekord einreichen"
+    },
+
+    "duplicate": {
+        "duplicate": "Upsi!",
+
+        "text": [
+            "Dein Rekord wurde bereits zur Überprüfung eingereicht und wird in Kürze von einem List Mod bearbeitet.",
+            "Bitte beachte, dass die vollständige Überprüfung der Rekorde bis zu einer Woche dauern kann.",
+            "Um deinen in Bearbeitung-befindlichen Rekord und dessen aktuellen Status anzuzeigen, gehe zu deiner Accountseite."
+        ],
+
+        "account": "Zur Accountseite",
+        "submit": "Einen anderen Rekord einreichen"
+    },
+    
+    "account": {
+        "pictureAlt": "Dein Profilbild",
+
+        "unregistered": "Unregistrierter Benutzer",
+
+        "score": "Punktzahl",
+        "completions": "Completions",
+        "verifications": "Verifizierungen",
+        "records": "Rekorde",
+
+        "migration": {
+            "migration": "Migrationsstatus",
+            "requested": "Angefordert",
+            "id": "Anforderungs-ID"
+        },
+
+        "pending": {
+            "pending": "Ausstehende Rekorde",
+            
+            "status": {
+                "waiting": "Rekord warted auf Genehmigung.",
+                "investigating": "Rekord wird überprüft.",
+                "approved": "Rekord wurde genehmigt.",
+                "denied": "Rekord wurde abgelehnt."
+            },
+
+            "denial": {
+                "denial": "Grund zur Ablehnung",
+                "empty": "Kein Grund angegeben.",
+                "confirm": "Verstanden",
+                "delete": "Rekord löschen"
+            }
+        },
+        
+        "video": "Videolink",
+
+        "copied": "Kopiert!"
+    },
+
+    "mods": {
+        "records": {
+            "records": "Rekorde",
+
+            "results": {
+                "s": "{} Rekord",
+                "p": "{} Rekorde"
+            },
+            "seconds": {
+                "s": " in {} Sekunde",
+                "p": " in {} Sekunden"
+            },
+
+            "profileAlt": "{}s Profilbild",
+            "discordAlt": "{}s Discord Profilbild",
+
+            "video": "Video",
+            "raw": "Uneditiert",
+            "view": "Video anschauen",
+
+            "emptyNotes": "Keine Notizen hinzugefügt...",
+
+            "desktop": "Desktop",
+            "mobile": "Handy",
+
+            "status": {
+                "waiting": "Wartend",
+                "investigating": "Überprüfend",
+                "denied": "Abgelehnt",
+                "approved": "Genehmigt"
+            },
+
+            "reason": "Grund der Ablehnung",
+            "update": "Rekord updaten"
+        },
+
+        "users": {
+            "users": "Benutzer",
+
+            "results": {
+                "s": "{} Anfrage",
+                "p": "{} Anfragen"
+            },
+            "seconds": {
+                "s": " in {} Sekunde",
+                "p": " in {} Sekunden"
+            },
+
+            "profileAlt": "{}s Profilbild",
+            "discordAlt": "{}s Discord Profilbild",
+
+            "accept": "Genehmigen",
+            "deny": "Ablehnen"
+        },
+
+        "levels": {
+            "levels": "Level",
+
+            "placeholder": "Level auswählen",
+
+            "placement": "Platzierung",
+            "level": "Levelname",
+            "creator": "Creator",
+            "verifier": "Verifizierer",
+            "video": "Video",
+            "youtube": "YouTube URL",
+            "videoError": "Bitte füg ein gültiges YouTube Video bei.",
+            "id": "ID",
+            "levelID": "Level-ID",
+
+            "submit": "Änderungen abschicken",
+            "add": "Level hinzufügen",
+
+            "side": [
+                "Ein Level bearbeiten",
+                "oder",
+                "Ein neues Level hinzufügen"
+            ],
+
+            "modal": {
+                "head": "Zustimmung",
+
+                "confirmation": [
+                    "Bist du sicher, dass du einen neuen Benutzer erstellen möchtest?",
+                    "\"{}\" scheint kein vorhandener Spieler zu sein."
+                ],
+
+                "confirm": "Ich bin mir sicher",
+                "deny": "Doch nicht"
+            }
+        }
+    },
+
+    "settings": {
+        "settings": "Accounteinstellungen",
+
+        "update": "Account updaten",
+        "name": "Name",
+        "device": "Gerät",
+        "desktop": "Desktop",
+        "mobile": "Handy",
+        "both": "Beides",
+        "shape": "Profilform",
+        "profileAlt": "Dein Profilbild",
+        "snow": "Dezemberschnee",
+
+        "actions": "Accountaktionen",
+        "logout": "Ausloggen",
+        "delete": "Account löschen",
+
+        "nameError": [
+            "Dein Benutzername muss zwischen 1 - 25 Zeichen lang sein.",
+            "Vorhergehende oder nachfolgende Leerzeichen werden gekürzt."
+        ],
+
+        "modal": {
+            "head": "Zustimmung",
+
+            "confirmation": [
+                "Bist du sicher, dass du deinen Account löschen willst?",
+                "Es wird für sehr lange Zeit verloren gehen!"
+            ],
+            "disclaimer": "Alle aktuellen Rekorde werden beibehalten.",
+
+            "confirm": "Ich bin mir sicher",
+            "deny": "Doch nicht"
+        }
+    },
+
+    "setup": {
+        "setup": "Accounteinrichtung abschließen",
+
+        "username": "Benutzername",
+
+        "shape": "Profilform",
+        "profileAlt": "Dein Profilbild",
+
+        "device": "Gerät",
+        "desktop": "Desktop",
+        "mobile": "Handy",
+        "both": "Beides",
+
+        "nameError": [
+            "Dein Benutzername muss zwischen 1 - 25 Zeichen lang sein.",
+            "Vorhergehende oder nachfolgende Leerzeichen werden gekürzt."
+        ],
+
+        "continue": "Fortfahren",
+        
+        "bottom": "Schon auf der Liste? {}.",
+        "migrate": "Migriere deinen Account"
+    },
+
+    "migrate": {
+        "migrate": "Account migrieren",
+
+        "username": "Benutername",
+
+        "shape": "Profilform",
+        "profileAlt":"Dein Profilbild",
+
+        "device": "Gerät",
+        "desktop": "Desktop",
+        "mobile": "Handy",
+        "both": "Beides",
+
+        "discord": "Discordaccount verbinden",
+
+        "continue": "Fortfahren",
+        
+        "bottom": "Noch nicht auf der Liste? {}.",
+        "setup": "Richte deinen Account ein"
+    },
+
+    "oauth": [
+        "Account erfolgreich gelinkt",
+        "Du kannst dieses Fenster nun schließen."
+    ],
+
+    "rules": {
+        "rules": [
+            "Regeln",
+            "Allgemeine Richtlinien für die Einreichung",
+            "Bei der Eintragung der Zeit muss darauf geachtet werden, dass diese korrekt formatiert ist. (z.B. {} – das Setzen eines Doppelpunkts anstelle eines Punktes für Millisekunden kann zu einem 502-Fehler führen)",
+            "Stelle sicher, dass im Popup-Menü die richtige Level-ID oder das richtige Level ausgewählt ist. (Dies ist insbesondere bei Leveln der Fall, die den gleichen/ähnlichen Namen haben)",
+            "Das YouTube-URL-Feld bezieht sich auf das Video, das auf der Website angezeigt werden soll.",
+            "Die \"Raw Footage URL\" bezieht sich auf eine ungeschnittene Aufnahme des gesamten Durchlaufs. Denk dran, das ist nur bei Extreme Demons erforderlich. Wenn du einen Durchlauf eines Non-Extreme Demons einreichst und keine Rohaufnahmen hast, lass dieses Feld einfach leer.",
+            "Wenn du einen Rekord eingereicht hast und merkst, dass du einen Fehler gemacht hast (z.B. die falsche Zeit oder das falsche Gerät eingegeben hast), kontaktiere einen Helfer, der dir hilft, den Fehler zu beheben.",
+            "Rohaufnahmen",
+            "(Hinweis: Rohaufnahmen sind bei Extreme Demons {}, können aber auch für Non-Extreme Demons eingereicht werden. Das Folgende gilt nur für Extreme Demons.)",
+            "Du musst eine Aufnahme deines gesamten Durchlaufs einreichen, die den kompletten Run zeigt, inklusive der Absolvierung jedes Checkpoints und des Endbildschirms.",
+            "Eine vollständige Aufnahme ist ideal, aber mindestens 5 Minuten pro Checkpoint sind erforderlich (oder die gesamte Aufnahme ab dem Startversuch beim Checkpoint).",
+            "Du darfst deine Rohaufnahmen in keiner Weise bearbeiten, außer um mehrere Clips zu einem Video zusammenzuführen.",
+            "Die Aufnahme muss Mikrofon-Audio mit hörbaren Klicks enthalten.",
+            "Es ist ideal, das Video auf Seiten wie Google Drive, MEGA oder Gofile hochzuladen, damit das Rekord-Team es herunterladen kann – aber nur, wenn es angefordert wird.",
+            "Seiten wie YouTube sind akzeptabel, aber du musst die Videodateien mindestens 2 Wochen lang aufbewahren, falls das Rekord-Team sie anfordert.",
+            "Qualität",
+            "Folgende Gründe könnten dazu führen, dass ein Rekord aufgrund von Problemen mit der Aufnahme nicht verifizierbar ist:",
+            "Extrem niedrige Auflösung",
+            "Schwere Framerate-Einbrüche",
+            "Verdecktes Gameplay",
+            "Unhörbare Klicks (bei Extreme Demons)",
+            "Wenn du unsicher bist, ob deine Aufnahme von akzeptabler Qualität ist, kontaktiere ein Mitglied des Helfer-Teams oder frag im Support-Kanal auf dem Discord-Server nach.",
+            "Wenn es dir schwerfällt, Klicks aufzunehmen, wird empfohlen, ein Handy oder ein ähnliches Gerät zu verwenden, um Audio während des Spielens aufzunehmen. Wenn du auf dem Handy oder mit einem Controller spielst, werden wir bei der Hörbarkeit der Klicks nicht so streng sein.",
+            "Obwohl ein Eingabe-Overlay KEIN Ersatz für Klicks ist, könnte es helfen, die Legitimität deines Rekords zu überprüfen (z.B. bei leisen Klicks), aber es ist nicht erforderlich.",
+            "Die Verwendung von \"Click Sounds\" oder eines \"Click Bot\", um echte Klicks zu ersetzen, ist verboten und macht deinen Rekord ungültig.",
+            "Modding",
+            "Die Verwendung von Hacks, Exploits und externen Programmen, die die Physik oder Eingaben verändern, Hitboxen modifizieren, Informationen anzeigen, die sonst nicht verfügbar wären, die Geschwindigkeit des Spiels anpassen oder die Spielmechanik grundlegend verändern, ist nicht erlaubt, mit den folgenden Ausnahmen:",
+            "Show Hitbox on Death (dein Rekord könnte aber abgelehnt werden, wenn dies einen signifikanten Vorteil im Gameplay verschafft, z.B. bei unsichtbarem/Memory-Gameplay)",
+            "Custom Keybinds",
+            "Globed (Keine Player Collision)",
+            "Wenn du dir unsicher bist, ob ein Mod legitim ist, kontaktiere ein Mitglied des Rekord-Teams.",
+            "Pause-Buffering",
+            "Pause-Buffering ist ein Exploit, bei dem durch schnelles Pausieren und Fortsetzen des Spiels effektiv in Zeitlupe gespielt wird.",
+            "Rekorde, die diesen Exploit nutzen, werden nicht akzeptiert.",
+            "Normales Pausieren wird nicht als Pause-Buffering verdächtigt. Es ist nur in Fällen verboten, in denen es bewusst genutzt wird, um einen Vorteil zu erlangen. Du darfst während zeitlich begrenzter Abschnitte pausieren, um während des Runs nachzudenken.",
+            "Sonstiges",
+            "Deine Rekorde müssen von dir (dem alleinigen Eigentümer dieses Accounts) durchgeführt werden. Wenn jemand ein Level oder einen Abschnitt eines Levels physisch für dich abschließt, wird dieser Rekord ungültig.",
+            "Zwei-Spieler-Level oder Level mit Zwei-Spieler-Mechanik müssen alleine abgeschlossen werden.",
+            "Das Spielen auf einer Kopie eines Levels ist erlaubt, aber du darfst keine Änderungen vornehmen. Kontaktiere ein Mitglied des Rekord-Teams, wenn du ein LDM (Low Detail Mode) zur Nutzung freigegeben haben und es in die \"Pemonlist LDM\"-Liste im Spiel aufgenommen haben möchtest.",
+            "Eine gekürzte Version deiner Aufnahme beizufügen, erleichtert dem Rekord-Team die Überprüfung deines Durchlaufs.",
+            "Das Video, das du einreichst, wird öffentlich mit deinem Rekord verlinkt. Es muss Aufnahmen deines Durchlaufs enthalten, die genau deine Rohaufnahmen widerspiegeln.",
+            "Du musst für alle eingereichten Rekorde denselben Benutzernamen verwenden. Das absichtliche Einreichen von Rekorden unter mehreren Accounts führt zur Entfernung deiner Rekorde.",
+            "Diese Richtlinien gelten gleichermaßen für alle Geräte (Handy, PC, etc.).",
+            "Wenn das Video, das auf der Website angezeigt wird, irgendwelches NSFW-Material enthält, könnte dein Rekord abgelehnt werden, da wir keine NSFW-Inhalte auf unserer Website verlinken wollen.",
+            "Durchläufe, die große Skips oder geheime Wege nutzen, könnten deinen Rekord ungültig machen. (Kleine Skips sind in Ordnung) – Wenn du dir unsicher bist, ob ein Skip erlaubt ist, kontaktiere ein Mitglied des Teams.",
+            "Letzte Bemerkung:",
+            "Wenn du dir unsicher bist, ob dein Rekord diesen Richtlinien entspricht, kannst du die \"Zusätzlichen Notizen\" beim Einreichen deines Rekords nutzen oder ein Mitglied des Helfer-Teams im Support-Kanal des Discord-Servers um Rat fragen – in manchen Fällen können Ausnahmen gemacht werden.",
+            "Wenn du irgendwelche Änderungen oder Ergänzungen zu diesen Regeln vorschlagen möchtest, kontaktiere bitte ein Mitglied des Teams.",
+            "Großes Dankeschön an TPL."
+        ],
+
+        "time": "0:00:00.000",
+        "required": "erforderlich"
+    },
+
+    "credits": {
+        "programming": "Programmierung",
+        "owner": "Listeigentümer",
+        "admins": "Listadmins",
+        "helpers": "Listhelfer",
+        "translators": "Übersetzer"
+    },
+
+    "fallback": [
+        "Upsi!",
+        "Die angeforderte URL konnte nicht ordnungsgemäß abgerufen werden. Wenn du eine falsche URL eingegeben hast, überprüfe bitte deine Schreibweise und versuche es erneut.",
+        "Nicht deine Schuld? Schreibe dem Entwickler eine Nachricht!"
+    ]
+}

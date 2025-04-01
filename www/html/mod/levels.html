@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---->
+    {% include "template/meta.html" %}
+    <!---->
+    <link rel="stylesheet" href="/static/css/min/mod.min.css">
+    <link rel="stylesheet" href="/static/css/min/modlevels.min.css">
+</head>
+<body>
+    <!---->
+    {% include "template/nav.html" %}
+    <!---->
+    <main>
+        <div class="container">
+            <div class="select">
+                <a href="/mod/records">{{ translation.mods.records.records }}</a>
+                <a href="/mod/users">{{ translation.mods.users.users }}</a>
+                <a href="/mod/levels">{{ translation.mods.levels.levels }}</a>
+            </div>
+            <div class="display">
+                <span class="level">
+                    <div class="search">
+                        <span class="material-symbols-outlined">search</span>
+                        <span class="material-symbols-outlined">hourglass_empty</span>
+                        <input type="text" list="levels" placeholder="{{ translation.mods.levels.placeholder }}" autocomplete="none" multiple>
+                        <datalist id="levels">
+                            {% for level in levels %}
+                                <option
+                                    label="#{{ level.placement }} - {{ level.level_id }}"
+                                    value="{{ level.name }}"
+                                    data-id="{{ level.id }}"
+                                    data-name="{{ level.name }}"
+                                    data-placement="{{ level.placement }}"
+                                    data-video-id="{{ level.video_id }}"
+                                    data-level-id="{{ level.level_id }}"
+                                    data-creator="{{ level.creator }}"
+                                    data-verifier-name="{{ level.verifier.name }}"
+                                ></option>
+                            {% endfor %}
+                        </datalist>
+                    </div>
+                    <form action="/mod/levels" method="post" class="preview">
+                        <h1>
+                            <span>#<input type="number" name="placement" min="1" placeholder="{{ translation.mods.levels.placement }}" autocomplete="none" required></span>
+                            <hr>
+                            <span><input type="text" name="name" placeholder="{{ translation.mods.levels.level }}" autocomplete="none" required></span>
+                        </h1>
+                        <hr>
+                        <div class="users">
+                            <span>
+                                <h3>{{ translation.mods.levels.creator }}</h3>
+                                <p><input type="text" name="creator" placeholder="{{ translation.mods.levels.creator }}" autocomplete="none" required></p>
+                            </span>
+                            <span data-id="">
+                                <h3>{{ translation.mods.levels.verifier }}</h3>
+                                <p>
+                                    <input type="text" name="verifier" list="players" placeholder="{{ translation.mods.levels.verifier }}" autocomplete="none" required>
+                                    <datalist id="players">
+                                        {% for player in players %}
+                                            <option
+                                                value="{{ player.name }}"
+                                            ></option>
+                                        {% endfor %}
+                                    </datalist>
+                                </p>
+                            </span>
+                        </div>
+                        <section>
+                            <iframe
+                                src="https://www.youtube-nocookie.com/embed/{ videoId }/"
+                                frameborder="0"
+                                allow="fullscreen"
+                                allowfullscreen="allowfullscreen"
+                            ></iframe>
+                            <span class="info">
+                                <span>
+                                    <h3>{{ translation.mods.levels.video }}</h3>
+                                    <p><input type="url" name="video" placeholder="{{ translation.mods.levels.youtube }}" autocomplete="none" required></p>
+                                </span>
+                                <span class="id">
+                                    <div>
+                                        <h3>{{ translation.mods.levels.id }}</h3>
+                                        <p><input type="number" name="levelid" min="1" placeholder="{{ translation.mods.levels.levelID }}" autocomplete="none" required></p>
+                                    </div>
+                                </span>
+                            </span>
+                        </section>
+                    </form>
+                    <div class="submit">
+                        <input type="submit" value="">
+                    </div>
+                </span>
+                <span class="selector">
+                    <div>
+                        <button data-method="editlevel" >{{ translation.mods.levels.side[0] }}</button>
+                        <p>{{ translation.mods.levels.side[1] }}</p>
+                        <button data-method="addlevel" >{{ translation.mods.levels.side[2] }}</button>
+                    </div>
+                </span>
+            </div>
+        </div>
+    </main>
+    <!---->
+    {% include "template/footer.html" %}
+    <!---->
+</body>
+
+<!---->
+{% include "template/include.html" %}
+<!---->
+<script src="/static/js/modlevels.js"></script>
+<script src="/static/js/jump.js"></script>
+
+</html>

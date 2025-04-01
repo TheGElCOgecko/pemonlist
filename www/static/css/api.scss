@@ -1,0 +1,667 @@
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+details {
+    summary {
+        &::marker {
+            content: "";
+        }
+
+        &::before {
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23eef' viewBox='0 0 16 16'%3E%3Cpath d='m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z'/%3E%3C/svg%3E");
+            position: relative;
+            top: 2px;
+            width: 14px;
+            margin-right: 15px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &[open] summary::before {
+        transform: rotate(90deg) translateX(-2px);
+    }
+}
+
+.main {
+    flex-grow: 1;
+    max-width: calc(100% - 316px);
+}
+
+.side {
+    margin-left: 20px;
+    position: sticky;
+    top: 90px;
+    width: 275px;
+    background-color: #112;
+    border-radius: 20px;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    border: 2px solid #334;
+    overflow: hidden;
+
+    details {
+        margin-left: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        summary {
+            margin-left: -60px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            cursor: pointer;
+            padding: 15px;
+
+            &::before {
+                margin-right: 20px;
+                left: 3px;
+            }
+        }
+
+        &[open] summary {
+            background-color: #2238;
+            border-bottom: 2px solid #334;
+
+            &::before {
+                translate: -2px;
+            }
+        }
+
+        > a {
+            margin-top: 15px;
+            display: table; // ?????????? how does this work
+
+            &:last-child {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    a {
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        color: #eef;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    > span {
+        padding: 15px;
+    }
+
+    > span:not(:last-child) {
+        border-bottom: 2px solid #334;
+    }
+}
+
+.main > div {
+    position: relative;
+    padding: 20px;
+    background-color: #334;
+    border-radius: 20px;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    overflow-wrap: break-word;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        margin: 0px;
+    }
+
+    span {
+        &:not(:first-child) {
+            margin-top: 20px;
+        }
+
+        &.table {
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #223;
+            display: flex;
+            justify-content: flex-start;
+            align-items: stretch;
+            flex-direction: column;
+
+            a {
+                padding: 10px;
+                cursor: pointer;
+                text-decoration: none;
+                color: #eef;
+                border-radius: 5px;
+                display: flex;
+
+                span {
+                    margin: 0px;
+                }
+
+                .dark {
+                    color: #99a;
+                    margin-left: 15px;
+                }
+            }
+        }
+
+        h2 {
+            margin: 0px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 0px;
+            line-height: 1.3;
+            text-align: left;
+            
+            &:not(:last-child) {
+                margin-bottom: 1ch;
+            }
+        }
+
+        code {
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #223;
+        }
+
+        h3 {
+            margin: 0px;
+            margin-top: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #445;
+        }
+
+        ul {
+            margin: 10px;
+            margin-left: 0px;
+            padding-left: 0px;
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+
+            li {
+                margin: 0px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+
+                :first-child {
+                    margin-right: 25px;
+                    position: relative;
+
+                    &::after {
+                        display: block;
+                        content: "";
+                        width: 15px;
+                        height: 1px;
+                        background-color: #778;
+                        position: absolute;
+                        top: 50%;
+                        right: -20px;
+                    }
+                }
+            }
+        }
+    }
+
+    blockquote {
+        padding: 15px;
+        border: 2px solid;
+        border-radius: 10px;
+        margin: 0px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+
+        &:not(:first-child) {
+            margin-top: 15px;
+        }
+
+        svg {
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        span {
+            margin-top: 0px;
+    
+            p {
+                line-height: 1.3;
+            }
+        }
+
+        &.info {
+            border-color: #66f;
+            background-color: #66f4;
+        }
+    }
+}
+
+.references {
+    h1 {
+        margin: 0px;
+        text-align: center;
+    }
+
+    ol {
+        margin: 0px;
+        margin-top: 20px;
+        width: calc(100% - 40px);
+
+        li p {
+            display: inline;
+            margin: 0px;
+        }
+    }
+}
+
+sup a {
+    text-decoration: none;
+    color: #88f;
+
+    &:visited, &:active {
+        color: #f88;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.reference {
+    position: absolute;
+    max-width: 400px;
+    transition: opacity 200ms ease-out;
+    opacity: 1;
+    z-index: 3;
+    padding: 10px;
+
+    span {
+        transition: transform 250ms ease-out;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px #0118;
+        background-color: #112;
+        display: block;
+        transform: translateY(0px);
+        outline: 2px solid #445;
+    }
+
+    &.hidden:not(:hover) {
+        pointer-events: none;
+        opacity: 0;
+
+        span {
+            transform: translateY(-10px);
+        }
+
+        .arrow {
+            transform: translate(-50%, -16px) rotate(135deg);
+        }
+    }
+
+    .arrow {
+        transition: transform 250ms ease-out;
+        position: absolute;
+        left: 50%;
+        bottom: 0px;
+        width: 13px;
+        height: 13px;
+        background-color: #112;
+        transform: translate(-50%, -4px) rotate(135deg);
+        clip-path: polygon(20% -20%, 0% 0%, 100% 100%, 120% 80%, 120% -20%);
+        outline: 2px solid #445;
+        z-index: 0;
+    }
+}
+
+.endpoint {
+    h3 {
+        font-family: 'Droid Sans Mono', 'Courier New', Courier, monospace;
+        text-align: center;
+        margin: 0px;
+        margin-top: 10px;
+        font-weight: 500;
+        color: #ccd;
+        font-size: medium;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .dark {
+            margin: 0px;
+            color: #88a;
+            font-size: 80%;
+        }
+    }
+
+    div {
+        display: flex;
+
+        span {
+            display: flex;
+            flex-direction: column;
+            width: calc(50% - 10px);
+
+            &:first-child {
+                margin-right: 20px;
+            }
+            
+            h2 {
+                margin: 0px;
+            }
+
+            p {
+                margin: 10px 0px;
+                margin-bottom: 0px !important;
+            }
+
+            details {
+                margin-top: 10px;
+                border-radius: 10px;
+                overflow: hidden;
+                border: 2px solid #445;
+                background-color: #2238;
+                overflow-x: auto !important;
+
+                > *:not(summary) {
+                    min-width: 350px
+                }
+
+                .title {
+                    margin: 0px 15px;
+                    margin-bottom: 10px;
+                    width: unset;
+                    margin-top: 5px;
+                    flex-grow: 1;
+
+                    p {
+                        padding: 0px;
+                        margin: 0px !important;
+                        
+                        &::before {
+                            display: none;
+                        }
+                    }
+
+                    code {
+                        background-color: #dde;
+                        color: #001;
+                    }
+
+                    &:hover {
+                        background-color: #223;
+                        border-radius: 5px;
+                        outline: 5px solid #223;
+                    }
+                }
+
+                .section {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: stretch;
+                    margin: 0px;
+                    padding-left: 0px;
+                    margin-left: 15px;
+                    margin-bottom: 15px;
+                    border-left: 2px solid #445;
+                    width: calc(100% - 18px);
+                    min-width: 400px
+                }
+
+                > .section {
+                    margin-bottom: 10px;
+                }
+
+                summary {
+                    padding: 15px;
+                    cursor: pointer;
+                    left: 0px;
+                    position: sticky;
+                }
+
+                &[open=""] {
+                    padding-bottom: 5px;
+
+                    summary {
+                        border-bottom: 2px solid #445;
+                        margin-bottom: 15px;
+                        background-color: #223;
+                    }
+                }
+
+                div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0px 15px;
+                    width: calc(100% - 30px);
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    margin: 0px 15px;
+                    margin-bottom: 10px !important;
+
+                    &:hover {
+                        background-color: #223;
+                        border-radius: 5px;
+                        outline: 5px solid #223;
+                    }
+                }
+
+                span {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin: 0px 15px;
+                    width: calc(100% - 30px);
+                    margin-bottom: 10px;
+
+                    &:hover {
+                        background-color: #223;
+                        border-radius: 5px;
+                        outline: 5px solid #223;
+                    }
+
+                    code {
+                        padding: 5px;
+                        border-radius: 5px;
+                        background-color: #112;
+                        flex-shrink: 0;
+                    }
+
+                    p {
+                        margin: 0px !important;
+                        position: relative;
+                        padding-left: 30px;
+                        outline: none !important;
+                        background-color: transparent !important;
+
+                        &::before {
+                            display: block;
+                            content: "";
+                            width: 20px;
+                            height: 1px;
+                            background-color: #778;
+                            position: absolute;
+                            top: 50%;
+                            left: 5px;
+                        }
+
+                        code {
+                            background-color: #1128;
+                        }
+                    }
+                }
+            }
+
+            .head {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: stretch;
+                width: 100%;
+                margin: 0px;
+                flex-wrap: wrap;
+
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    align-items: stretch;
+                    flex-grow: 1;
+                    flex-wrap: wrap;
+
+                    button {
+                        margin-left: 5px;
+                        padding: 2px 10px;
+                        background-color: #334;
+                        border-radius: 5px;
+                        border: 2px solid #556;
+                        color: #eef !important;
+                        cursor: pointer;
+                        transition: none;
+
+                        &.hidden {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            input {
+                margin-top: 10px;
+                padding: 10px 7px;
+                background-color: #334;
+                border: 2px solid #556;
+                border-radius: 4px;
+                color: #dde;
+                font-size: medium;
+                font-family: "Whitney", Arial, Helvetica, sans-serif, "Material Symbols Outlined";
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            pre {
+                background-color: #223;
+                border-radius: 10px;
+                padding: 15px;
+                margin: 0px;
+                margin-top: 10px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                height: 250px;
+                overflow: auto;
+                resize: vertical;
+
+                &::-webkit-scrollbar-corner {
+                    background-color: #223;
+                }
+
+                code {
+                    font-style: italic;
+                    color: #aab;
+                    padding: 0px;
+                    background-color: transparent;
+
+                    [class*="hljs-"] {
+                        font-style: normal;
+                        display: inline;
+                        margin: 0px;
+                        width: inherit
+                    }
+                }
+            }
+        }
+    }
+}
+
+body:not(.touch) {
+    .table a:hover {
+        background-color: #334;
+    }
+
+    .head button:hover {
+        background-color: #445 !important;
+    }
+
+    .endpoint summary:hover {
+        background-color: #223;
+    }
+}
+
+body.touch {
+    .table a:active {
+        background-color: #334;
+    }
+
+    .head button:active {
+        background-color: #445 !important;
+    }
+
+    .endpoint summary:active {
+        background-color: #223;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .side {
+        margin: 0px;
+        margin-bottom: 20px;
+        width: 500px;
+        max-width: 100%;
+        position: unset;
+        align-self: center;
+    }
+
+    .main {
+        max-width: unset;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .endpoint div {
+        flex-direction: column;
+
+        span {
+            width: 100%;
+            margin-right: 0px;
+        }
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---->
+    {% include "template/meta.html" %}
+    <!---->
+    <link rel="stylesheet" href="/static/css/min/leaderboard.min.css">
+</head>
+<body>
+    <!---->
+    {% include "template/nav.html" %}
+    <!---->
+    <main>
+        <div class="container">
+            {% if not players is defined %}
+                <div class="placeholder">
+                    <p>{{ translation.leaderboard.processing }}</p>
+                </div>
+            {% elif not players | length > 0 %}
+                <div class="placeholder">
+                    <p>{{ translation.leaderboard.empty }}</p>
+                </div>
+            {% else %}
+                <div class="search">
+                    <span class="material-symbols-outlined">search</span>
+                    <span class="material-symbols-outlined">hourglass_empty</span>
+                    <textarea placeholder="{{ translation.search.search }}"></textarea>
+                    <div class="info"></div>
+                </div>
+                <div class="players">
+                    <div class="table">
+                        {% for player in players %}
+                            <a href="/player/{{ player.name }}">
+                                <span title="
+                                    {% if player.rank <= 25 %}
+                                        #{{ player.rank }}
+                                    {% endif %}
+                                " class="rank">
+                                    {% if player.rank <= 1 %}
+                                        <img title="#{{ player.rank }}" src="/static/img/diamondTrophy.png">
+                                    {% elif player.rank <= 5 %}
+                                        <img title="#{{ player.rank }}" src="/static/img/goldTrophy.png">
+                                    {% elif player.rank <= 10 %}
+                                        <img title="#{{ player.rank }}" src="/static/img/silverTrophy.png">
+                                    {% elif player.rank <= 25 %}
+                                        <img title="#{{ player.rank }}" src="/static/img/bronzeTrophy.png">
+                                    {% else %}
+                                        #{{ player.rank }}
+                                    {% endif %}
+                                    {% if player.rank <= 25 %}
+                                        <p>#{{ player.rank }}</p>
+                                    {% endif %}
+                                </span>
+                                <span class="holder">{{ player.name }}</span>
+                                <span class="points">
+                                    <span class="divider"></span>
+                                    <span>{{ player.points }} {{ translation.leaderboard.points }}</span>
+                                </span>
+                                <span class="device material-symbols-outlined">
+                                    {% if player.device == 'Desktop' %}
+                                        computer
+                                    {% elif player.device == 'Mobile' %}
+                                        smartphone
+                                    {% elif player.device == 'Both' %}
+                                        devices
+                                    {% endif %}
+                                </span>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="empty hidden">{{ translation.search.empty }}</div>
+            {% endif %}
+        </div>
+    </main>
+    <!---->
+    {% include "template/footer.html" %}
+    <!---->
+</body>
+
+<!---->
+{% include "template/include.html" %}
+<!---->
+<script src="/static/js/leaderboard.js"></script>
+<script src="/static/js/jump.js"></script>
+
+</html>

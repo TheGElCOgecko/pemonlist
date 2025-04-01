@@ -1,0 +1,439 @@
+{
+    "nav": {
+        "list": "List",
+        "leaderboard": "Scorebord",
+        "submit": "Record Indienen",
+        "rules": "Regels",
+        "credits": "Credits",
+        "discord": "Discord",
+
+        "account": "Account",
+        "logout": "Uitloggen",
+        "settings": "Instellingen",
+        "login": "Inloggen"
+    },
+
+    "search": {
+        "search": "Zoeken",
+
+        "results": {
+            "s": "{} resultaat",
+            "p": "{} resultaten"
+        },
+        "seconds": {
+            "s": " in {} seconde",
+            "p": " in {} seconden"
+        },
+
+        "empty": "Geen resultaten."
+    },
+    
+    "scroll": "Naar begin Scrollen",
+
+    "agreement": {
+        "text": [
+            "Bij het gebruik van deze website gaat u akkoord met het gebruik van cookies, en ook met de {} en het {}.",
+            "We zullen noot opzettelijk uw data opsporen of verkopen, onder geen omstandigheid."
+        ],
+        "terms": "Voorwarden",
+        "privacy": "Privacybeleid",
+
+        "confirm": "Begrepen"
+    },
+
+    "footer": {
+        "attribution": "Deze site is niet aangesloten bij RobTop Games AB, alle rechten voorbehouden.",
+        "privacy": "Privacybeleid",
+        "terms": "Voorwaarden",
+        "rules": "Regels bij Indienen Records",
+        "credits": "Credits",
+        "docs": "API Dokumentumok"
+    },
+
+    "list": {
+        "list": "List",
+        "extended": "Extended List",
+        "legacy": "Legacy List",
+
+        "thumbnailAlt": "{}'s thumbnail",
+        "crownAlt": "Eerste plaats kroon"
+    },
+
+    "level": {
+        "creator": "Auteur",
+        "verifier": "Verificateur",
+        "records": "Records",
+        "points": "Punten wanneer Voltooid",
+        "id": "ID"
+    },
+
+    "login": {
+        "login":"Inloggen",
+        "google": "Google",
+        "discord": "Discord"
+    },
+
+    "leaderboard": {
+        "processing": "Het scorebord is momenteel records aan het verwerken, probeer a.u.b. later weer.d",
+        "empty": "Het scorebord is momenteel leeg.",
+        "points": "punten"
+    },
+
+    "player": {
+        "score": "Score",
+        "completions": "Voltooiingen",
+        "verifications": "Verificaties",
+        "video": "Video Link",
+        "records": "Records"
+    },
+
+    "submit": {
+        "submit": "Indienen",
+
+        "reminder": "Lees eerst de {} voordat je een record indient!",
+        "rules": "regels",
+
+        "time": "Tijd",
+        "timeError": "Vier a.u.b. en geldig tijd formaat.",
+        
+        "level": "Level",
+        "levelError": "Voer a.u.b. een geldig level naam in.",
+        "levelPlaceholder": "Level Naam",
+
+        "youtube": "YouTube URL",
+        "youtubeError": "Voer a.u.b. een geldige Youtube URL in.",
+        "raw": "Onbewerkte Video URL",
+        "noVideos": "Voer a.u.b. in ieder geval een video in.",
+
+        "videoSwitch": "Video",
+        "rawSwitch": "Onbewerkt",
+
+        "noVideo": "Uw video zal hier komen te staan.",
+        "processing": "Verwerken...",
+        "invalidVideo": "Sorry, dat is geen geldige YouTube video.",
+
+        "device": "Apparaat",
+        "desktop": "Desktop",
+        "mobile": "Mobiel",
+
+        "notes": "Toevoegende Opmerkingen (optioneel)",
+        "finish": "Record Indienen"
+    },
+
+    "submitted": {
+        "submitted": "Gefeliciteerd!",
+
+        "text": [
+            "Uw record is ingediend voor een beoordeling, en zal spoedig door een list mod beoordeeld worden.",
+            "Onthoud a.u.b. dat records tot een week kunnen duren om geverifieerd te worden, en we hebben het recht uw record te weigeren als we gedachtes hebben dat je de {} niet volgt.",
+            "Houd uw privé-berichten voor vragen deen een list mod kan hebben over uw record.",
+            "Om uw records te zien die in behandeling zijn en de status daarvan, ga dan naar uw account pagina."
+        ],
+        "rules": "regels",
+
+        "account": "Ga naar account",
+        "submit": "Dien een ander record in"
+    },
+
+    "duplicate": {
+        "duplicate": "Oeps!",
+
+        "text": [
+            "Uw record is al ingediend voor beoordeling, en zal spoedig door een list mod beoordeeld worden.",
+            "Onthoud a.u.b. dat records tot een week kunnen duren om geverifieerd te worden.",
+            "Om uw records te zien die in behandeling zijn en de status daarvan, ga dan naar uw account pagina."
+        ],
+
+        "account": "Ga naar account",
+        "submit": "Dien een ander record in"
+    },
+    
+    "account": {
+        "pictureAlt": "Uw profiel foto",
+
+        "unregistered": "Ongeregistreerde Gebruiker",
+
+        "score": "Score",
+        "completions": "Voltooiingen",
+        "verifications": "Verificaties",
+        "records": "Records",
+
+        "migration": {
+            "migration": "Migratie Status",
+            "requested": "Aangevraagde",
+            "id": "Aanvraag ID"
+        },
+
+        "pending": {
+            "pending": "Records in behandeling",
+            
+            "status": {
+                "waiting": "Record wacht op goedkeuring",
+                "investigating": "Record wordt onderzocht",
+                "approved": "Record is goedgekeurd",
+                "denied": "Record is geweigerd"
+            },
+
+            "denial": {
+                "denial": "Reden for weigering",
+                "empty": "Geen reden was gegeven.",
+                "confirm": "Begrepen",
+                "delete": "Verwijder record"
+            }
+        },
+        
+        "video": "Video Link",
+
+        "copied": "Gekopieerd!"
+    },
+
+    "mods": {
+        "records": {
+            "records": "Records",
+
+            "results": {
+                "s": "{} record",
+                "p": "{} records"
+            },
+            "seconds": {
+                "s": " in {} seconde",
+                "p": " in {} seconden"
+            },
+
+            "profileAlt": "{}'s profiel foto",
+            "discordAlt": "{}'s Discord profiel foto",
+
+            "video": "Video",
+            "raw": "Onbewerkt",
+            "view": "Bekijk video",
+
+            "emptyNotes": "Geen opmerking gegeven...",
+
+            "desktop": "Desktop",
+            "mobile": "Mobiel",
+
+            "status": {
+                "waiting": "Wachten",
+                "investigating": "Wordt Onderzocht",
+                "denied": "Geweigerd",
+                "approved": "Goedgekeurd"
+            },
+
+            "reason": "Reden voor weigering",
+            "update": "Update Record"
+        },
+
+        "users": {
+            "users": "Gebruikers",
+
+            "results": {
+                "s": "{} verzoek",
+                "p": "{} verzoeken"
+            },
+            "seconds": {
+                "s": " in {} seconde",
+                "p": " in {} seconden"
+            },
+
+            "profileAlt": "{}'s profiel foto",
+            "discordAlt": "{}'s Discord profiel foto",
+
+            "accept": "Accepteer",
+            "deny": "Weiger"
+        },
+
+        "levels": {
+            "levels": "Levels",
+
+            "placeholder": "Selecteer Level",
+
+            "placement": "Plaats",
+            "level": "Level Naam",
+            "creator": "Auteur",
+            "verifier": "Verificateur",
+            "video": "Video",
+            "youtube": "YouTube URL",
+            "videoError": "Voer a.u.b. een geldige YouTube video in",
+            "id": "ID",
+            "levelID": "Level ID",
+
+            "submit": "Veranderingen indienen",
+            "add": "Level Toevoegen",
+
+            "side": [
+                "Bewerk een Level",
+                "of",
+                "Voeg een Nieuw Level toe"
+            ],
+
+            "modal": {
+                "head": "Bevestiging",
+
+                "confirmation": [
+                    "Weet je zeker dat je een nieuwe gebruiker wilt maken?",
+                    "\"{}\" schijnt geen bestaande speler te zijn."
+                ],
+
+                "confirm": "Ik ben er zeker van",
+                "deny": "Toch Niet"
+            }
+        }
+    },
+
+    "settings": {
+        "settings": "Account Instellingen",
+
+        "update": "Update Account",
+        "name": "Naam",
+        "device": "Apparaat",
+        "desktop": "Desktop",
+        "mobile": "Mobiel",
+        "both": "Beide",
+        "shape": "Profiel Vorm",
+        "profileAlt": "Uw profiel foto",
+        "snow": "December Sneeuw",
+
+        "actions": "Account Acties",
+        "logout": "Uitloggen",
+        "delete": "Verwijder Account",
+
+        "nameError": [
+            "Uw gebruikersnaam moet tussen 1 en 25 characters zijn.",
+            "Voorafgaande of volgende spaties worden bijgesneden."
+        ],
+
+        "modal": {
+            "head": "Bevestiging",
+
+            "confirmation": [
+                "Weet u zeker dat u uw account wilt verwijderen?",
+                "Het zal voor een lange tij verloren zijn!"
+            ],
+            "disclaimer": "Alle huidige records zullen behouden worden.",
+
+            "confirm": "Ik ben er zeker van",
+            "deny": "Toch Niet"
+        }
+    },
+
+    "setup": {
+        "setup": "Voltooi het instellen van het account",
+
+        "username": "Gebruikersnaam",
+
+        "shape": "Profiel Vorm",
+        "profileAlt": "Uw profiel foto",
+
+        "device": "Apparaat",
+        "desktop": "Desktop",
+        "mobile": "Mobiel",
+        "both": "Beide",
+
+        "nameError": [
+            "Uw gebruikersnaam moet tussen 1 en 25 characters zijn.",
+            "Voorafgaande of volgende spaties worden bijgesneden."
+        ],
+
+        "continue": "Doorgaan",
+        
+        "bottom": "Al op de list? {}.",
+        "migrate": "Migreer uw account"
+    },
+
+    "migrate": {
+        "migrate": "Migreer Account",
+
+        "username": "Gebruikersnaam",
+
+        "shape": "Profiel Vorm",
+        "profileAlt":"Uw profiel foto",
+
+        "device": "Apparaat",
+        "desktop": "Desktop",
+        "mobile": "Mobiel",
+        "both": "Beide",
+
+        "discord": "Link Discord Account",
+
+        "continue": "Doorgaan",
+        
+        "bottom": "Nog niet op de list? {}.",
+        "setup": "Maak een account"
+    },
+
+    "oauth": [
+        "Account succesful gelinked",
+        "Je kunt nu dit window sluiten."
+    ],
+
+    "rules": {
+        "rules": [
+            "Regels",
+            "Algemene regels bij indienen",
+            "Wanneer je een tijd indient, Zorg er dan voor dat het correct geformatteerd is. (bijv. {} — als je een dubbele punt inplaats van een punt voor milliseconden gebruikt, kan het leiden tot een 502 error)",
+            "Zorg dat de correcte level ID of correcte level is gekozen in het opo-up menu. (Dit is vooral voor levels met dezelfde/vergelijkbare namen)",
+            "Het YouTube URL veld verwijst naar de video die jij wilt dat andere zien op de website.",
+            "De \"Onbewertke Video URL\" verwijst naar een ongekniped opname van jouw record, onthoud dat dit alleen geldt voor Extreme Demons. Als je een record voor niet een Extreme Demon indient en je hebt geen onbewerkte video, laat dan dit veld leeg.",
+            "Als je een record hebt ingedient en je ziet dat je een fout hebt gemaakt (bijv. de verkeerde tijd of apparaat ingevuld), neem dan contact op meet een helper de je dan zal helpen het op te lossen.",
+            "Onbewerkte Video",
+            "(Opmerking: Onbewerkte video is {} voor extreme demons, maar kan ook ingediend worden voor niet extremes. De volgende regels zijn alleen bij extremes van toepassing)",
+            "Je moet een opname indienen van uw voltooiing die uw hele run laat zien met elke checkpoint en ook het eindscherm.",
+            "Een volledige opname is ideaal, maar ten minste 5 minuten voor elke checkpoint is nodig. (Of the volledige opname vanaf de begin pogingen van de checkpoint)",
+            "Je kunt de onebewerkte video niet bewerken in geen enkele manier behalve het bij elkaar plakken van segmenten in een video.",
+            "De opname moet microfoon audio met clicks die je kunt horen hebben.",
+            "Uploaden naar sites zoals Google Drive / MEGA / Gofile is ideaal zodat het records team de video kan downloaden — only if requested.",
+            "Sites zoals YouTube zijn acceptabel, maar je moet het bestand/de bestanden van de video voor minimaal 2 weken bewaren, voor het geval het records team ernaar vraagt.",
+            "Kwaliteit",
+            "De volgende dingen zijn reden die een record onverifieerbaar kunnen maken:",
+            "Extreem Lage Resolutie",
+            "Erge Framerate Drops",
+            "Bedekte Gameplay",
+            "onverstaanbare klikgeluiden (Voor Extremes)",
+            "Als je onzeker bent of jouw video van acceptabele kwalitiet is, neem dan contact op met iemand van het helper team of in het support kanaal in de discord server.",
+            "Als het voor jouw moeilijk is om clicks op te nemen, gebruik van een telefoon of een vergelijkbar apparaat om audio op the nemen terwijl je speelt is aanbevolen, en als je een mobiel of controller spelere bent, zullen we niet net zo strict zijn over hoe hoorbaar de clicks zijn.",
+            "Een input display is GEEN vervanging voor clicks, alls je het gebruikt kan het wel helpen je records te verifiëren (als je bijv. stille clicks hebt) maar isn't nodig.",
+            "Het gebruik van \"Click Sounds\" of een \"Click Bot\" om echte clicks the vervangen is niet toegestaan, en zal jouw record dus ongeldig verklaren.",
+            "Modding",
+            "Het gebruik van hacks, exploits, externe programmas, inputs, hitboxes, informatie laten zien die niet normaal te zien hoort te zijn, game snelheid, of dingen veranderen die fundamenteel de gameplay veranderen zijn niet toegestaan, behalve de volgende uitzonderingen:",
+            "Show Hitbox On Death (Je records kan geweigerd worden als het wordt gebruikt voor een groot voordeel voor een level's gameplay bijv. Onzichtbaar/Memory gameplay)",
+            "Custom Keybinds",
+            "Globed (Geen Speler Collision)",
+            "Als je onzeker bent van de legitimiteit van een mod, neem dan contact op met iemand van ons team.",
+            "Pause Buffering",
+            "Pause Buffering is een exploit waarbij je gebruikt maakt van vaak pauzeren, om effectief in slow motion te spelen.",
+            "Records die deze exploit gebruiken worden niet geaccepteerd.",
+            "Normaal gebruik van pauzeren zal niet verdacht worden als pause buffering. Het is alleen niet toegestaan om het express te gebruiken om er voordel van te krijgen. Je mag gebruik maken van pauzeren tijdens getimede delen om na te denken.",
+            "Gemengd",
+            "Je voltooiingen moeten gehaald worden door jou (de enige eigenaar van het account), als iemand anders een deel of het hele level voor jou doet zal dat je record misschien ongeldig maken.",
+            "Twee-speler levels of levels die twee-speler mechanismes gebruiken moeten solo worden gehaald.",
+            "Spelen op een kopie van een level is toegestaan, maar je kan geen vranderingen maken. Neem contact op met een lid van het records team als je een LDM goedgekeurd wilt hebben voor gebruik, en toevoeginen tot de in game \"Pemonlist LDM\" list.",
+            "Een geknipte video toevoegen van jouw record geeft het record team een makkelijkere tijd om jouw record to beoordelen.",
+            "De video die je indient zal publiekelijk gelinkt worden aan jouw record. Het moet footage hebben van jouw voltooiing die jouw onbewerkte video reflecteerd.",
+            "Je moet dezelfde accountnaam gebruiken voor alle records die je indient. Als je opzettelijk records onder een meerdere namen indient, worden je records verwijderd.",
+            "Deze richtlijnen gelden gelijkmatig voor alle apparaten. (Mobiel, PC, enz.)",
+            "Als de video die op de website te zien zal zijn NSFW materiaal bevatten, kan jouw record afgewezen worden. Wij wille geen link naar NSFW op onze website.",
+            "Grote skips of geheime routes kunnen je record invalideren. (Kleine skips zijn prima)  Als je onzeker bent of een skip mag gebruikt worden, neem dan contact op met iemand van ons team.",
+            "Laatste Opmerking:",
+            "Als je onzekere bent of jouw record de regels volgt, kan je de \"Toevoegende Opmerkingen\" bij het indienen of je vraagt een lid van het helper team voor begeleiding in het support kanaal in de discord server - uitzonderingen kunnen in sommige omstandigheden gemaakt worden.",
+            "Als je suggesties hebt voor veranderingen en toevoegingen aan de regels, neem dan a.u.b. contac op met een lid van ons team.",
+            "GROTE dank aan de TPL."
+        ],
+
+        "time": "0:00:00.000",
+        "required": "verplicht"
+    },
+
+    "credits": {
+        "programming": "Programmeren",
+        "owner": "List Eigenaar",
+        "admins": "List Beheerders",
+        "helpers": "List Helpers",
+        "translators": "Vertalers"
+    },
+
+    "fallback": [
+        "Oops!",
+        "De aangevraagde URL kon niet goed opgehaald worden. Als u een incorrent URL in heeft gevoerd, check dan a.u.b. de spelling en probeer het opnieuw.",
+        "Niet uw schuld? Stuur gerust een bericht naar de ontwikkelaar!"
+    ]
+}

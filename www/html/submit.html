@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---->
+    {% include "template/meta.html" %}
+    <!---->
+    <link rel="stylesheet" href="/static/css/min/submit.min.css">
+</head>
+<body>
+    <!---->
+    {% include "template/nav.html" %}
+    <!---->
+    <main>
+        <div class="container">
+            <div class="form">
+                <h1>{{ translation.submit.submit }}</h1>
+                <p>{{ translation.submit.reminder | sandwich(0) }}<a class="proper" href="/rules">{{ translation.submit.rules }}</a>{{ translation.submit.reminder | sandwich(1) }}</p>
+                <form action="/submit" method="post">
+                    <span class="beside">
+                        <span>
+                            <label for="time">{{ translation.submit.time }}</label>
+                            <input type="text" name="time" id="time" placeholder="0:00:00.000" required autocomplete="none">
+                        </span>
+                        <span>
+                            <label for="level">{{ translation.submit.level }}</label>
+                            <span style="width: unset; margin: 0px;">
+                                <input type="text" list="levels" name="level" id="level" placeholder="{{ translation.submit.levelPlaceholder }}" required autocomplete="none" multiple>
+                            </span>
+                            <input type="hidden" name="levelid" id="levelid">
+                            <datalist id="levels">
+                                {% for level in levels %}
+                                    <option label="#{{ level.placement }} - {{ level.level_id }}" value="{{ level.name }}" data-level-id="{{ level.level_id }}" data-creator="{{ level.creator }}"></option>
+                                {% endfor %}
+                            </datalist>
+                        </span>
+                    </span>
+                    <span class="video">
+                        <span>
+                            <label for="video">{{ translation.submit.youtube }}</label>
+                            <input type="url" name="video" id="video" placeholder="https://youtube.com/watch" required>
+                            <input type="hidden" name="videoid" id="videoid">
+                            <label for="raw">{{ translation.submit.raw }}</label>
+                            <input type="url" name="raw" id="raw" placeholder="https://drive.google.com/file">
+                        </span>
+                        <span class="default">
+                            <div class="select">
+                                <span class="selected" state="video">{{ translation.submit.videoSwitch }}</span>
+                                <span state="raw">{{ translation.submit.rawSwitch }}</span>
+                            </div>
+                            <div class="preview">
+                                <p data-index="1">{{ translation.submit.noVideo }}</p>
+                                <p data-index="2">{{ translation.submit.processing }}</p>
+                                <iframe src="" frameborder="0" allow="fullscreen" allowfullscreen="allowfullscreen"></iframe>
+                                <p data-index="3">{{ translation.submit.invalidVideo }}</p>
+                            </div>
+                        </span>
+                    </span>
+                    <label for="device">{{ translation.submit.device }}</label>
+                    <select id="device" name="device">
+                        <option value="desktop">{{ translation.submit.desktop }}</option>
+                        <option value="mobile">{{ translation.submit.mobile }}</option>
+                    </select>
+                    <textarea name="notes" id="notes" placeholder="{{ translation.submit.notes }}" rows="3"></textarea>
+                    <hr>
+                    <input type="submit" value="{{ translation.submit.finish }}">
+                </form>
+            </div>
+        </div>
+    </main>
+    <!---->
+    {% include "template/footer.html" %}
+    <!---->
+</body>
+
+<!---->
+{% include "template/include.html" %}
+<!---->
+<script src="/static/js/submit.js"></script>
+<script src="/static/js/jump.js"></script>
+
+</html>

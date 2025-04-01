@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---->
+    {% include "template/meta.html" %}
+    <!---->
+    <link rel="stylesheet" href="/static/css/min/fallback.min.css">
+</head>
+<body>
+    <!---->
+    {% include "template/nav.html" %}
+    <!---->
+    <main>
+        <div class="container">
+            <h1>{{ translation.fallback[0] }}</h1>
+            <span>
+                <p>{{ translation.fallback[1] }}</p>
+                <p>{{ translation.fallback[2] }}</p>
+                <code>{{ status }}</code>
+                {% if error %}
+                    <details>
+                        <summary>Error</summary>
+                        <pre><code>{{ error.stack }}</code></pre>
+                    </details>
+                {% endif %}
+            </span>
+        </div>
+    </main>
+    <!---->
+    {% include "template/footer.html" %}
+    <!---->
+</body>
+
+<!---->
+{% include "template/include.html" %}
+<!---->
+
+</html>

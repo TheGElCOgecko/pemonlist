@@ -1,0 +1,41 @@
+{
+  "name": "pemonlist",
+  "version": "1.2.1-pre.5",
+  "description": "Platformer demon list website",
+  "main": "src/main.ts",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint",
+    "start": "bun run ./src/main.ts",
+    "start:lint": "bun lint --fix && bun start"
+  },
+  "author": "TheGElCOgecko",
+  "contributors": [
+    "TheGElCOgecko",
+    "Lexi",
+    "camila314"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@stylistic/eslint-plugin": "^2.12.1",
+    "cookie-parser": "^1.4.7",
+    "edgedb": "^1.5.12",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "express": "^5.0.1",
+    "nunjucks": "^3.2.4",
+    "typescript-eslint": "^8.19.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/bun": "^1.1.14",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.5",
+    "@types/nunjucks": "^3.2.6",
+    "discord-oauth2": "^2.12.1",
+    "eslint": "^9.17.0",
+    "globals": "^15.14.0",
+    "google-auth-library": "^9.15.0"
+  }
+}

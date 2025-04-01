@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---->
+    {% include "template/meta.html" %}
+    <!---->
+    <link rel="stylesheet" href="/static/css/min/submit.min.css">
+</head>
+<body>
+    <!---->
+    {% include "template/nav.html" %}
+    <!---->
+    <main>
+        <div class="container">
+            <div class="status">
+                <h1>{{ translation.submitted.submitted }}</h1>
+                <div>
+                    <p>{{ translation.submitted.text[0] }}</p>
+                    <p>{{ translation.submitted.text[1] | sandwich(0) }}<a href="/rules" class="proper">{{ translation.submitted.rules }}</a>{{ translation.submitted.text[1] | sandwich(1) }}</p>
+                    <p>{{ translation.submitted.text[2] }}</p>
+                    <p>{{ translation.submitted.text[3] }}</p>
+                </div>
+                <hr>
+                <span>
+                    <a href="/account">{{ translation.submitted.account }}</a>
+                    <a href="/submit">{{ translation.submitted.submit }}</a>
+                </span>
+            </div>
+        </div>
+    </main>
+    <!---->
+    {% include "template/footer.html" %}
+    <!---->
+</body>
+
+<!---->
+{% include "template/include.html" %}
+<!---->
+
+</html>

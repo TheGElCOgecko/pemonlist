@@ -1,0 +1,440 @@
+{
+    "nav": {
+        "list": "Lista",
+        "leaderboard": "Ranglista",
+        "submit": "Rekord Beküldés",
+        "rules": "Szabályok",
+        "credits": "Kreditek",
+        "discord": "Discord",
+
+        "account": "Fiók",
+        "logout": "Kijelentkezés",
+        "settings": "Beállítások",
+        "login": "Bejelentkezés"
+    },
+
+    "search": {
+        "search": "Keresés",
+
+        "results": {
+            "s": "{} eredmény",
+            "p": "{} eredmények"
+        },
+        "seconds": {
+            "s": " {} másodpercen belül",
+            "p": " {} másodpercen belül"
+        },
+
+        "empty": "Nincs Eredmény"
+    },
+    
+    "scroll": "Görgessen a tetejére",
+
+    "agreement": {
+        "text": [
+            "A weboldal használatával Ön elfogadja a cookie-k használatát, valamint az Általános {} és az {}.",
+            "Soha nem fogjuk szándékosan nyomon követni vagy eladni adatait, bármi is történjen."
+        ],
+        "terms": "Szerződési Feltételeket",
+        "privacy": "Adatvédelmi szabályzatot",
+
+        "confirm": "Rendben"
+    },
+
+    "footer": {
+        "attribution": "Ez az oldal semmilyen módon nem áll kapcsolatban a RobTop Games AB-vel, minden jog fenntartva.",
+        "privacy": "Adatvédelmi Szabályzat",
+        "terms": "Felhasználási feltételek",
+        "rules": "Beküldési szabályok",
+        "credits": "Kreditek",
+        "docs": "API Docs"
+    },
+
+    "list": {
+        "list": "Lista",
+        "extended": "Kiterjedt Lista",
+        "legacy": "Hagyaték Lista",
+
+        "thumbnailAlt": "{} indexképe",
+        "crownAlt": "Első helyezett koronálya"
+    },
+
+    "level": {
+        "creator": "Készítő",
+        "verifier": "Verifier",
+        "records": "Rekordok",
+        "points": "Pontok teljesítése után",
+        "id": "ID"
+    },
+
+    "login": {
+        "login": "Bejelentkezés",
+        "google": "Google",
+        "discord": "Discord"
+    },
+
+    "leaderboard": {
+        "processing": "A ranglista az jelenleg feldolgozza a rekordokat kérem próbálkozzon meg később",
+        "empty": "A ranglista jelenleg üres",
+        "points": "pontok"
+    },
+
+    "player": {
+        "score": "Pontszám",
+        "completions": "Completions",
+        "verifications": "Verifications",
+        "video": "Videó Link",
+        "records": "Rekordok"
+    },
+
+    "submit": {
+        "submit": "Beküldés",
+
+        "reminder": "Feladás előtt feltétlenül {}!",
+        "rules": "olvassa el a szabályzatot",
+
+        "time": "idő",
+        "timeError": "Adjon meg egy érvényes időformátumot.",
+        
+        "level": "Pálya",
+        "levelError": "Adjon meg egy érvényes pálya nevet.",
+        "levelPlaceholder": "Pálya Neve",
+
+        "youtube": "Youtube URL",
+        "youtubeError": "Adj meg egy érvényes YouTube URL-t.",
+        "raw": "Nyers felvétel URL-je",
+        "noVideos": "Kérjük, adjon meg legalább egy videót.",
+
+        "videoSwitch": "Videó",
+        "rawSwitch": "Nyers",
+
+        "noVideo": "A videód itt fog megjelenni.",
+        "processing": "Feldolgozás...",
+        "invalidVideo": "Sajnáljuk, ez nem érvényes YouTube-videó.",
+
+        "device": "Eszköz",
+        "desktop": "Számítógép",
+        "mobile": "Mobil",
+
+        "notes": "További megjegyzések (opcionális)",
+        "finish": "Rekord Beküldése"
+    },
+
+    "submitted": {
+        "submitted": "Gratulálok!",
+
+        "text": [
+            "A rekordodatt elküldtük felülvizsgálatra, és hamarosan egy listamódosító fog hozzájutni.",
+            "Kérjük, ne feledje, hogy a feljegyzések teljes ellenőrzése akár egy hetet is igénybe vehet, és jogunkban áll megtagadni a nyilvántartását, ha azt gyanítjuk, hogy csalt vagy megszegi a {}.",
+            "Tartsa szemmel a DM-jeit, ha kérdései vannak a listamódnak a rekordjával kapcsolatban.",
+            "A folyamatban lévő rekordok és azok aktuális állapotának megtekintéséhez lépjen a fiókja oldalára."
+        ],
+
+        "rules": "szabályokat",
+
+        "account": "Ugrás a fiókhoz",
+        "submit": "Beküldés még egy rekordot"
+    },
+
+    "duplicate": {
+        "duplicate": "Hoppá!",
+
+        "text": [
+            "A rekordot már elküldték felülvizsgálatra, és hamarosan egy listamód fog hozzájutni.",
+            "A rekordot már elküldték felülvizsgálatra, és hamarosan egy listamód fog hozzájutni.",
+            "A folyamatban lévő rekordok és azok aktuális állapotának megtekintéséhez lépjen a fiókja oldalára."
+        ],
+
+        "account": "Ugrás a fiókhoz",
+        "submit": "Beküldés egy másik rekordot"
+    },
+    
+    "account": {
+        "pictureAlt": "A Profil képed",
+
+        "unregistered": "Nem regisztrált felhasználó",
+
+        "score": "Pontok",
+        "completions": "Befejezések",
+        "verifications": "Verification",
+        "records": "Rekordok",
+
+        "migration": {
+            "migration": "Migrációs állapot",
+            "requested": "Kért",
+            "id": "Kért ID"
+        },
+
+        "pending": {
+            "pending": "Függőben lévő rekordok",
+            
+            "status": {
+                "waiting": "A rekord jóváhagyásra vár",
+                "investigating": "A rekord vizsgálata folyamatban van.",
+                "approved": "A rekord elfogadva.",
+                "denied": "A rekord elutasítva."
+            },
+
+            "denial": {
+                "denial": "Az elutasítás oka",
+                "empty": "Nem adtak meg indoklást.",
+                "confirm": "Meg van!",
+                "delete": "Rekord törlése"
+            }
+        },
+        
+        "video": "Videó Link",
+
+        "copied": "Lemásolva!"
+    },
+
+    "mods": {
+        "records": {
+            "records": "Rekordok",
+
+            "results": {
+                "s": "{} rekord",
+                "p": "{} rekordok"
+            },
+            "seconds": {
+                "s": " {} másodperc alatt",
+                "p": " {} másodperc alatt"
+            },
+
+            "profileAlt": "{}'s profilképe",
+            "discordAlt": "{}'s Discord profil képe",
+
+            "video": "Videó",
+            "raw": "Nyers",
+            "view": "Videó megnézése",
+
+            "emptyNotes": "Nem adtak fel jegyzeteket...",
+
+            "desktop": "Számítógép",
+            "mobile": "Mobil",
+
+            "status": {
+                "waiting": "Várakozás",
+                "investigating": "Átkutatás",
+                "denied": "Elutasítva",
+                "approved": "Elfogadva"
+            },
+
+            "reason": "Elutasítás oka",
+            "update": "Rekord frissítése"
+        },
+
+        "users": {
+            "users": "Felhasználók",
+
+            "results": {
+                "s": "{} kérés",
+                "p": "{} kérések"
+            },
+            "seconds": {
+                "s": " {} másodperc alatt",
+                "p": " {} másodperc alatt"
+            },
+
+            "profileAlt": "{}'s profilképe",
+            "discordAlt": "{}'s Discord profil képe",
+
+            "accept": "Elfogadni",
+            "deny": "Elutasítani"
+        },
+
+        "levels": {
+            "levels": "Pályák",
+
+            "placeholder": "Pálya választása",
+
+            "placement": "Helyezés",
+            "level": "Pálya neve",
+            "creator": "Készítő",
+            "verifier": "Verifier",
+            "video": "Videó",
+            "youtube": "Youtube URL",
+            "videoError": "kérjük Adjon meg egy érvényes YouTube-videót.",
+            "id": "ID",
+            "levelID": "Pálya ID",
+
+            "submit": "Módosítások beküldése",
+            "add": "Pálya hozzáadása",
+
+            "side": [
+                "Pálya szerkesztése",
+                "vagy",
+                "Új pálya hozzáadása"
+            ],
+
+            "modal": {
+                "head": "Megerősítés",
+
+                "confirmation": [
+                    "Biztosan új felhasználót akar létrehozni?",
+                    "Úgy tűnik, hogy a(z) \"{}\" az nem egy létező játékos"
+                ],
+
+                "confirm": "Biztos vagyok",
+                "deny": "mindegy"
+            }
+        }
+    },
+
+    "settings": {
+        "settings": "fiók beállítása",
+
+        "update": "Fiók frissitése",
+        "name": "Név",
+        "device": "Eszköz",
+        "desktop": "Számítógép",
+        "mobile": "Mobil",
+        "both": "Mindkettő",
+        "shape": "Profil alakzata",
+        "profileAlt": "A profil képed",
+        "snow": "Decemberi hó",
+
+        "actions": "Fiók műveletek",
+        "logout": "Kijelentkezés",
+        "delete": "Fiók törlése",
+
+        "nameError": [
+            "A felhasználónévnek 1 és 25 karakter között kell lennie.",
+            "Az előző vagy a záró szóközök le lesznek vágva."
+        ],
+
+        "modal": {
+            "head": "Megerősítés",
+
+            "confirmation": [
+                "Biztos benne, hogy törölni akarja a fiókját?",
+                "Nagyon sokáig elveszik!"
+            ],
+            "disclaimer": "Minden aktuális rekordot megőrzünk.",
+
+            "confirm": "Biztos vagyok",
+            "deny": "Mindegy"
+        }
+    },
+
+    "setup": {
+        "setup": "A fiók beállítás befejezése",
+
+        "username": "Felhasználónév",
+
+        "shape": "Profil alakzata",
+        "profileAlt": "A profil képed",
+
+        "device": "Eszköz",
+        "desktop": "Számítógép",
+        "mobile": "Mobil",
+        "both": "Mindkettő",
+
+        "nameError": [
+            "A felhasználónévnek 1 és 25 karakter között kell lennie.",
+            "Az előző vagy a záró szóközök le lesznek vágva."
+        ],
+
+        "continue": "folytatás",
+        
+        "bottom": "Már szerepel a listán? {}.",
+        "migrate": "Állítsa át fiókját"
+    },
+
+    "migrate": {
+        "migrate": "Fiók áttelepítése",
+
+        "username": "Felhasználónév",
+
+        "shape": "Profil alakzata",
+        "profileAlt":"A profil képed",
+
+        "device": "Eszköz",
+        "desktop": "Számítógép",
+        "mobile": "Mobil",
+        "both": "Mindkettő",
+
+        "discord": "Discord fiók összekapcsolása",
+
+        "continue": "Folytatás",
+        
+        "bottom": "Még nincs a listán? {}.",
+        "setup": "Állítsa be fiókját"
+    },
+
+    "oauth": [
+        "Fiók összekapcsolása sikeresen megtörtént",
+        "Most bezárhatja ezt az ablakot."
+    ],
+
+    "rules": {
+        "rules": [
+            "Szabályok",
+            "Általános benyújtási irányelvek",
+            "Idő beküldésekor ügyelni kell a megfelelő formázásra. (pl. {} – ha ezredmásodpercig kettőspontot tesz a pont helyett, az 502-es hibához vezethet)",
+            "Győződjön meg arról, hogy a megfelelő szintazonosítót vagy szintet választotta ki a felugró menüben. (Ez konkrétan az azonos/hasonló nevű szintekre vonatkozik)",
+            "A YouTube URL mezője arra a videóra vonatkozik, amelyet meg szeretne jeleníteni a webhelyen.",
+            "A \"Raw Footage URL\" a teljes befejezés vágatlan felvételére utal, ne feledje, hogy ez csak szélsőséges démon befejezések esetén szükséges. Ha egy nem extrém démonra küldi be a kitöltést, és nincs nyers felvétele, kérjük, hagyja üresen ezt a mezőt.",
+            "Ha feljegyzést nyújtott be, és rájött, hogy hibát követett el (pl. rossz időt vagy eszközt adott meg), forduljon egy segítőhöz, aki segít a hiba elhárításában.",
+            "Nyers felvétel",
+            "(Megjegyzés: extreme démonokhoz nyers felvétel {}, de a non extreme démonokhoz esetén is beküldhető, a következők csak az extrém démonok befejezésére vonatkoznak)",
+            "Mellékelnie kell a teljesítésről készült felvételt, amely a teljes futást mutatja az egyes ellenőrzőpontok teljesítésével és a záróképernyővel.",
+            "A teljes felvétel ideális, de minden ellenőrzőponthoz legalább 5 perc szükséges. (Vagy a teljes felvétel az ellenőrzőponti indítási kísérletekről)",
+            "A nyers felvételeket más módon nem szerkesztheti, mint több klip egy videóba való kombinálásával.",
+            "A felvételnek tartalmaznia kell a mikrofon hangját hallható kattanással.",
+            "Ideális a feltöltés olyan oldalakra, mint a Google Drive / MEGA / Gofile, így a felvételi csapat letöltheti a videót – csak kérésre.",
+            "Az olyan webhelyek, mint a YouTube, elfogadhatók, de legalább 2 hétig meg kell őriznie a videó fájljait, ha a rekordok csapat kéri.",
+            "Minőség",
+            "A következő okok miatt lehet, hogy a felvétel nem ellenőrizhető a felvétellel kapcsolatos problémák miatt:",
+            "Rendkívül alacsony felbontás",
+            "Súlyos Framerate Drops",
+            "Fedett játékmenet",
+            "Nem hallható kattintások (extreme démonoknál)",
+            "Ha nem vagy biztos abban, hogy a felvétel minősége elfogadható, lépjen kapcsolatba a segítő csapat egyik tagjával vagy a discord szerver támogatási csatornáján.",
+            "Ha nehezen rögzíti a kattintásokat, telefon vagy hasonló eszköz használata javasolt hang rögzítésére játék közben, és ha Ön mobil vagy kontrolleres lejátszó, akkor nem leszünk olyan szigorúak a kattintások hallhatóságával kapcsolatban.",
+            "Bár a beviteli fedvény NEM helyettesíti a kattintásokat, használata segíthet a rekordok (pl. csendes kattintások) jogosságának ellenőrzésében, de nem kötelező.",
+            "A \"Click Sounds\" vagy a \"Click Bot\" használata valódi kattintások helyettesítésére tilos, és a rekord illegitimnek minősül.",
+            "Moding",
+            "A hack használata, fizikát vagy bemeneteket megváltoztató, hitboxokat módosító, egyébként nem elérhető információkat megjelenítő, a játék sebességét módosító vagy a játékmechanizmust alapvetően megváltoztató külső programok használata nem engedélyezett, kivéve az alábbi kivételeket:",
+            "Mutasd a Hitbox On Death-et (azonban a rekordod megtagadható, ha ezt arra használják, hogy jelentős előnyt szerezzenek egy szintű játékmenetben, pl.: Láthatatlan/Memory játékmenet)",
+            "Egyéni billentyűkombinációk",
+            "Globed (nincs játékos ütközés)",
+            "Ha nem biztos a mod legitimitását illetően, vegye fel a kapcsolatot a nyilvántartási csapat egyik tagjával.",
+            "Szüneteltetési pufferelés",
+            "A szüneteltetési pufferelés egy olyan kihasználás, amely gyors szüneteltetést és szüneteltetést foglal magában, hogy hatékonyan lehessen lassítva játszani.",
+            "Azokat a rekordokat, amelyek ezt az exploitot használják, nem fogadjuk el.",
+            "A szüneteltetés normál használata nem tekinthető szüneteltetési pufferelésnek. Csak abban az esetben tiltott, ha szándékosan előnyszerzésre használják, az időmérős szakaszok alatt szünetelhet gondolkodni futás közben.",
+            "Különféle",
+            "A kitöltést Önnek (a fiók egyetlen tulajdonosának) kell elvégeznie. Ha valaki fizikailag teljesít egy pályát vagy egy pályaszakaszt, az a rekord érvénytelenítését eredményezi.",
+            "A kétjátékos pályákat vagy a kétjátékos mechanikát alkalmazó pályákat egyedül kell teljesíteni.",
+            "Egy szint másolatán játszani megengedett, de nem módosíthatsz semmit. Lépjen kapcsolatba a nyilvántartási csapat egyik tagjával, ha azt szeretné, hogy egy LDM-et engedélyezzenek a használatra, és hozzáadják a játékban található „Pemonlist LDM” listához.",
+            "A felvételek kivágott változatának belefoglalása megkönnyíti a felvételi csapatnak a befejezés áttekintését.",
+            "A beküldött videó nyilvánosan össze lesz kapcsolva az Ön rekordjával. Tartalmaznia kell az elkészült felvételt, amely pontosan tükrözi a nyers felvételt.",
+            "Ugyanazt a fióknevet kell használnia az összes beküldött rekordhoz. Ha szándékosan küld több fiókhoz tartozó rekordokat, akkor a rekordok törlődnek.",
+            "Ezek az irányelvek minden készülékre egyformán vonatkoznak. (Mobil, PC, stb.)",
+            "Ha a weboldalon megjelenítendő videó NSFW-anyagot tartalmaz, előfordulhat, hogy az Ön felvétele elutasításra kerül, mivel nem kívánunk az NSFW-re hivatkozni a weboldalunkon.",
+            "A nagy átugrással vagy titkos módszerekkel végzett kiegészítések érvényteleníthetik a rekordot. (A kis ugrások is megfelelőek) — Ha nem biztos abban, hogy egy ugrás használható-e, vegye fel a kapcsolatot a személyzet egyik tagjával.",
+            "Végső nóta:",
+            "Ha nem biztos abban, hogy rekordja megfelel ezeknek az irányelveknek, használhatja a „További megjegyzéseket” a rekord elküldésekor, vagy kérhet útmutatást a segítőcsapat egyik tagjától a discord szerver támogatási csatornájában – bizonyos esetekben kivételek tehetők.",
+            "Ha bármilyen változtatást vagy kiegészítést szeretne javasolni e szabályokhoz, kérjük, forduljon a személyzet egyik tagjához.",
+            "HATALMAS kredit a TPL-nek."
+        ],
+
+        "time": "0:00:00.000",
+        "required": "szükséges"
+    },
+
+    "credits": {
+        "programming": "Programozók",
+        "owner": "Lista tulajdonos",
+        "admins": "Lista Adminok",
+        "helpers": "Lista Segítők",
+        "translators": "Fordítók"
+    },
+
+    "fallback": [
+        "Jaj!",
+        "A kért URL-t nem lehetett megfelelően lekérni. Ha helytelen URL-t adott meg, kérjük, ellenőrizze a helyesírást, és próbálja újra.",
+        "Nem a te hibád? Nyugodtan írj üzenetet a fejlesztőnek!"
+    ]
+}

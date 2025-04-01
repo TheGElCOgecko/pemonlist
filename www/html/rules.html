@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---->
+    {% include "template/meta.html" %}
+    <!---->
+    <link rel="stylesheet" href="/static/css/min/text.min.css">
+</head>
+    <!---->
+    {% include "template/nav.html" %}
+    <!---->
+    <main>
+        <div class="container">
+            <h1>{{ translation.rules.rules[0] }}</h1> <!-- Rules -->
+
+            <h2>{{ translation.rules.rules[1] }}</h2> <!-- General Submission Guidelines -->
+            <ul>
+                <li>
+                    {{ translation.rules.rules[2] | sandwich(0) }}
+                    <code>{{ translation.rules.time }}</code>
+                    {{ translation.rules.rules[2] | sandwich(1) }}
+                </li>
+                <li>{{ translation.rules.rules[3] }}</li>
+                <li>{{ translation.rules.rules[4] }}</li>
+                <li>{{ translation.rules.rules[5] }}</li>
+                <li>{{ translation.rules.rules[6] }}</li>
+            </ul>
+
+            <h2>{{ translation.rules.rules[7] }}</h2> <!-- Raw Footage -->
+            <p>
+                {{ translation.rules.rules[8] | sandwich(0) }}
+                <i>{{ translation.rules.required }}</i>
+                {{ translation.rules.rules[8] | sandwich(1) }}
+            </p>
+            <ul>
+                <li>{{ translation.rules.rules[9] }}</li>
+                <li>{{ translation.rules.rules[10] }}</li>
+                <li>{{ translation.rules.rules[12] }}</li>
+                <li>{{ translation.rules.rules[13] }}</li>
+                <li>{{ translation.rules.rules[14] }}</li>
+            </ul>
+
+            <h2>{{ translation.rules.rules[15] }}</h2> <!-- Quality -->
+            <ul>
+                <li>{{ translation.rules.rules[16] }}</li>
+                <ul>
+                    <li>{{ translation.rules.rules[17] }}</li>
+                    <li>{{ translation.rules.rules[18] }}</li>
+                    <li>{{ translation.rules.rules[19] }}</li>
+                    <li>{{ translation.rules.rules[20] }}</li>
+                </ul>
+                <li>{{ translation.rules.rules[21] }}</li>
+                <li>{{ translation.rules.rules[22] }}</li>
+                <li>{{ translation.rules.rules[23] }}</li>
+                <li>{{ translation.rules.rules[24] }}</li>
+            </ul>
+
+            <h2>{{ translation.rules.rules[25] }}</h2> <!-- Modding -->
+            <ul>
+                <li>{{ translation.rules.rules[26] }}</li>
+                <ul>
+                    <li>{{ translation.rules.rules[27] }}</li>
+                    <li>{{ translation.rules.rules[28] }}</li>
+                    <li>{{ translation.rules.rules[29] }}</li>
+                </ul>
+                <li>{{ translation.rules.rules[30] }}</li>
+            </ul>
+
+            <h2>{{ translation.rules.rules[31] }}</h2> <!-- Pause Buffering -->
+            <ul>
+                <li>{{ translation.rules.rules[32] }}</li>
+                <li>{{ translation.rules.rules[33] }}</li>
+                <li>{{ translation.rules.rules[34] }}</li>
+            </ul>
+
+            <h2>{{ translation.rules.rules[35] }}</h2> <!-- Miscellaneous -->
+            <ul>
+                <li>{{ translation.rules.rules[36] }}</li>
+                <ul>
+                    <li>{{ translation.rules.rules[37] }}</li>
+                </ul>
+                <li>{{ translation.rules.rules[38] }}</li>
+                <li>{{ translation.rules.rules[39] }}</li>
+                <li>{{ translation.rules.rules[40] }}</li>
+                <li>{{ translation.rules.rules[41] }}</li>
+                <li>{{ translation.rules.rules[42] }}</li>
+                <li>{{ translation.rules.rules[43] }}</li>
+                <li>{{ translation.rules.rules[44] }}</li>
+            </ul>
+
+            <h2>{{ translation.rules.rules[45] }}</h2> <!-- Final Note: -->
+            <p>{{ translation.rules.rules[46] }}</p>
+
+            <br>
+
+            <h3>{{ translation.rules.rules[47] }}</h3>
+            <h3>{{ translation.rules.rules[48] }}</h3>
+        </div>
+    </main>
+    <!---->
+    {% include "template/footer.html" %}
+    <!---->
+</body>
+
+<!---->
+{% include "template/include.html" %}
+<!---->
+<script src="/static/js/jump.js"></script>
+
+</html>

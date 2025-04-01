@@ -1,0 +1,440 @@
+{
+    "nav": {
+        "list": "Lista",
+        "leaderboard": "Tabla",
+        "submit": "Pošalji Rekord",
+        "rules": "Pravila",
+        "credits": "Krediti",
+        "discord": "Diskord",
+
+        "account": "Nalog",
+        "logout": "Izloguj Se",
+        "settings": "Podešavanja",
+        "login": "Uloguj Se"
+    },
+
+    "search": {
+        "search": "Pretraži",
+
+        "results": {
+            "s": "{} rezultat",
+            "p": "{} rezultati"
+        },
+        "seconds": {
+            "s": " u {} sekund",
+            "p": " u {} sekundi"
+        },
+
+        "empty": "Nema rezultata."
+    },
+    
+    "scroll": "Pomeri na Vrh",
+
+    "agreement": {
+        "text": [
+            "Koristeći ovaj sajt Vi se slažete sa korisčenjem kolačića, {} i sa {}.",
+            "Mi nikad nećemo namerno pratiti ili prodavati vaše podatke, bez obzira na sve."
+        ],
+        "terms": "Odredbama i Uslovima",
+        "privacy": "Smernicama Privatnosti",
+
+        "confirm": "Razumeo sam"
+    },
+
+    "footer": {
+        "attribution": "Ovaj sajt ni na koji način nije povezan sa Robtop Games AB, sva prava zadržana.",
+        "privacy": "Smernice Privatnosti",
+        "terms": "Odredbe i Uslovi",
+        "rules": "Pravila za Slanje",
+        "credits": "Krediti",
+        "docs": "API Dokumenti"
+    },
+
+    "list": {
+        "list": "Lista",
+        "extended": "Proširena Lista",
+        "legacy": "Nasledjena Lista",
+
+        "thumbnailAlt": "sličica od {}",
+        "crownAlt": "Kruna za prvo mesto"
+    },
+
+    "level": {
+        "creator": "Graditelj",
+        "verifier": "Verifikator",
+        "records": "Rekordi",
+        "points": "Poena kad Predjeno",
+        "id": "ID"
+    },
+
+    "login": {
+        "login": "Uloguj Se",
+        "google": "Gugl",
+        "discord": "Diskord"
+    },
+
+    "leaderboard": {
+        "processing": "Tabla još uvek obradjuje rekorde, pokušajte ponovo kasnije.",
+        "empty": "Tabla je upravo prazna.",
+        "points": "poeni"
+    },
+
+    "player": {
+        "score": "Rezultat",
+        "completions": "Predjenih Nivoa",
+        "verifications": "Verifikacije",
+        "video": "Video Link",
+        "records": "Rekordi"
+    },
+
+    "submit": {
+        "submit": "Pošalji",
+
+        "reminder": "Bolje {} pre nego što šalješ rekorde!",
+        "rules": "pročitaj pravila",
+
+        "time": "Vreme",
+        "timeError": "Molimo vas da napišete važeći vremenski format.",
+        
+        "level": "Nivo",
+        "levelError": "Molimo vas da napišete važeće ime nivoa.",
+        "levelPlaceholder": "Ime Nivoa",
+
+        "youtube": "JutJub URL",
+        "youtubeError": "Molimo vas da napišete važeći JutJub URL.",
+        "raw": "URL za sirov snimak",
+        "noVideos": "Molimo vas da stavite barem jedan video.",
+
+        "videoSwitch": "Video",
+        "rawSwitch": "Sirovo",
+
+        "noVideo": "Vaš video će se pojavljivati ovde.",
+        "processing": "Obrada u toku...",
+        "invalidVideo": "Izvini, to nije važeći JutJub video.",
+
+        "device": "Uredjaj",
+        "desktop": "Desktop",
+        "mobile": "Mobilni Telefon",
+
+        "notes": "Napomene (opcionalno)",
+        "finish": "Pošalji Rekord"
+    },
+
+    "submitted": {
+        "submitted": "Čestitike!",
+
+        "text": [
+            "Tvoj rekord je poslat za pregled, i do njega će uskoro doći moderator liste",
+            "Imajte na umu da rekordima ponekad treba nekoliko dana da budu verifikovani, i mi imamo pravo da odbijemo vaš rekord ako sumnjamo da ne poštujete {}",
+            "Pazite na svoje DM-ove za sva pitanja koja moderator liste može imati o vašem rekordu",
+            "Da bi ste videli svoje rekorde i njihove trenutne statuse, idite na vaš nalog"
+        ],
+
+        "rules": "pravila",
+
+        "account": "Idi na nalog",
+        "submit": "Pošalji jos jedan rekord"
+    },
+
+    "duplicate": {
+        "duplicate": "Ups!",
+
+        "text": [
+            "Vaš rekord je već poslat na pregled i uskoro će ga proveriti moderator liste",
+            "Imajte na umu da rekordima ponekad treba nekoliko dana da budu verifikovani",
+            "Da bi ste videli svoje rekorde i njihove trenutne statuse, idite na vaš nalog"
+        ],
+
+        "account": "Idi na nalog",
+        "submit": "Pošaljite drugi rekord"
+    },
+    
+    "account": {
+        "pictureAlt": "Vaša profilna slika",
+
+        "unregistered": "Neregistrovani Nalog",
+
+        "score": "Rezultat",
+        "completions": "Predjenih Nivoa",
+        "verifications": "Verifikacije",
+        "records": "Rekordi",
+
+        "migration": {
+            "migration": "Status Migracije",
+            "requested": "Zahtevni",
+            "id": "Zahtevni ID"
+        },
+
+        "pending": {
+            "pending": "Rekordi na čekanju",
+            
+            "status": {
+                "waiting": "Rekord na čekanju za odobrenje.",
+                "investigating": "Rekord se upravo istraćuje.",
+                "approved": "Rekord je odobren.",
+                "denied": "Rekord je odbijen."
+            },
+
+            "denial": {
+                "denial": "Razlog za odbijanje",
+                "empty": "Nula razloga je navedeno.",
+                "confirm": "Razumeo sam",
+                "delete": "Izbriši rekord"
+            }
+        },
+        
+        "video": "Video Link",
+
+        "copied": "Kopirano!"
+    },
+
+    "mods": {
+        "records": {
+            "records": "Rekordi",
+
+            "results": {
+                "s": "{} rekordi",
+                "p": "{} rekordi"
+            },
+            "seconds": {
+                "s": " u {} sekund",
+                "p": " u {} sekundi"
+            },
+
+            "profileAlt": "profilna slika od {}",
+            "discordAlt": "profilna Diskord slika od {}",
+
+            "video": "Video",
+            "raw": "Sirovo",
+            "view": "Pogledaj video",
+
+            "emptyNotes": "Nula beleški je napisano...",
+
+            "desktop": "Desktop",
+            "mobile": "Mobilni Telefon",
+
+            "status": {
+                "waiting": "Čekanje",
+                "investigating": "Istraćuje",
+                "denied": "Odbijen",
+                "approved": "Odobren"
+            },
+
+            "reason": "Razlog zbog odbijenosti",
+            "update": "Ažuriraj Rekord"
+        },
+
+        "users": {
+            "users": "Nalozi",
+
+            "results": {
+                "s": "{} zahtev",
+                "p": "{} zahtevi"
+            },
+            "seconds": {
+                "s": " u {} sekund",
+                "p": " u {} sekundi"
+            },
+
+            "profileAlt": "profilna slika od {}",
+            "discordAlt": "profilna Diskord slika od {}",
+
+            "accept": "Prihvati",
+            "deny": "Odbi"
+        },
+
+        "levels": {
+            "levels": "Nivoi",
+
+            "placeholder": "Izaberi Nivo",
+
+            "placement": "Pozicija",
+            "level": "Ime Nivoa",
+            "creator": "Graditelj",
+            "verifier": "Verifikator",
+            "video": "Video",
+            "youtube": "JutJub URL",
+            "videoError": "Unesite važeći JutJub video.",
+            "id": "ID",
+            "levelID": "ID od Nivoa",
+
+            "submit": "Pošalji Promene",
+            "add": "Dodaj Nivo",
+
+            "side": [
+                "Uredi Niv",
+                "il",
+                "Dodaj Novi Niv"
+            ],
+
+            "modal": {
+                "head": "Potvrda",
+
+                "confirmation": [
+                    "Da li ste sigurni da želite da napravite novi nalog",
+                    "Čini se da \"{}\" nije postojeći igrač"
+                ],
+
+                "confirm": "Siguran sam",
+                "deny": "Nema veze"
+            }
+        }
+    },
+
+    "settings": {
+        "settings": "Podešavanja oko Naloga",
+
+        "update": "Ažuriraj Nalog",
+        "name": "Ime",
+        "device": "Uredjaj",
+        "desktop": "Desktop",
+        "mobile": "Mobilni Telefon",
+        "both": "Oba",
+        "shape": "Profilni Oblik",
+        "profileAlt": "Ažuriraj Nalog",
+        "snow": "Sneg Decembarski",
+
+        "actions": "Radnje Naloga",
+        "logout": "Odjavi Se",
+        "delete": "Izbriši Nalog",
+
+        "nameError": [
+            "Tvoje korisničko ime mora da bude 25 karaktera ili manje",
+            "Prethodni ili prateći razmaci će biti skraćeni"
+        ],
+
+        "modal": {
+            "head": "Potvrda",
+
+            "confirmation": [
+                "Da li si siguran da želiš da izbrišeš svoj nalog",
+                "Biće izgubljeno za veoma dugo vreme"
+            ],
+            "disclaimer": "Svi trenutni rekordi će biti sačuvani.",
+
+            "confirm": "Siguran sam",
+            "deny": "Nema veze"
+        }
+    },
+
+    "setup": {
+        "setup": "Završi Nalog Podešavanja",
+
+        "username": "Korisničko Ime",
+
+        "shape": "Profilni Oblik",
+        "profileAlt": "Vaša profilna slika",
+
+        "device": "Uredjaj",
+        "desktop": "Desktop",
+        "mobile": "Mobilni Telefon",
+        "both": "Oba",
+
+        "nameError": [
+            "Tvoje korisničko ime mora da bude 25 karaktera ili manje",
+            "Prethodni ili prateći razmaci će biti skraćeni"
+        ],
+
+        "continue": "Nastavi",
+        
+        "bottom": "Već na listi? {}.",
+        "migrate": "Migriraj svoj nalog"
+    },
+
+    "migrate": {
+        "migrate": "Migriraj Nalog",
+
+        "username": "Korisničko Ime",
+
+        "shape": "Profilni Oblik",
+        "profileAlt": "Vaša profilna slika",
+
+        "device": "Uredjaj",
+        "desktop": "Desktop",
+        "mobile": "Mobilni Telefon",
+        "both": "Oba",
+
+        "discord": "Poveži Diskord Nalog",
+
+        "continue": "Nastavi",
+        
+        "bottom": "Još niste na listi? {}.",
+        "setup": "Podesi svoj nalog"
+    },
+
+    "oauth": [
+        "Nalog Povezan Uspešn",
+        "Sada možete zatvoriti ovaj prozor"
+    ],
+
+    "rules": {
+        "rules": [
+            "Pravil",
+            "Opšte Smernice za Slanje Rekord",
+            "Kada šaljete vreme, proverite da li ste lepo uneli vreme. (nmp. {} — stavljanje dve tačke umesto tačke za milisekunde će dovesti do greške 502",
+            "Uverite se da je u pop-up meniju izabran tačan ID od nivoa ili tačan nivo. (Ovo posebno važi za nivoe sa istim ili sličnim imenima",
+            "Polje za JutJub URL se odnosi na video koji želite da bude prikazan na sajtu",
+            "\"URL za sirov snimak\" se odnosi na neiseckan snimak celog videa, imajte na umu da je ovo potrebno samo za extreme demone. Ako šaljete snimak ne za extreme demone, ostavite ovo polje prazno",
+            "Ako ste poslali snimak i videli da ste napravili grešku (nmp. uneli pogrešno vreme ili pogrešan uređaj), kontaktirajte moderatora liste da vam pomognu",
+            "Sirov Snima",
+            "(Napomena: Sirov snimak je {} samo za extremne demone, za sve ostale demone nije, sledeće važi samo za extremne demone",
+            "Vaš snimak mora da sadrži ne iseckan snimak svih checkpoint-a i završni ekran nivoa",
+            "Ceo sirov snimak je dovoljno, ali barem zadnjih 5 minuta of svakog checkpoint-a je potrebn",
+            "Ne smeš da edituješ svoj sirov snimak sem ako spajaš više nego jedan snimak",
+            "Snimak mora da ima dobar audio i jasne klikove",
+            "Stavljanje snimka na Google Drive / MEGA / Gofile je idealno tako da tim za rekorde može lako da instalira videe — samo ako se zatraž",
+            "Sajtovi kao što su JutJub su prihvatljeni, ali pametno je da čuvate sirov snimak barem 2 nedelje u slučaju da ga tim za rekorde zatraži ponovo",
+            "Kvalite",
+            "Razlozi zbog kojih bi rekord mogao biti odbijen su",
+            "Ekstremno Mala Rezolucij",
+            "Ozbiljni Pad FPS-",
+            "Pokriven Snima",
+            "Nečujni Klikovi (Za Extreme Demone",
+            "Ako niste sigurni da li je vaš snimak prihvatljivog kvaliteta, obratite se članu pomoćnog tima ili na kanalu podrške na discord serveru",
+            "Ako vam je teško da snimite klikove, preporučuje se korišćenje telefona ili sličnog uređaja za snimanje zvuka dok igrate, a ako ste mobilni ili kontroler korisnik nećemo biti tako strogi u pogledu čuđenja klikova",
+            "Dok input displej NIJE zamena za klikove, njegovo korišćenje može pomoći u verifikaciji legitimnosti vašeg rekorda (npr. tihi klikovi), ali nije potrebno",
+            "Upotreba \"Click Sounds\" ili \"Click Bot\" da zameni prave klikove je zabranjeno i smatraće se neligitiman",
+            "Modiranj",
+            "Upotreba hakova, eksploatacija i eksternih programa koji menjaju fiziku ili inpute, modifikuju hitboks, prikazuju informacije koje inače nisu dostupne, prilagođavaju brzinu igara ili fundamentalno menjaju mehaniku igranja nije dozvoljena osim sledećih izuzetaka",
+            "Pokazivanje Hitboksova Na Smrt (Međutim, vaš rekord može biti odbijen ako se ovo koristi na nivoima sa nevidljivim ili memorijskim gameplay-om",
+            "Custom Keybind",
+            "Globed (Bez Sudaranja sa Drugim Igračima",
+            "Ako niste sigurni u legitimnost nekog moda, obratite se članu tima za evidenciju",
+            "Pause Bufferin",
+            "Baferovanje Pauziranja je eksploatacija koja uključuje brzo pauziranje i pauziranje kako bi se efikasno igralo usporeno",
+            "Rekordi koji iskorišćavaju ovu eksploataciju neće biti primljeni",
+            "Svaka normalna upotreba pauziranja neće se sumnjati kao pauza baferovanje. Zabranjen je samo u slučajevima kada se namerno koristi za iskoriščavanje prednosti, dozvoljeno vam je da pauzirate tokom sekcija da biste razmišljali tokom ranova",
+            "Razno",
+            "Vaše komplecije morate da objavite vi (jedini vlasnik naloga), ako neko drugi fizički uradi kompleciju umesto vas rekord će vam biti odbijen.",
+            "Nivoi za dva igrača ili nivoi koji koriste dva-igrača mehanike moraju biti pređene solo.",
+            "Igranje na kopiji nivoa je dozvoljeno, ali ne možete napraviti nikakve izmene. Obratite se članu tima za evidenciju ako želite da LDM odobrite za upotrebu i dodate na listu \"Pemonlist LDM\" u igrici",
+            "Uključivanje skraćene verzije vašeg snimka daje timu za rekorde lakše vreme pregleda vašeg završetka",
+            "Video koji pošaljete biće javno povezan sa vašim rekordom. Mora da sadrži snimak vašeg završetka koji tačno odražava vaše sirove snimke",
+            "Morate koristiti isto ime naloga za sve rekorde koje pošaljete. Namerno slanje rekorda pod više naloga će rezultirati uklanjanjem vaših rekorda",
+            "Sva pravila važe jednako za sve uredjaje (Mobilne Telefone, Kompjutere, i dr.",
+            "Ako video koji će biti prikazan na veb lokaciji sadrži bilo kakav NSFW materijal, vaš rekod može biti odbijen jer ne želimo NSFW na našoj veb stranici",
+            "Komplecije koje koriste ogromne skipove mogu poništiti vaš rekord. (Mali skipovi su u redu) — Ako niste sigurni da li je preskakanje dozvoljeno za upotrebu, obratite se članu tima osoblja",
+            "Zadnja Napomena",
+            "Ako niste sigurni da li je vaš rekord u skladu sa ovim smernicama, možete da koristite \"Dodatne napomene\" prilikom slanja vašeg rekorda ili da zatražite od člana pomoćnog tima smernice na kanalu podrške na serveru za razdavanje - u nekim slučajevima mogu biti napravljeni izuzeci",
+            "Ako želite da predložite bilo kakve izmene ili dopune ovih pravila, kontaktirajte člana tima osoblja",
+            "OGROMNO Hvala za TPL"
+        ],
+
+        "time": "0:00:00.000",
+        "required": "potreban"
+    },
+
+    "credits": {
+        "programming": "Programiranje",
+        "owner": "Vlasnik Liste",
+        "admins": "Administratori Liste",
+        "helpers": "Pomoćnici Liste",
+        "translators": "Prevodioci"
+    },
+
+    "fallback": [
+        "Ups",
+        "Traženi URL nije mogao da se pravilno preuzme. Ako ste uneli netačni URL, proverite pravopis i pokušajte ponovo",
+        "Nije vaša greška? Slobodno pošaljite poruke programeru"
+    ]
+}

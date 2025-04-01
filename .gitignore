@@ -1,0 +1,13 @@
+node_modules/
+.env
+*.sublime-project
+*.sublime-workspace
+*.sublime-syntax
+package-lock.json
+bun.lockb
+.DS_Store
+before
+*.edgeql
+changelog.txt
+errcode.txt
+out.db

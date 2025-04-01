@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---->
+    {% include "template/docmeta.html" %}
+    <!---->
+</head>
+<body>
+    <!---->
+    {% include "template/docnav.html" %}
+    <!---->
+    <main>
+        <div class="container">
+            <!---->
+            {% include "template/docside.html" %}
+            <!---->
+            <div class="main">
+                <div>
+                    <h1>Introduction</h1>
+                    <span>
+                        <p>It seems you've found the <b>Pemonlist API Documentation</b>! Here, you can find information on and examples of API endpoints, as well as tips and tricks for using it in various applications.</p>
+                        <p>Keep in mind that these endpoints are not for free use, and common sense still applies. If we find you're using abusing the servers in any way, you can expect to be banned permanently.</p>
+                        <p>If you want to contribute any information to the documentation or have any questions regarding use that isn't explained here, please <a class="proper" href="https://git.gay/Lexi/pemonlist-site/issues/new">submit an issue</a> on the repository.</p>
+                        
+                        <blockquote class="info">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm8.93 4.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                            </svg>
+                            <span>
+                                <p>While questions are not unappreciated or discouraged, please take the time to look around the docs before asking common questions. Most information should be outlined here.</p>
+                            </span>
+                        </blockquote>
+                    </span>
+                    <span>
+                        <h2>Fair Warning:</h2>
+                        <p>This API is designed to emulate the way that the front-end interacts with the back-end. The actual website does not use an API and instead uses post requests and a templating engine. While you can use these post requests, we recommend you don't, as they are undocumented and aren't well-suited for public use.</p>
+                        <p>In addition, there is no way to log in to / interact with a user's account through the API. While oauth is planned, it's not of high priority, and will likely not be added for some time.</p>
+                    </span>
+                    <span>
+                        <h2>Make Cool Stuff!</h2>
+                        <p>The API offers the option to empower users with the (near) full scope of one of the most frequently-updated platformer lists available.</p>
+                        <p>Have an idea for something cool, but you want to make sure it's cool with us? Message <a href="https://discordapp.com/users/506101469787717658" class="proper">Lexi (me)</a> for approval and any direct support.</p>
+                        <p>To get started, visit the <a href="/api/docs/endpoints" class="proper">endpoints</a> section.</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!---->
+    {% include "template/footer.html" %}
+    <!---->
+</body>
+
+<!---->
+{% include "template/include.html" %}
+<!---->
+<script src="/static/js/jump.js"></script>
+
+</html>

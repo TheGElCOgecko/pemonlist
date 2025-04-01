@@ -1,0 +1,265 @@
+.player {
+    position: relative;
+    padding: 20px;
+    background-color: #334;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 10px;
+
+    h1 {
+        margin: 0px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 1;
+        }
+
+        .rank {
+            user-select: none;
+
+            img {
+                height: 50px;
+                -webkit-user-drag: none;
+            }
+            
+            p {
+                position: absolute;
+                margin: 0px;
+                // https://owumaro.github.io/text-stroke-generator/
+                text-shadow: #112 2px 0px 0px, #112 1.75517px 0.958851px 0px, #112 1.0806px 1.68294px 0px, #112 0.141474px 1.99499px 0px, #112 -0.832294px 1.81859px 0px, #112 -1.60229px 1.19694px 0px, #112 -1.97998px 0.28224px 0px, #112 -1.87291px -0.701566px 0px, #112 -1.30729px -1.5136px 0px, #112 -0.421592px -1.95506px 0px, #112 0.567324px -1.91785px 0px, #112 1.41734px -1.41108px 0px, #112 1.92034px -0.558831px 0px;
+                margin-top: 36px;
+                font-size: x-large;
+
+                &.diamond {
+                    color: #9cf;
+                }
+
+                &.gold {
+                    color: #fc0;
+                }
+
+                &.silver {
+                    color: #ccc;
+                }
+
+                &.bronze {
+                    color: #d83;
+                }
+            }
+        }
+
+        hr {
+            background-color: #778;
+            width: 20px;
+            margin: 10px;
+            flex-shrink: 0;
+            margin-top: 12px
+        }
+
+        .name .device {
+            margin: 0px 12px;
+            position: relative;
+            top: 2px;
+            font-size: xx-large;
+        }
+    }
+
+    hr {
+        margin: 20px 0px;
+        margin-bottom: 10px
+    }
+
+    .stats {
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(100% + 20px);
+        max-width: 700px;
+
+        span {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            margin: 10px;
+
+            * {
+                margin: 0px;
+                font-size: large;
+            }
+
+            h3 {
+                margin-bottom: 5px;
+                font-size: x-large;
+            }
+        }
+    }
+}
+
+.records, .unverified, .verifications {
+    padding: 20px;
+    background-color: #334;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+
+    h1 {
+        margin: 0px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .table {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 80px);
+        background-color: #223;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+
+        div {
+            border-radius: 5px;
+            font-size: larger;
+            height: 50px;
+            display: flex;
+            align-items: stretch;
+            position: relative;
+
+            hr {
+                all: revert;
+                margin: 0px;
+                flex-grow: 1;
+                border: none;
+                border-top: 1px dashed #445;
+                align-self: center;
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                flex-shrink: 1;
+
+                span {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-shrink: 0;
+                    text-decoration: none;
+                    color: #dde;
+                }
+        
+                .placement, .rank {
+                    width: 55px;
+                    user-select: none;
+                }
+
+                .open {
+                    width: 55px;
+                    user-select: none;
+                }
+        
+                .level {
+                    justify-content: flex-start;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    flex-shrink: 1;
+                    padding-right: 10px;
+                    -webkit-line-clamp: 2;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    max-height: 38px;
+                    overflow-wrap: anywhere;
+                }
+
+                .link {
+                    padding-left: 10px;
+                    flex-shrink: 0;
+                    justify-content: flex-end;
+                    margin-right: -10px;
+                }
+    
+                .time {
+                    padding-left: 10px;
+                    flex-shrink: 0;
+                    justify-content: flex-end;
+                    font-family: 'Droid Sans Mono', 'Courier New', Courier, monospace;
+    
+                    .ms {
+                        color: #778;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+body:not(.touch) {
+    .records, .unverified, .verifications {
+        .table div:hover {
+            background-color: #334;
+        }
+    }
+}
+
+body.touch {
+    .records, .unverified, .verifications {
+        .table div:active {
+            background-color: #334;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .records, .unverified, .verifications {
+        .table {
+            width: calc(100% - 40px) !important;
+            margin-bottom: 0px !important;
+    
+            div {
+                height: 45px !important;
+    
+                a {
+                    font-size: medium !important;
+    
+                    .placement {
+                        width: 45px;
+                    }
+        
+                    .time {
+                        margin-right: 5px;
+                    }
+            
+                    .rank {
+                        display: none !important;
+                    }
+
+                    .link {
+                        margin-right: 2px;
+                    }
+                }
+
+                .status, .open {
+                    width: 30px !important;
+                    font-size: large !important;
+                    margin-left: -5px;
+                }
+            }
+        }
+    }
+}

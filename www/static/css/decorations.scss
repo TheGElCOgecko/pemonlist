@@ -1,0 +1,37 @@
+img.pfp {
+    mask-image: none;
+    transition: border-radius 150ms ease-out, mask-image 150ms ease-out;
+
+    &.Circle {
+        border-radius: 50%;
+    }
+
+    &.Squircle {
+        border-radius: 15%;
+    }
+
+    &.Cube {
+        mask-image: url("/static/img/cube.svg");
+        mask-size: contain;
+    }
+
+    &.Ball {
+        mask-image: url("/static/img/ball.svg");
+        mask-size: contain;
+    }
+
+    &.Cat {
+        mask-image: url("/static/img/cat.svg");
+        mask-size: contain;
+    }
+
+    &.Kiki {
+        mask-image: url("/static/img/kiki.svg");
+        mask-size: contain;
+    }
+
+    &.Bouba {
+        mask-image: url("/static/img/bouba.svg");
+        mask-size: contain;
+    }
+}

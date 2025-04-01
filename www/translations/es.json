@@ -1,0 +1,447 @@
+{
+    "nav": {
+        "list": "Lista",
+        "leaderboard": "Tabla de clasificación",
+        "submit": "Subir récord",
+        "rules": "Reglas",
+        "credits": "Créditos",
+        "discord": "Discord",
+
+        "account": "Cuenta",
+        "logout": "Cerrar sesión",
+        "settings": "Configuración",
+        "login": "Iniciar sesión"
+    },
+
+    "search": {
+        "search": "Buscar",
+
+        "results": {
+            "s": "{} resultado",
+            "p": "{} resultados"
+        },
+        "seconds": {
+            "s": " en {} segundo",
+            "p": " en {} segundos"
+        },
+
+        "empty": "No hay resultados."
+    },
+    
+    "scroll": "Volver al comienzo",
+
+    "agreement": {
+        "text": [
+            "Al usar esta página apruebas el uso de cookies, de los {} y la {}.",
+            "Nunca rastrearemos ni venderemos sus datos, sin importar qué."
+        ],
+        "terms": "Términos y Condiciones",
+        "privacy": "Política de Privacidad",
+
+        "confirm": "Entiendo"
+    },
+
+    "footer": {
+        "attribution": "Este sitio no está afiliado de ninguna forma con RobTop Games AB, todos los derechos reservados.",
+        "privacy": "Política de Privacidad",
+        "terms": "Términos y Condiciones",
+        "rules": "Reglas de envío",
+        "credits": "Créditos",
+        "docs": "Documentos API"
+    },
+
+    "list": {
+        "list": "Lista",
+        "extended": "Lista Extensa",
+        "legacy": "Lista de Legado",
+
+        "thumbnailAlt": "Miniatura de {}",
+        "crownAlt": "Corona de primer lugar"
+    },
+
+    "level": {
+        "creator": "Creador",
+        "verifier": "Verificador",
+        "records": "Récords",
+        "points": "Puntos al completar",
+        "id": "ID"
+    },
+
+    "login": {
+        "login":"Iniciar sesión",
+        "google": "Google",
+        "discord": "Discord"
+    },
+
+    "leaderboard": {
+        "processing": "La tabla de clasificación sigue procesando récords, por favor intenta nuevamente más tarde.",
+        "empty": "La tabla de clasificación está vacía en este momento.",
+        "points": "puntos"
+    },
+
+    "player": {
+        "score": "Puntuación",
+        "completions": "Completados",
+        "verifications": "Verificaciones",
+        "video": "Link del vídeo",
+        "records": "Récords"
+    },
+
+    "submit": {
+        "submit": "Envío",
+
+        "reminder": "¡Esté seguro de {} antes de enviar!",
+        "rules": "leer las reglas",
+
+        "time": "Tiempo",
+        "timeError": "Por favor, pon un formato válido.",
+        
+        "level": "Nivel",
+        "levelError": "Por favor, introduzca un nombre de nivel válido.",
+        "levelPlaceholder": "Nombre del nivel",
+
+        "youtube": "URL de YouTube",
+        "youtubeError": "Por favor, pon una URL de YouTube válida.",
+        "raw": "URL del vídeo en bruto.",
+        "noVideos": "Por favor, introduzca al menos un vídeo.",
+
+        "videoSwitch": "Vídeo",
+        "rawSwitch": "Bruto",
+
+        "noVideo": "Tu vídeo aparecerá aquí.",
+        "processing": "Procesando...",
+        "invalidVideo": "Lo siento, eso no es un vídeo de YouTube válido",
+
+        "device": "Dispositivo",
+        "desktop": "Escritorio",
+        "mobile": "Móvil",
+
+        "notes": "Notas adicionales (opcional)",
+        "finish": "Enviar récord"
+    },
+
+    "submitted": {
+        "submitted": "¡Felicidades!",
+
+        "text": [
+            "Tu récord ha sido enviado para revisión y un moderador de lista lo recibirá pronto.",
+            "Por favor, recuerda que los récords pueden tomar una semana o más para verificar completamente y tenemos el derecho de rechazar tu récord si sospechamos que estás haciendo trampas o desobedeciendo las {}.",
+            "Echa un ojo a tus DMs por cualquier pregunta que un moderador de lista pueda tener acerca de tu récord.",
+            "Para ver tus récords pendientes y su estado actual, ve a la página de tu cuenta."
+        ],
+        "rules": "reglas",
+
+        "account": "Ir a cuenta",
+        "submit": "Subir otro récord"
+    },
+
+    "duplicate": {
+        "duplicate": "¡Ups!",
+
+        "text": [
+            "Tu récord ya había sido enviado para revisión y un moderador de lista lo recibirá pronto.",
+            "Por favor, recuerda que los récords pueden tomar una semana o más para verificar completamente.",
+            "Para ver tus récords pendientes y su estado actual, ve a la página de tu cuenta."
+        ],
+
+        "account": "Ir a cuenta",
+        "submit": "Subir otro récord diferente"
+    },
+    
+    "account": {
+        "pictureAlt": "Tu foto de perfil",
+
+        "unregistered": "Usuario no registrado",
+
+        "score": "Puntuación",
+        "completions": "Completados",
+        "verifications": "Verificaciones",
+        "records": "Récords",
+
+        "migration": {
+            "migration": "Estado de migración",
+            "requested": "Solicitado",
+            "id": "ID de solicitud"
+        },
+
+        "pending": {
+            "pending": "Récords pendientes",
+            
+            "status": {
+                "waiting": "El récord está esperando para su aprobación.",
+                "investigating": "El récord está siendo investigado.",
+                "approved": "El récord ha sido aceptado.",
+                "denied": "El récord ha sido rechazado."
+            },
+
+            "denial": {
+                "denial": "Razón del rechazo",
+                "empty": "No se adjuntó razón.",
+                "confirm": "Entiendo",
+                "delete": "Borrar récord"
+            }
+        },
+        
+        "video": "Link del vídeo",
+
+        "copied": "¡Copiado!"
+    },
+
+    "mods": {
+        "records": {
+            "records": "Récords",
+
+            "results": {
+                "s": "{} récord",
+                "p": "{} récords"
+            },
+            "seconds": {
+                "s": " en {} segundo",
+                "p": " en {} segundos"
+            },
+
+            "profileAlt": "Foto de perfil de {}",
+            "discordAlt": "Foto de perfil de Discord de {}",
+
+            "video": "Vídeo",
+            "raw": "Bruto",
+            "view": "Mostrar vídeo",
+
+            "emptyNotes": "No se adjuntaron notas...",
+
+            "desktop": "Escritorio",
+            "mobile": "Móvil",
+
+            "status": {
+                "waiting": "Esperando",
+                "investigating": "Investigando",
+                "denied": "Rechazado",
+                "approved": "Aprobado"
+            },
+
+            "reason": "Razón del rechazo",
+            "update": "Actualizar récord"
+        },
+
+        "users": {
+            "users": "Usuarios",
+
+            "results": {
+                "s": "{} solicitud",
+                "p": "{} solicitudes"
+            },
+            "seconds": {
+                "s": " en {} segundo",
+                "p": " en {} segundos"
+            },
+
+            "profileAlt": "Foto de perfil de {}",
+            "discordAlt": "Foto de perfil de Discord de {}",
+
+            "accept": "Aceptar",
+            "deny": "Rechazar"
+        },
+
+        "levels": {
+            "levels": "Niveles",
+
+            "placeholder": "Seleccionar nivel",
+
+            "placement": "Posición",
+            "level": "Nombre del nivel",
+            "creator": "Creador",
+            "verifier": "Verificador",
+            "video": "Vídeo",
+            "youtube": "URL de YouTube",
+            "videoError": "Por favor, pon un video de YouTube válido.",
+            "id": "ID del nivel",
+            "levelID": "ID del nivel",
+
+            "submit": "Enviar cambios",
+            "add": "Añadir nivel",
+
+            "side": [
+                "Editar un nivel",
+                "o",
+                "Añadir un nuevo nivel"
+            ],
+
+            "modal": {
+                "head": "Confirmación",
+
+                "confirmation": [
+                    "¿Estás seguro de que quieres crear un nuevo usuario?",
+                    "\"{}\" no parece que sea un jugador existente."
+                ],
+
+                "confirm": "Estoy seguro",
+                "deny": "Olvídalo"
+            }
+        }
+    },
+
+    "settings": {
+        "settings": "Opciones de cuenta",
+
+        "update": "Actualizar cuenta",
+        "name": "Nombre",
+        "device": "Dispositivo",
+        "desktop": "Escritorio",
+        "mobile": "Móvil",
+        "both": "Ambos",
+        "shape": "Forma del perfil",
+        "profileAlt": "Tu foto de perfil",
+        "snow": "Nieve de Diciembre",
+
+        "actions": "Acciones de cuenta",
+        "logout": "Cerrar sesión",
+        "delete": "Borrar cuenta",
+
+        "nameError": [
+            "Tu nombre de usuario debe tener de 1 a 25 caracteres.",
+            "Se recortarán los espacios anteriores o finales."
+        ],
+
+        "modal": {
+            "head": "Confirmación",
+
+            "confirmation": [
+                "¿Estás seguro de que quieres borrar tu cuenta?",
+                "¡Se perderá por un muy largo tiempo!"
+            ],
+            "disclaimer": "Todos los récords actuales se mantendrán.",
+
+            "confirm": "Estoy seguro",
+            "deny": "Olvídalo"
+        }
+    },
+
+    "setup": {
+        "setup": "Finalizar configuración de la cuenta",
+
+        "username": "Nombre de usuario",
+
+        "shape": "Forma del perfil",
+        "profileAlt": "Tu foto de perfil",
+
+        "device": "Dispositivo",
+        "desktop": "Escritorio",
+        "mobile": "Móvil",
+        "both": "Ambos",
+
+        "nameError": [
+            "Tu nombre de usuario debe tener de 1 a 25 caracteres.",
+            "Se recortarán los espacios anteriores o finales."
+        ],
+
+        "continue": "Continuar",
+        
+        "bottom": "¿Ya en la lista? {}.",
+        "migrate": "Migra tu cuenta"
+    },
+
+    "migrate": {
+        "migrate": "Migrar cuenta",
+
+        "username": "Nombre de usuario",
+
+        "shape": "Forma del perfil",
+        "profileAlt":"Tu foto de perfil",
+
+        "device": "Dispositivo",
+        "desktop": "Escritorio",
+        "mobile": "Móvil",
+        "both": "Ambos",
+
+        "discord": "Vincular cuenta de Discord",
+
+        "continue": "Continuar",
+        
+        "bottom": "¿Aún no estás en la lista? {}.",
+        "setup": "Configurar tu cuenta"
+    },
+
+    "oauth": [
+        "Vinculación de cuenta exitosa",
+        "Ahora puedes cerrar esta ventana."
+    ],
+
+    "rules": {
+        "rules": [
+            "Reglas",
+    
+            "Pautas generales de envío",
+            "Cuando ingresas un tiempo, asegúrate de que esté formulado correctamente (ej. {} — poner doble punto en lugar de un punto por los milisegundos puede producir un error 502)",
+            "Asegúrate de seleccionar la ID correcta o el nivel correcto en el menú emergente. (Esto es específicamente para los niveles que tienen nombres iguales/similares)",
+            "El campo \"URL de Youtube\" se refiere al vídeo que quieres que sea mostrado en la página.",
+            "El campo \"URL de video en bruto\" se refiere a la grabacion sin cortes del récord, ten en cuenta que esto es solo requerido para los extreme demons. Si estás subiendo un récord de un no extreme demon y no tienes la grabación en bruto, deja este campo vacío.",
+            "Si subiste un récord y te diste cuenta de que cometiste un error (por ejemplo, poner mal el tiempo o el dispositivo equivocado), contáctate con un ayudante quien podrá solucionarlo.",
+
+            "Vídeo en bruto",
+            "(Nota: el video en bruto es {} para los extreme demons pero puedes envíarlos para niveles no extremes, las siguientes reglas solo se aplican en récords de extreme demons)",
+            "Debes incluir una grabación de tu récord mostrando la partida entera con cada checkpoint y la pantalla final.",
+            "Una grabación completa es ideal, pero se requieren al menos 5 minutos por cada checkpoint. (O la grabación entera desde los intentos iniciales de ese checkpoint)",
+            "No puedes editar tu vídeo en bruto de otra manera que no sea combinando múltiples clips en un solo vídeo.",
+            "La grabación debe incluir un audio de micrófono donde se puedan oír los clics.",
+            "Subir a sitios como Google Drive / MEGA / Gofile es ideal así el equipo de récords puede descargar el vídeo — sólo si requerido.",
+            "Sitios como YouTube son aceptables, pero debes mantener el/los archivos del vídeo por al menos 2 semanas en caso de que el equipo de récords lo requiera.",
+
+            "Calidad",
+            "Las siguientes son razones por las que un récord pueda ser inverificable debido a problemas con la grabación:",
+            "Resolución extremadamente baja",
+            "Severos bajones de framerate",
+            "Gameplay tapado",
+            "Clics no oíbles (para extremes)",
+            "Si no estás seguro de que tu grabación sea de calidad aceptable, contáctate con un miembro del equipo de ayudantes o con el canal de soporte del server de Discord.",
+            "Si se te dificulta grabar los clics, se recomienda usar un móvil o un dispositivo similar para grabar el audio mientras juegas, y si eres jugador de móvil o de mando, no seremos tan estrictos acerca de el audio de los clics.",
+            "El input overlay NO es un reemplazante de los clics, pero usarlo puede ayudar a verificar la legitimidad de tu record (por ejemplo clics silenciosos) pero no es requerido.",
+            "El uso de \"Click Sounds\" o \"Click Bot\" para reemplazar clics reales está prohibido y tu récord se considerará ilegitimo.",
+
+            "Modificaciones",
+            "El uso de hacks, exploits y programas externos que cambien fisicas o inputs, modifiquen hitboxes, muestren información que no se pueda ver de otra manera, ajusten la velocidad del juego o fundamentalmente modifiquen las mecánicas del juego no están permitidos menos las siguientes excepciones:",
+            "Mostrar hitbox al morir (Tu récord puede ser rechazado si esto es usado para darte una ventaja en el gameplay del nivel, por ejemplo en gameplay invisible/de memoria)",
+            "Teclas personalizadas",
+            "Globed (Sin colisión de jugadores)",
+            "Si no estás seguro de la legitimidad de un mod, contáctate con un miembro del equipo de récords.",
+
+            "Pause Buffering",
+            "El Pause Buffering es un exploit que trata de pausar y despausar rápidamente para jugar en slow motion.",
+            "Récords que usen este exploit no serán aceptados.",
+            "Cualquier uso normal de pausar no será sospechado como pause buffering. Esto sólo está baneado si se usa deliberadamente para tener una ventaja, está permitido pausar en secciones con temporizador para pensar durante tu partida.",
+
+            "Misceláneo",
+            "Tus récords deben ser realizados por ti (el único propietario de la cuenta), hacer que alguien en persona complete un nivel o sección de un nivel por ti hará que el récord sea invalidado.",
+            "Niveles de dos jugadores o que utilizan mecánicas de dos jugadores deben ser completados en solitario.",
+            "Jugar en la copia de un nivel está permitido, pero no puedes hacerle ningún cambio. Contáctate con un miembro del equipo de récords si queres tener un LDM aprobado para su uso y para que se añada a la lista del juego \"Pemonlist LDM\".",
+            "Incluir una versión cortada de tu grabación ayuda al equipo de récords a facilitar la revisión del mismo.",
+            "El video que subas va a ser linkeado públicamente a tu récord. Debe contener grabación de tu récord que refleje precisamente tu vídeo en bruto.",
+            "Debes usar el mismo nombre de cuenta para todos los récords que envíes. Subir récords intencionalmente a múltiples cuentas va a resultar en la eliminación de tus récords.",
+            "Esas pautas aplican equitativamente a todos los dispositivos. (Móvil, PC, etc.)",
+            "Si el vídeo que se mostrará en la página tiene material NSFW, tu récord puede ser rechazado ya que no queremos enviar links de NSFW en nuestra página.",
+            "Récords que utilicen grandes skips o secret ways pueden invalidar tu récord. (Pequeños skips están permitidos) — Si no estás seguro de si un skip está permitido, contáctate con un miembro del staff.",
+
+            "Nota final:",
+            "Si no estás seguro de que tus récords siguen estas pautas, puedes utilizar las \"Notas adicionales\" cuando subas un récord o preguntar a un miembro del equipo de ayuda para que te guíe en el canal de soporte en el server de Discord - en algunos casos, se pueden hacer excepciones.",
+
+            "Si te gustaría sugerir algun cambio o adición a estas reglas, por favor contáctate con un miembro del staff.",
+            "ENORMES créditos a la TPL."
+        ],
+
+        "time": "0:00:00.000",
+        "required": "required"
+    },
+
+    "credits": {
+        "programming": "Programación",
+        "owner": "Dueño de la lista",
+        "admins": "Administradores de la lista",
+        "helpers": "Ayudantes de la lista",
+        "translators": "Traductores"
+    },
+
+    "fallback": [
+        "¡Ups!",
+        "La URL solicitada no pudo recuperarse correctamente. Si ingresaste una URL incorrecta, por favor, revisa lo que escribiste y vuelve a intentar.",
+        "¿No es tu culpa? ¡Considera contactarte con el desarrollador!"
+    ]
+}

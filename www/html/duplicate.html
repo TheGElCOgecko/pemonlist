@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---->
+    {% include "template/meta.html" %}
+    <!---->
+    <link rel="stylesheet" href="/static/css/min/submit.min.css">
+</head>
+<body>
+    <!---->
+    {% include "template/nav.html" %}
+    <!---->
+    <main>
+        <div class="container">
+            <div class="status">
+                <h1>{{ translation.duplicate.duplicate }}</h1>
+                <div>
+                    <p>{{ translation.duplicate.text[0] }}</p>
+                    <p>{{ translation.duplicate.text[1] }}</p>
+                    <p>{{ translation.duplicate.text[2] }}</p>
+                </div>
+                <hr>
+                <span>
+                    <a href="/account">{{ translation.duplicate.account }}</a>
+                    <a href="/submit">{{ translation.duplicate.submit }}</a>
+                </span>
+            </div>
+        </div>
+    </main>
+    <!---->
+    {% include "template/footer.html" %}
+    <!---->
+</body>
+
+<!---->
+{% include "template/include.html" %}
+<!---->
+
+</html>

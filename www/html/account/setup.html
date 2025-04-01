@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---->
+    {% include "template/meta.html" %}
+    <!---->
+    <link rel="stylesheet" href="/static/css/min/setup.min.css">
+    <link rel="stylesheet" href="/static/css/min/decorations.min.css">
+</head>
+<body>
+    <!---->
+    {% include "template/nav.html" %}
+    <!---->
+    <main>
+        <div class="container">
+            <div class="main">
+                <h2>{{ translation.setup.setup }}</h2>
+                <form action="/account/setup" method="post">
+                    <label for="username">{{ translation.setup.username }}</label>
+                    <input type="text" required id="username" name="username" autocomplete="username">
+                    <label for="device">{{ translation.setup.device }}</label>
+                    <select id="device" name="device">
+                        <option value="desktop">{{ translation.setup.desktop }}</option>
+                        <option value="mobile">{{ translation.setup.mobile }}</option>
+                        <option value="both">{{ translation.setup.both }}</option>
+                    </select>
+                    <hr>
+                    <input type="submit" value="{{ translation.setup.continue }}">
+                </form>
+            </div>
+            <div class="other">
+                <p>{{ translation.setup.bottom | sandwich(0) }}<a href="/account/migrate">{{ translation.setup.migrate }}</a>{{ translation.setup.bottom | sandwich(1) }}</p>
+            </div>
+        </div>
+    </main>
+    <!---->
+    {% include "template/footer.html" %}
+    <!---->
+</body>
+
+<!---->
+{% include "template/include.html" %}
+<!---->
+<script src="/static/js/setup.js"></script>
+
+</html>

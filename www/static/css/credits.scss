@@ -1,0 +1,119 @@
+main {
+    padding: 5px;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 100%;
+
+    div {
+        margin: 15px;
+        padding: 20px;
+        background-color: #334;
+        width: calc(100% / 3 - 70px);
+        border-radius: 20px;
+        min-height: 250px;
+        flex-shrink: 0;
+
+        h1 {
+            margin: 0px;
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h3 {
+            margin: 3px;
+            margin-top: 20px;
+            padding: 3px 0px;
+            border-bottom: 1px solid #445;
+        }
+
+        > span {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            
+            &:not(:last-of-type) {
+                margin-bottom: 5px;
+            }
+
+            > * {
+                padding: .3ch;
+            }
+
+            span {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: row;
+                min-width: calc(100% - 111px);
+                font-size: larger;
+
+                hr {
+                    margin: .2ch;
+                    margin-left: .5ch;
+                    width: unset;
+                    flex-grow: 1;
+                    border: none;
+                    border-top: 1px dashed #667;
+                    height: 0px;
+                    padding: 0px;
+                    position: relative;
+                    top: 2px;
+                }
+
+                p {
+                    margin: 0px;
+                    color: #ccd;
+                }
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                color: #ccd;
+            }
+
+            > a {
+                position: relative;
+                top: 2px;
+            }
+        }
+    }
+}
+
+body:not(.touch) {
+    a:hover {
+        color: #eef;
+    }
+}
+
+body.touch {
+    a:active {
+        color: #eef;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        justify-content: stretch;
+        flex-direction: column;
+
+        div {
+            width: calc(100% - 70px);
+            min-height: unset;
+
+            span {
+                flex-grow: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---->
+    {% include "template/docmeta.html" %}
+    <!---->
+</head>
+<body>
+    <!---->
+    {% include "template/docnav.html" %}
+    <!---->
+    <main>
+        <div class="container">
+            <!---->
+            {% include "template/docside.html" %}
+            <!---->
+            <div class="main">
+                <div>
+                    <h1>Endpoints</h1>
+                    <span>
+                        <p>All endpoints are prefixed with <code id="origin">https://pemonlist.com</code>. (e.g. <code><span id="origin">https://pemonlist.com</span>/api/list</code>)</p>
+                        <p>Parameters that start with a <code>:</code> operate as <a href="https://stackoverflow.com/tags/slug/info" target="_blank" class="proper">slugs</a>.</p>
+                        <p> Parameters that start with a <code>?</code> operate as <a href="https://stackoverflow.com/tags/url-parameters/info" target="_blank" class="proper">URL parameters</a>.</p>
+                    </span>
+                    <span>
+                        <h2>Versioning</h2>
+                        <p>Every endpoint supports a <code>?version</code> URL parameter. This is commonly used to protect compatibility between versions and prevent breaking changes from actually breaking applications.</p>
+                        <p>The versioning parameter is not required and often does not change the output of an endpoint, but omitting it or including it is not required. <b>If omitted, it defaults to the latest version.</b></p>
+                        <p>To work properly, the value must be a positive non-zero integer, but no checks are done to confirm this.</p>
+                        <h3>API Version per Update Version</h3>
+                        <ul>
+                            <li><code>v1</code><a href="https://git.gay/Lexi/pemonlist-site/releases/tag/v1.1.3" target="_blank" class="proper">v1.1.3</a></li>
+                            <li><code>v2</code><a href="https://git.gay/Lexi/pemonlist-site/releases/tag/v1.2.0" target="_blank" class="proper">v1.2.0</a></li>
+                            <li><code>v3</code><a href="https://git.gay/Lexi/pemonlist-site/releases/tag/v1.2.1-pre.3" target="_blank" class="proper">v1.2.1-pre.3</a></li>
+                        </ul>
+                    </span>
+                    <span>
+                        <h2>Errors</h2>
+                        <p>To better handle errors when using the API, all errors will be in a JSON format instead of an HTML page.</p>
+                        <p>Regular error codes don't come with a <code>message</code> key, however <code>fatal_err</code> codes do. These are considered Internal Server Errors and are not directly caused by the requester. They should be reported to the developer immediately.</p>
+                        <p>Every error comes with an <code>error</code> and <code>code</code> key, indicating an error has occured, and what error it is. Endpoint-specific error codes are documented in their respective sections.</p>
+                        <h3>General Errors</h3>
+                        <ul>
+                            <li><code>not_found</code>The endpoint you requested could not be found.</li>
+                            <li><code>fatal_err</code>The endpoint you requested encountered an error.</li>
+                        </ul>
+                    </span>
+                </div>
+                <div>
+                    <span class="table">
+                        <a tabindex="0" endpoint="/api/uptime">
+                            <span>Uptime</span>
+                            <span class="dark">/api/uptime</span>
+                        </a>
+                        <a tabindex="0" endpoint="/api/list">
+                            <span>List</span>
+                            <span class="dark">/api/list</span>
+                        </a>
+                        <a tabindex="0" endpoint="/api/level/:level_id">
+                            <span>Level</span>
+                            <span class="dark">/api/level/:level_id</span>
+                        </a>
+                        <a tabindex="0" endpoint="/api/player/:user">
+                            <span>Player</span>
+                            <span class="dark">/api/player/:user</span>
+                        </a>
+                    </span>
+                </div>
+                <div id="/api/uptime" class="endpoint">
+                    <h1>Uptime</h1>
+                    <h3><span class="dark" id="hostname">pemonlist.com</span>/api/uptime</h3>
+                    <div>
+                        <span>
+                            <h2>Usage</h2>
+                            <p>Retrieves the current uptime status of the server.</p>
+                            <details open>
+                                <summary>Response</summary>
+                                <span>
+                                    <code>cachedObjects</code>
+                                    <p>The number of query objects currently stored in cache.</p>
+                                </span>
+                                <span>
+                                    <code>cpuUsage</code>
+                                    <p>The percentage of CPU used by the process.</p>
+                                </span>
+                                <span>
+                                    <code>memory</code>
+                                    <p>The amount of memory used by the process, expressed in KB.</p>
+                                </span>
+                                <span>
+                                    <code>startup</code>
+                                    <p>The UNIX timestamp the server was started, expressed in seconds.</p>
+                                </span>
+                                <span>
+                                    <code>uptime</code>
+                                    <p>The UNIX time since the server has been started, expressed in seconds.</p>
+                                </span>
+                            </details>
+                        </span>
+                        <span>
+                            <span class="head">
+                                <h2>Explorer</h2>
+                                <div>
+                                    <button class="hidden">Reset</button>
+                                    <button>Execute</button>
+                                </div>
+                            </span>
+                            <pre><code>The result will show up here...</code></pre>
+                        </span>
+                    </div>
+                </div>
+                <div id="/api/list" class="endpoint" search="page,limit">
+                    <h1>List</h1>
+                    <h3><span class="dark" id="hostname">pemonlist.com</span>/api/list</h3>
+                    <div>
+                        <span>
+                            <h2>Usage</h2>
+                            <p>Returns an array of the current listing of all levels in order of ranking.</p>
+                            <details open>
+                                <summary>Parameters</summary>
+                                <span>
+                                    <code>?page</code>
+                                    <p>The current page of results. Defaults to <code>1</code>.</p>
+                                </span>
+                                <span>
+                                    <code>?limit</code>
+                                    <p>The number of results to show per page. Defaults to <code>10</code>.</p>
+                                </span>
+                            </details>
+                            <details>
+                                <summary>Response</summary>
+                                <span>
+                                    <code>count</code>
+                                    <p>The number of levels available in the list.</p>
+                                </span>
+                                <span class="title"><code>data</code></span>
+                                <div class="section">
+                                    <span>
+                                        <code>creator</code>
+                                        <p>The level creator's name.</p>
+                                    </span>
+                                    <span>
+                                        <code>level_id</code>
+                                        <p>The in-game Level ID.</p>
+                                    </span>
+                                    <span>
+                                        <code>name</code>
+                                        <p>The name of the level.</p>
+                                    </span>
+                                    <span>
+                                        <code>placement</code>
+                                        <p>The placement of the level on the list.</p>
+                                    </span>
+                                    <span class="title"><code>top_record</code></span>
+                                    <div class="section">
+                                        <span>
+                                            <code>formatted_time</code>
+                                            <p>The #1 record's completion time formatted to <code>HH:MM:SS.MS</code>.</p>
+                                        </span>
+                                        <span class="title"><code>player</code></span>
+                                        <div class="section">
+                                            <span>
+                                                <code>id</code>
+                                                <p>The player's UUID.</p>
+                                            </span>
+                                            <span>
+                                                <code>name</code>
+                                                <p>The player's name.</p>
+                                            </span>
+                                        </div>
+                                        <span>
+                                            <code>timestamp_milliseconds</code>
+                                            <p>The #1 record's completion time in milliseconds.</p>
+                                        </span>
+                                    </div>
+                                    <span class="title"><code>verifier</code></span>
+                                    <div class="section">
+                                        <span>
+                                            <code>id</code>
+                                            <p>The verifier's UUID.</p>
+                                        </span>
+                                        <span>
+                                            <code>name</code>
+                                            <p>The verifier's name.</p>
+                                        </span>
+                                    </div>
+                                    <span>
+                                        <code>video_id</code>
+                                        <p>The verification's YouTube video ID.</p>
+                                    </span>
+                                </div>
+                            </details>
+                            <details open>
+                                <summary>Errors</summary>
+                                <span>
+                                    <code>bad_page</code>
+                                    <p>The page is not a positive non-zero integer.</p>
+                                </span>
+                                <span>
+                                    <code>bad_limit</code>
+                                    <p>The limit is not a positive integer.</p>
+                                </span>
+                            </details>
+                        </span>
+                        <span>
+                            <span class="head">
+                                <h2>Explorer</h2>
+                                <div>
+                                    <button class="hidden">Reset</button>
+                                    <button>Execute</button>
+                                </div>
+                            </span>
+                            <pre><code>The result will show up here...</code></pre>
+                        </span>
+                    </div>
+                </div>
+                <div id="/api/level/:level_id" class="endpoint">
+                    <h1>Level</h1>
+                    <h3><span class="dark" id="hostname">pemonlist.com</span>/api/level/:level_id</h3>
+                    <div>
+                        <span>
+                            <h2>Usage</h2>
+                            <p>Retrieves a level on the list.</p>
+                            <details open>
+                                <summary>Parameters</summary>
+                                <span>
+                                    <code>:level_id</code>
+                                    <p>The in-game Level ID.</p>
+                                </span>
+                            </details>
+                            <details>
+                                <summary>Response</summary>
+                                <span>
+                                    <code>creator</code>
+                                    <p>The creator of the level's name.</p>
+                                </span>
+                                <span>
+                                    <code>level_id</code>
+                                    <p>The in-game Level ID.</p>
+                                </span>
+                                <span>
+                                    <code>name</code>
+                                    <p>The name of the level.</p>
+                                </span>
+                                <span>
+                                    <code>placement</code>
+                                    <p>The placement of the level on the list.</p>
+                                </span>
+                                <span>
+                                    <code>points</code>
+                                    <p>The leaderboard points that the level gives.</p>
+                                </span>
+                                <span class="title"><code>records</code></span>
+                                <p>Record Object</p>
+                                <div class="section">
+                                    <span>
+                                        <code>formatted_time</code>
+                                        <p>The record's completion time formatted to <code>HH:MM:SS.MS</code>.</p>
+                                    </span>
+                                    <span>
+                                        <code>mobile</code>
+                                        <p>If the record was achieved on a mobile device.</p>
+                                    </span>
+                                    <span class="title"><code>player</code></span>
+                                    <div class="section">
+                                        <span>
+                                            <code>id</code>
+                                            <p>The player's UUID.</p>
+                                        </span>
+                                        <span>
+                                            <code>player</code>
+                                            <p>The player's name.</p>
+                                        </span>
+                                    </div>
+                                    <span>
+                                        <code>rank</code>
+                                        <p>The player's rank on the level. Not the same as the player's leaderboard rank.</p>
+                                    </span>
+                                    <span>
+                                        <code>timestamp_milliseconds</code>
+                                        <p>The record's completion time in milliseconds.</p>
+                                    </span>
+                                    <span>
+                                        <code>video_id</code>
+                                        <p>The completion's YouTube video ID or a link to the completion footage on another site.</p>
+                                    </span>
+                                </div>
+                                <span class="title"><code>verifier</code></span>
+                                <div class="section">
+                                    <span>
+                                        <code>id</code>
+                                        <p>The verifier's UUID.</p>
+                                    </span>
+                                    <span>
+                                        <code>name</code>
+                                        <p>The verifier's name.</p>
+                                    </span>
+                                </div>
+                                <span>
+                                    <code>video_id</code>
+                                    <p>The verification's YouTube video ID.</p>
+                                </span>
+                            </details>
+                            <details open>
+                                <summary>Errors</summary>
+                                <span>
+                                    <code>bad_level_id</code>
+                                    <p>This ID does not exist in the list's database.</p>
+                                </span>
+                            </details>
+                        </span>
+                        <span>
+                            <span class="head">
+                                <h2>Explorer</h2>
+                                <div>
+                                    <button class="hidden">Reset</button>
+                                    <button>Execute</button>
+                                </div>
+                            </span>
+                            <pre><code>The result will show up here...</code></pre>
+                        </span>
+                    </div>
+                </div>
+                <div id="/api/player/:user" class="endpoint">
+                    <h1>Player</h1>
+                    <h3><span class="dark" id="hostname">pemonlist.com</span>/api/player/:user</h3>
+                    <div>
+                        <span>
+                            <h2>Usage</h2>
+                            <p>Retrieves a player on the leaderboard.</p>
+                            <details open>
+                                <summary>Parameters</summary>
+                                <span>
+                                    <code>:user</code>
+                                    <p>The player's name or UUID.</p>
+                                </span>
+                            </details>
+                            <details>
+                                <summary>Response</summary>
+                                <span>
+                                    <code>device</code>
+                                    <p>The device(s) the player uses.</p>
+                                </span>
+                                <span>
+                                    <code>id</code>
+                                    <p>The player's UUID.</p>
+                                </span>
+                                <span>
+                                    <code>name</code>
+                                    <p>The player's name.</p>
+                                </span>
+                                <span>
+                                    <code>points</code>
+                                    <p>The leaderboard points that the player has.</p>
+                                </span>
+                                <span>
+                                    <code>rank</code>
+                                    <p>The player's leaderboard rank.</p>
+                                </span>
+                                <span class="title"><code>records</code></span>
+                                <p>Record Object</p>
+                                <div class="section">
+                                    <span>
+                                        <code>formatted_time</code>
+                                        <p>The record's completion time formatted to <code>HH:MM:SS.MS</code>.</p>
+                                    </span>
+                                    <span class="title"><code>level</code></span>
+                                    <div class="section">
+                                        <span>
+                                            <code>level_id</code>
+                                            <p>The in-game Level ID.</p>
+                                        </span>
+                                        <span>
+                                            <code>name</code>
+                                            <p>The name of the level.</p>
+                                        </span>
+                                        <span>
+                                            <code>placement</code>
+                                            <p>The placement of the level on the list.</p>
+                                        </span>
+                                    </div>
+                                    <span>
+                                        <code>mobile</code>
+                                        <p>If the record was achieved on a mobile device.</p>
+                                    </span>
+                                    <span>
+                                        <code>rank</code>
+                                        <p>The player's rank on the level. Does not apply to the leaderboard.</p>
+                                    </span>
+                                    <span>
+                                        <code>timestamp_milliseconds</code>
+                                        <p>The record's completion time in milliseconds.</p>
+                                    </span>
+                                    <span>
+                                        <code>video_id</code>
+                                        <p>The completion's YouTube video ID or a link to the completion footage on another site.</p>
+                                    </span>
+                                </div>
+                                <span class="title"><code>verifications</code></span>
+                                <p>Verification Object</p>
+                                <div class="section">
+                                    <span class="title"><code>level</code></span>
+                                    <div class="section">
+                                        <span>
+                                            <code>level_id</code>
+                                            <p>The in-game Level ID.</p>
+                                        </span>
+                                        <span>
+                                            <code>name</code>
+                                            <p>The name of the level.</p>
+                                        </span>
+                                        <span>
+                                            <code>placement</code>
+                                            <p>The placement of the level on the list.</p>
+                                        </span>
+                                    </div>
+                                    <span>
+                                        <code>video_id</code>
+                                        <p>The verification's YouTube video ID.</p>
+                                    </span>
+                                </div>
+                            </details>
+                            <details open>
+                                <summary>Errors</summary>
+                                <span>
+                                    <code>bad_user</code>
+                                    <p>The user does not exist in the list's database.</p>
+                                </span>
+                            </details>
+                        </span>
+                        <span>
+                            <span class="head">
+                                <h2>Explorer</h2>
+                                <div>
+                                    <button class="hidden">Reset</button>
+                                    <button>Execute</button>
+                                </div>
+                            </span>
+                            <pre><code>The result will show up here...</code></pre>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!---->
+    {% include "template/footer.html" %}
+    <!---->
+</body>
+
+<!---->
+{% include "template/include.html" %}
+<!---->
+<script src="/static/js/jump.js"></script>
+<script src="/static/js/endpoints.js"></script>
+
+</html>

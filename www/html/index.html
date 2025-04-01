@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---->
+    {% include "template/meta.html" %}
+    <!---->
+    <link rel="stylesheet" href="/static/css/min/list.min.css">
+</head>
+<body>
+    <!---->
+    {% include "template/nav.html" %}
+    <!---->
+    <main>
+        <div class="container">
+            <div class="select">
+                <button>{{ translation.list.list }}</button>
+                <button>{{ translation.list.extended }}</button>
+                <button>{{ translation.list.legacy }}</button>
+            </div>
+            <div class="search">
+                <span class="material-symbols-outlined">search</span>
+                <span class="material-symbols-outlined">hourglass_empty</span>
+                <textarea placeholder="{{ translation.search.search }}"></textarea>
+                <div class="info"></div>
+            </div>
+            {% for level in levels %}
+                <div class="level">
+                    <a class="img"
+                        href="https://youtube.com/watch?v={{ level.video_id }}"
+                        target="_blank"
+                    >
+                        <img loading="lazy" src="https://i1.ytimg.com/vi_webp/{{ level.video_id }}/hqdefault.webp" alt="{{ translation.list.thumbnailAlt | replace("{}", level.name)}}">
+                    </a>
+                    <a class="info" href="/level/{{ level.level_id }}">
+                        <h2>{{ level.name }}</h2>
+                        <p>{{ level.creator }}</p>
+                    </a>
+                    <h1>#{{ level.placement }}</h1>
+                    {% if level.record %}
+                        <h3>
+                            <span class="name">{{ level.record.name }}</span>
+                            <span class="time"> {{ level.record.time_format }}</span>
+                            <span class="milliseconds">.{{ level.record.time_ms }}</span>
+                            <img class="trophy" src="/static/img/crown.png" alt="{{ translation.list.crownAlt }}">
+                        </h3>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            {% if extended | length > 0 %}
+                <div class="extended">
+                    <h1 id="extended">Extended List</h1>
+                    <hr>
+                    {% for level in extended %}
+                        <div class="level">
+                            <a class="img"
+                                href="https://youtube.com/watch?v={{ level.video_id }}"
+                                target="_blank"
+                            >
+                                <img loading="lazy" src="https://i1.ytimg.com/vi/{{ level.video_id }}/hqdefault.jpg" alt="{{ level.thumbAlt }}">
+                            </a>
+                            <a class="info" href="/level/{{ level.level_id }}">
+                                <h2>{{ level.name }}</h2>
+                                <p>{{ level.creator }}</p>
+                            </a>
+                            <h1>#{{ level.placement }}</h1>
+                            {% if level.record %}
+                                <h3>
+                                    <span class="name">{{ level.record.name }}</span>
+                                    <span class="time"> {{ level.record.time_format }}</span>
+                                    <span class="milliseconds">.{{ level.record.time_ms }}</span>
+                                    <img class="trophy" src="/static/img/crown.png" alt="{{ translation.list.crownAlt }}">
+                                </h3>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% if legacy | length > 0 %}
+                <div class="legacy">
+                    <h1 id="legacy">Legacy List</h1>
+                    <hr>
+                    {% for level in legacy %}
+                        <div class="level">
+                            <a class="img"
+                                href="https://youtube.com/watch?v={{ level.video_id }}"
+                                target="_blank"
+                            >
+                                <img loading="lazy" src="https://i1.ytimg.com/vi/{{ level.video_id }}/maxresdefault.jpg" alt="{{ level.thumbAlt }}">
+                            </a>
+                            <a class="info" href="/level/{{ level.level_id }}">
+                                <h2>{{ level.name }}</h2>
+                                <p>{{ level.creator }}</p>
+                            </a>
+                            <h1>#{{ level.placement }}</h1>
+                            {% if level.record %}
+                                <h3>
+                                    <span class="name">{{ level.record.name }}</span>
+                                    <span class="time"> {{ level.record.time_format }}</span>
+                                    <span class="milliseconds">.{{ level.record.time_ms }}</span>
+                                    <img class="trophy" src="/static/img/crown.png" alt="{{ translation.list.crownAlt }}">
+                                </h3>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <div class="empty hidden">{{ translation.search.empty }}</div>
+        </div>
+    </main>
+    <!---->
+    {% include "template/footer.html" %}
+    <!---->
+</body>
+
+<!---->
+{% include "template/include.html" %}
+<!---->
+<script src="/static/js/list.js"></script>
+<script src="/static/js/jump.js"></script>
+
+</html>

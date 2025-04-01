@@ -1,0 +1,189 @@
+main {
+    align-items: center !important;
+
+    .container {
+        max-width: 500px !important;
+    }
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #334;
+    border-radius: 20px;
+    flex-direction: column;
+
+    h2 {
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: column;
+        width: 100%;
+
+        > label:not(:first-of-type) {
+            margin-top: 10px;
+        }
+
+        label {
+            user-select: none;
+        }
+
+        input, select {
+            margin-top: 10px;
+            padding: 7px;
+            background-color: #334;
+            border: 1px solid #556;
+            border-radius: 4px;
+            color: #dde;
+            height: 24px;
+            transition: background-color 70ms ease-out, color 70ms ease-out;
+            font-family: "Whitney", Arial, Helvetica, sans-serif, "Material Symbols Outlined";
+            font-size: medium;
+
+            &[type="submit"] {
+                cursor: pointer;
+                height: 40px;
+            }
+
+            &[name="discord"] {
+                padding: 0px;
+                margin: 0px;
+                height: 1px;
+                border: none;
+                outline: none;
+                pointer-events: none;
+                z-index: -1;
+            }
+
+            option {
+                background-color: #223;
+                color: #dde;
+                height: 17px;
+            }
+
+            &:last-child {
+                margin: 0px;
+            }
+        }
+        
+        select {
+            height: 40px;
+        }
+
+        .profile {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: stretch;
+                flex-direction: column;
+                margin-top: 10px;
+
+                &:first-child {
+                    flex-grow: 1;
+                    margin-right: 10px;
+                    justify-self: space-between;
+
+                    select {
+                        margin-top: 10px;
+                    }
+                }
+
+                &:last-child {
+                    padding: 4px;
+                    background-color: #223c;
+                    border-radius: 3px;
+                }
+            }
+        }
+
+        .discord {
+            all: revert;
+            margin-top: 20px;
+            background-color: #334;
+            border: 1px solid #556;
+            border-radius: 4px;
+            color: #dde;
+            height: 38px;
+            transition: background-color 70ms ease-out, color 70ms ease-out;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: medium;
+            font-family: "Whitney", Arial, Helvetica, sans-serif, "Material Symbols Outlined";
+
+            svg {
+                margin-right: 10px;
+
+                .chk {
+                    opacity: 0;
+                }
+            }
+
+            &.done svg {
+                width: 24px;
+                height: unset;
+                margin-right: 2px;
+                position: relative;
+                right: 4px;
+
+                .chk { opacity: 1; }
+                .dsc { opacity: 0; }
+            }
+
+            p {
+                margin: 0px;
+            }
+        }
+
+        hr {
+            background-color: #556;
+            margin: 15px 0px;
+        }
+    }
+}
+
+body:not(.touch) {
+    .main form .discord:hover, input[type="submit"]:hover {
+        background-color: #dde;
+        color: #334;
+    }
+}
+
+body.touch {
+    .main form .discord:active, input[type="submit"]:active {
+        background-color: #dde;
+        color: #334;
+    }
+}
+
+.other {
+    display: flex;
+    justify-content: center;
+    color: #778;
+    margin: 20px 10px;
+    font-size: medium;
+
+    p {
+        margin: 0px;
+
+        a:visited {
+            color: #88f;
+        }
+
+        a:active {
+            color: #f88;
+        }
+    }
+}
