@@ -5,10 +5,10 @@ export namespace std {
   export interface BaseObject {
     "id": string;
   }
+  export interface $Object extends BaseObject {}
   export type Endian = "Little" | "Big";
   export interface FreeObject extends BaseObject {}
   export type JsonEmpty = "ReturnEmpty" | "ReturnTarget" | "Error" | "UseNull" | "DeleteKey";
-  export interface $Object extends BaseObject {}
   export namespace enc {
     export type Base64Alphabet = "standard" | "urlsafe";
   }
@@ -73,6 +73,101 @@ export namespace cfg {
     "transports": ConnectionTransport[];
   }
 }
+export namespace $default {
+  export interface Dated extends std.$Object {
+    "created_at": Date;
+  }
+  export interface Account extends Dated {
+    "email": string;
+    "image": string;
+    "mod": boolean;
+    "oauth2": string;
+    "profile_shape": ProfileShape;
+    "status": AccountStatus;
+    "youtube"?: string | null;
+    "discord"?: Discord | null;
+    "player"?: Player | null;
+    "tokens": AuthToken[];
+  }
+  export type AccountStatus = "None" | "Migrating" | "Done";
+  export interface AuthToken extends std.$Object {
+    "expires": Date;
+    "token": string;
+    "account": Account;
+  }
+  export type ChangeType = "Add" | "Edit" | "Remove";
+  export interface Changelog extends Dated {
+    "change_type": ChangeType;
+    "creator"?: string | null;
+    "level_id"?: number | null;
+    "name"?: string | null;
+    "placement"?: number | null;
+    "old_placement"?: number | null;
+    "message"?: string | null;
+  }
+  export type Device = "Mobile" | "Desktop" | "Both";
+  export interface Discord extends std.$Object {
+    "accent_color": string;
+    "avatar": string;
+    "banner": string;
+    "global_name": string;
+    "user_id": string;
+    "username": string;
+  }
+  export interface Entry extends Dated {
+    "status": Status;
+    "time": gel.Duration;
+    "mobile": boolean;
+    "notes"?: string | null;
+    "raw_video"?: string | null;
+    "reason"?: string | null;
+    "video_id": string;
+    "rank": number;
+    "level": Level;
+    "player": Player;
+    "mod"?: Account | null;
+  }
+  export interface Level extends Dated {
+    "placement": number;
+    "points": number;
+    "creator": string;
+    "level_id": number;
+    "name": string;
+    "video_id": string;
+    "verifier": Player;
+    "entries": Entry[];
+  }
+  export interface MigrationRequest extends Dated {
+    "account": Account;
+    "discord": Discord;
+    "player": Player;
+  }
+  export interface Player extends Dated {
+    "device": Device;
+    "name": string;
+    "points": number;
+    "rank": number;
+    "entries": Entry[];
+    "verifications": Level[];
+    "unverified_entries": Entry[];
+  }
+  export type ProfileShape = "Circle" | "Squircle" | "Square" | "Cube" | "Ball" | "Cat" | "Bouba" | "Kiki";
+  export type Status = "Submitted" | "Waiting" | "Investigating" | "Approved" | "Denied";
+}
+export type Dated = $default.Dated;
+export type Account = $default.Account;
+export type AccountStatus = $default.AccountStatus;
+export type AuthToken = $default.AuthToken;
+export type ChangeType = $default.ChangeType;
+export type Changelog = $default.Changelog;
+export type Device = $default.Device;
+export type Discord = $default.Discord;
+export type Entry = $default.Entry;
+export type Level = $default.Level;
+export type MigrationRequest = $default.MigrationRequest;
+export type Player = $default.Player;
+export type ProfileShape = $default.ProfileShape;
+export type Status = $default.Status;
 export namespace fts {
   export type ElasticLanguage = "ara" | "bul" | "cat" | "ces" | "ckb" | "dan" | "deu" | "ell" | "eng" | "eus" | "fas" | "fin" | "fra" | "gle" | "glg" | "hin" | "hun" | "hye" | "ind" | "ita" | "lav" | "nld" | "nor" | "por" | "ron" | "rus" | "spa" | "swe" | "tha" | "tur" | "zho" | "edb_Brazilian" | "edb_ChineseJapaneseKorean";
   export type Language = "ara" | "hye" | "eus" | "cat" | "dan" | "nld" | "eng" | "fin" | "fra" | "deu" | "ell" | "hin" | "hun" | "ind" | "gle" | "ita" | "nor" | "por" | "ron" | "rus" | "spa" | "swe" | "tur";
@@ -306,10 +401,10 @@ export namespace sys {
 export interface types {
   "std": {
     "BaseObject": std.BaseObject;
+    "Object": std.$Object;
     "Endian": std.Endian;
     "FreeObject": std.FreeObject;
     "JsonEmpty": std.JsonEmpty;
-    "Object": std.$Object;
     "enc": {
       "Base64Alphabet": std.enc.Base64Alphabet;
     };
@@ -332,6 +427,22 @@ export interface types {
     "SCRAM": cfg.SCRAM;
     "Trust": cfg.Trust;
     "mTLS": cfg.mTLS;
+  };
+  "default": {
+    "Dated": $default.Dated;
+    "Account": $default.Account;
+    "AccountStatus": $default.AccountStatus;
+    "AuthToken": $default.AuthToken;
+    "ChangeType": $default.ChangeType;
+    "Changelog": $default.Changelog;
+    "Device": $default.Device;
+    "Discord": $default.Discord;
+    "Entry": $default.Entry;
+    "Level": $default.Level;
+    "MigrationRequest": $default.MigrationRequest;
+    "Player": $default.Player;
+    "ProfileShape": $default.ProfileShape;
+    "Status": $default.Status;
   };
   "fts": {
     "ElasticLanguage": fts.ElasticLanguage;
