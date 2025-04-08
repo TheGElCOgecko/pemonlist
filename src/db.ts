@@ -1,6 +1,4 @@
-import { createClient } from "edgedb";
-import { Client } from "edgedb/dist/baseClient";
-import type { QueryArgs } from "edgedb/dist/ifaces";
+import { Client, createClient } from "gel";
 
 import { isNullOrUndefined } from "./util";
 
@@ -14,6 +12,8 @@ export enum QueryType {
     queryRequired = "queryRequired",
     queryRequiredSingle = "queryRequiredSingle"
 }
+
+type QueryArgs = Record<string, unknown> | unknown[] | null;
 
 export class CacheIdentifier {
     constructor(public query: string, public type: QueryType, public args: QueryArgs) {}
@@ -51,7 +51,7 @@ export type CacheOptions = {
     timeToLive?: number | Date
 };
 
-declare module "edgedb" {
+declare module "gel" {
     interface Client {
         _query(type: QueryType, query: string, args?: QueryArgs, cacheOptions?: CacheOptions): Promise<unknown>
 
