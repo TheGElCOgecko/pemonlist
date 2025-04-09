@@ -1,4 +1,5 @@
-import { Client, createClient } from "gel";
+import { createClient } from "gel";
+import { Client } from "gel/dist/baseClient";
 
 import { isNullOrUndefined } from "./util";
 
