@@ -11,3 +11,4 @@ before
 changelog.txt
 errcode.txt
 out.db
+bun.lock

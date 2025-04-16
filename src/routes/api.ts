@@ -1,6 +1,6 @@
 import { getHeapStatistics } from "v8";
 
-import type { Entry, Level, Player } from "../../dbschema/interfaces";
+import type { Account, Entry, Level, Player } from "../../dbschema/interfaces";
 import app from "../app";
 import db, { cache } from "../db";
 import { isNullOrUndefined, sortObjectKeys } from "../util";
@@ -149,6 +149,10 @@ app.get("/api/player/:player", async (req, res) => {
 	const playerName = req.params.player;
 	const isId = /[a-zA-Z0-9-]+/.test(playerName) && playerName.replaceAll("-", "").length === 32;
 
+	const playerFromDiscord = await db.cachedQuerySingle<Account>(`
+		select Account { player } filter . discord.user_id = <str>$playerName limit 1;
+	`, { playerName }, { timeToLive: 60e3 });
+
 	const player = await db.cachedQuerySingle<{ records: Entry[] } & Player>(`
 	    select Player {
 	        id,
@@ -177,8 +181,8 @@ app.get("/api/player/:player", async (req, res) => {
 	        device
 	    } filter .name = ((<Player><uuid><str>$playerName).name if <bool>$isId else <str>$playerName)
 	`, {
-		playerName,
-		isId
+		playerName: isNullOrUndefined(playerFromDiscord) ? playerName : playerFromDiscord?.player?.id,
+		isId: isNullOrUndefined(playerFromDiscord) ? isId : true
 	}, { timeToLive: 60e3 });
 
 	if (isNullOrUndefined(player))
