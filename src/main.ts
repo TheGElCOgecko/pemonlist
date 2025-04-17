@@ -13,6 +13,8 @@ import { STATUS_CODES } from "http";
 import { app } from "./app";
 import { isNullOrUndefined, sortObjectKeys } from "./util";
 
+app.set("trust proxy", true);
+
 app.get("*fallback", (req, res) => {
     const { url } = req;
     if (url.startsWith("/api") && !url.startsWith("/api/docs")) {
