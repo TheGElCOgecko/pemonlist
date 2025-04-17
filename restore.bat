@@ -1,6 +1,6 @@
 @ECHO OFF
-edgedb instance start -I pemonlist
-edgedb -I KontrollFreek/pemonlist dump out.db
-echo Yes | edgedb branch wipe main
-edgedb restore out.db
-edgedb migrate
+gel instance start -I pemonlist
+gel -I KontrollFreek/pemonlist dump out.db
+echo Yes | gel branch wipe main
+gel restore out.db
+gel migrate
