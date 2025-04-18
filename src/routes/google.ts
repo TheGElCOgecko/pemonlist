@@ -16,7 +16,9 @@ export interface Oauth2 {
 }
 
 app.get("/api/auth/google", async (req: Request<unknown, unknown, unknown, Oauth2>, res) => {
-	const redirect = `${req.protocol}://${req.get("host")}/api/auth/google`;
+	const hostname = req.get("host")
+	const redirect = (hostname === "pemonlist.com") ? `https://${hostname}/api/auth/google`
+		: `${req.protocol}://${hostname}/api/auth/google`;
 	const authUrl = oauth2Client.generateAuthUrl({
 		access_type: "offline",
 		scope: "email",

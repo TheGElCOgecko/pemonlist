@@ -41,7 +41,9 @@ app.get("/api/auth/discord", async (req, res) => {
 		return res.redirect("/login");
 	}
 
-	const redirect = `${req.protocol}://${req.get("host")}/api/auth/discord`;
+	const hostname = req.get("host")
+	const redirect = (hostname === "pemonlist.com") ? `https://${hostname}/api/auth/discord`
+		: `${req.protocol}://${hostname}/api/auth/discord`;
 	const authUrl = discordOauth2.generateAuthUrl({
 		scope: "identify email",
 		redirectUri: redirect,
