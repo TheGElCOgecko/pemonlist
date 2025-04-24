@@ -394,10 +394,8 @@
             "Por mais que input overlay NÃO seja uma substituição para cliques, usar ele pode ajudar a verificar a legitimidade do seu recorde (exemplo: cliques quietos), mas não é exigido.",
             "O uso de \"Click Sounds ou \"Click Bot\" para substituir cliques reais é proibido e vai considerar seu recorde como ilegítimo.",
             "Modificações",
-            "O uso de hacks, exploits, e programas externos que mudam físicas ou inputs, modificam hitboxes, mostram informações não disponíveis de outra maneira, ajustam a velocidade do jogo, ou fundamentalmente altera mecânicas de gameplay não é permitido além das seguintes exceções:",
-            "\"Show Hitbox On Death\" (Portanto seu recorde pode ser recusado se isso for usado para dar uma vantagem significativa na gameplay de um nível, por exemplo em gameplay invisível ou de memória)",
-            "Teclas Personalizadas",
-            "Globed (Sem Colisão de Jogadores)",
+            "O uso de hacks, exploits, e programas externos que mudam físicas ou inputs, modificam hitboxes, mostram informações não disponíveis de outra maneira, ajustam a velocidade do jogo, ou fundamentalmente altera mecânicas de gameplay não é permitido, com algumas exceções. Por favor veja o link a seguir para mais informações:",
+            "Se um hack, mod, ou programa não é mencionado na planilha, assuma que não é permitido.",
             "Se você não tem certeza da legimitidade de um mod, contate um membro do time de recordes.",
             "Pause Buffering",
             "Pause Buffering é um exploit envolvendo rápidas pausas e despausas para poder jogar efetivamente em câmera lenta.",
@@ -406,6 +404,7 @@
             "Outros",
             "Sua(s) vitória(s) deve(m) ser completada(s) por você (o único dono da conta), tendo alguém fisicamente completando um nível ou uma seção do nível para você resultará neste recorde sendo invalidado. ",
             "Níveis de dois jogadores ou níveis utilizando mecânicas de dois jogadores devem ser completados sozinho.",
+            "Gravação das mãos é obrigatória para todas as extreme demons de dois jogadores em que o jogador pode controlar dois ou mais personagens distintos simultaneamente. Exceções são \"the guards mission\" e \"Ice Climbers\", os quais não requerem imagem das mãos.",
             "Jogar em uma cópia do nível é permitido, mas você não pode fazer nenhuma mudança. Contate um membro do time de recordes se você quer que um LDM seja aprovado para uso e adicionado na lista \"Pemonlist LDM\" dentro do jogo.",
             "Incluir uma versão cortada da sua gravação facilita a revisão do time de recordes em relação a sua vitória.",
             "O vídeo que você enviar será publicamente envolvido ao seu recorde. Ele deve conter registros da sua vitória que reflitam com precisão a sua gravação bruta.",
@@ -416,7 +415,7 @@
             "Nota Final:",
             "Se você não tem certeza de que seu recorde segue essas diretrizes, você pode utilizar as \"Notas Adicionais\" quando estiver enviando seu recorde ou então perguntar a algum membro do time de ajudantes para orientação no canal de suporte no servidor do Discord - exceçôes podem ser feitas em alguns casos.",
             "Se você gostaria de sugerir quaisquer mudanças ou adições a essas regras, por favor contate um membro da staff.",
-            "GRANDES agradecimentos à TPL."
+            "ENORMES agradecimentos à TPL."
         ],
 
         "time": "0:00:00.000",
