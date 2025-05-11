@@ -3,7 +3,6 @@ node_modules/
 *.sublime-project
 *.sublime-workspace
 *.sublime-syntax
-package-lock.json
 bun.lockb
 .DS_Store
 before
