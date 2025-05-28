@@ -119,9 +119,10 @@ document.querySelectorAll(".record select").forEach(s =>
 document.querySelectorAll(".submit select").forEach(s => s.addEventListener("change", e => {
     const submit = e.target.parentElement.lastElementChild;
     const denied = e.target.value == "denied";
+    const investigating = e.target.value == "investigating";
     const reason = submit.previousElementSibling;
 
-    reason.type = denied ? "text" : "hidden";
+    reason.type = (denied || investigating) ? "text" : "hidden";
 }));
 
 let scrollTimeout = false;

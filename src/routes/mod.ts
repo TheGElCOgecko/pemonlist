@@ -177,7 +177,6 @@ export interface EntryEdit {
 app.post("/mod/records", requireMod, async (req: Request<unknown, unknown, EntryEdit>, res) => {
     req.body.device = req.body.device.toCapital() as Device;
     req.body.status = req.body.status.toCapital() as Status;
-
     await db.execute(`
         update Entry filter .id = <uuid><str>$entry_id set {
             time := <duration><str>$time,

@@ -137,7 +137,11 @@
                                     {% endif %}
                                 >{{ translation.mods.records.status.approved }}</option>
                             </select>
+                            {% if record.status == "Investigating" %}
+                            <input type="text" name="reason" value="{{ record.reason or ''}}" placeholder="{{ translation.mods.records.reason }}" required autocomplete="off">
+                            {% else %}
                             <input type="hidden" name="reason" placeholder="{{ translation.mods.records.reason }}" required autocomplete="off">
+                            {% endif %}
                             <input type="submit" value="{{ translation.mods.records.update }}" disabled>
                         </div>
                     </form>
