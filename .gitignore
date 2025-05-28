@@ -12,3 +12,6 @@ errcode.txt
 out.db
 bun.lock
 backup_10-04-25_02-54-48.db
+bunlog.txt
+start.sh
+touch
