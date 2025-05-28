@@ -85,6 +85,7 @@ export namespace $default {
     "profile_shape": ProfileShape;
     "status": AccountStatus;
     "youtube"?: string | null;
+    "num_mod_records"?: number | null;
     "discord"?: Discord | null;
     "player"?: Player | null;
     "tokens": AuthToken[];
