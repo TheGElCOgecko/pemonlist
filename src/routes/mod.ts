@@ -186,6 +186,10 @@ app.post("/mod/records", requireMod, async (req: Request<unknown, unknown, Entry
             reason := <str>$reason,
         };
 
+        update Account filter .id = <uuid><str>$mod set {
+            num_mod_records := coalesce(.num_mod_records, 0) + 1
+        };
+
         with entry := (select Entry { level, player } filter .id = <uuid><str>$entry_id)
         delete Entry filter
             .level = entry.level and
