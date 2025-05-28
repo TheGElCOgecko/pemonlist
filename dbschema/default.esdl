@@ -56,6 +56,17 @@ module default {
 		required property mod -> bool {
 			default := false;
 		};
+
+		property num_mod_records -> int32;
+
+		trigger new_mod after update for each
+			when (__old__.mod = false and __new__.mod = true)
+		do (
+			update Account
+				filter .id = __new__.id
+				set { num_mod_records := 0 }
+		)
+
 	}
 
 	type AuthToken {
