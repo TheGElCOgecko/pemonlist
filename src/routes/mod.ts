@@ -178,6 +178,14 @@ app.post("/mod/records", requireMod, async (req: Request<unknown, unknown, Entry
     req.body.device = req.body.device.toCapital() as Device;
     req.body.status = req.body.status.toCapital() as Status;
     await db.execute(`
+        with entry := (select Entry { level, player } filter .id = <uuid><str>$entry_id)
+        delete Entry filter
+            .level = entry.level and
+            .player = entry.player and
+            .status = Status.Approved and
+            .status = <Status><str>$status and
+            .id != <uuid><str>$entry_id;
+
         update Entry filter .id = <uuid><str>$entry_id set {
             time := <duration><str>$time,
             status := <Status><str>$status,
@@ -189,14 +197,6 @@ app.post("/mod/records", requireMod, async (req: Request<unknown, unknown, Entry
         update Account filter .id = <uuid><str>$mod set {
             num_mod_records := coalesce(.num_mod_records, 0) + 1
         };
-
-        with entry := (select Entry { level, player } filter .id = <uuid><str>$entry_id)
-        delete Entry filter
-            .level = entry.level and
-            .player = entry.player and
-            .status = Status.Approved and
-            .status = <Status><str>$status and
-            .id != <uuid><str>$entry_id;
     `, {
         time: req.body.time,
         status: req.body.status.replace(/(.)(?=.+)/, a=>a.toUpperCase()),
