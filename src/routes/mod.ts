@@ -195,7 +195,7 @@ app.post("/mod/records", requireMod, async (req: Request<unknown, unknown, Entry
             .id != <uuid><str>$entry_id;
 
         update Account filter .id = <uuid>$mod set {
-            num_mod_records := coalesce(.num_mod_records, 0) + 1
+            num_mod_records := .num_mod_records + 1
         };
     `, {
         time: req.body.time,
