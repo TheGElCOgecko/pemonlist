@@ -194,7 +194,7 @@ app.post("/mod/records", requireMod, async (req: Request<unknown, unknown, Entry
             .status = <Status><str>$status and
             .id != <uuid><str>$entry_id;
 
-        update Account filter .id = <uuid>$mod set {
+        update Account filter .id = <uuid><str>$mod set {
             num_mod_records := .num_mod_records + 1
         };
     `, {
@@ -205,7 +205,6 @@ app.post("/mod/records", requireMod, async (req: Request<unknown, unknown, Entry
         reason: req.body.reason,
         entry_id: req.body.entryid,
     });
-    console.log(`Num of mod records: ${req.account!.num_mod_records}`);
     res.redirect("/mod/records");
 });
 
