@@ -178,30 +178,43 @@ app.post("/mod/records", requireMod, async (req: Request<unknown, unknown, Entry
     req.body.device = req.body.device.toCapital() as Device;
     req.body.status = req.body.status.toCapital() as Status;
     await db.execute(`
-        update Entry filter .id = <uuid><str>$entry_id set {
-            time := <duration><str>$time,
-            status := <Status><str>$status,
+        with
+            entry_id := <uuid>$entry_id,
+            time := <duration>$time,
+            status := <Status>$status,
             mobile := <bool>$mobile,
-            mod := <Account><uuid><str>$mod,
+            mod_id := <uuid>$mod_id,
             reason := <str>$reason,
-        };
 
-        with entry := (select Entry { level, player } filter .id = <uuid><str>$entry_id)
-        delete Entry filter
-            .level = entry.level and
-            .player = entry.player and
-            .status = Status.Approved and
-            .status = <Status><str>$status and
-            .id != <uuid><str>$entry_id;
+            ENTRY := <Entry>entry_id,
+            MOD := <Account>mod_id,
 
-        update Account filter .id = <uuid><str>$mod set {
-            num_mod_records := .num_mod_records + 1
-        };
+            DELETE_OTHER_ENTRIES := (
+                delete Entry
+                filter
+                .level = ENTRY.level and
+                .player = ENTRY.player and
+                .status = Status.Approved and
+                .status = status and
+                .id != entry_id
+            ),
+            UPDATE_ENTRY := (
+                update ENTRY set {
+                time := time,
+                status := status,
+                mobile := mobile,
+                mod := MOD,
+                reason := reason,
+                }
+            ),
+            update MOD set {
+                num_mod_records := .num_mod_records + 1
+            };
     `, {
         time: req.body.time,
         status: req.body.status.replace(/(.)(?=.+)/, a=>a.toUpperCase()),
         mobile: req.body.device === "Mobile",
-        mod: req.account!.id,
+        mod_id: req.account!.id,
         reason: req.body.reason,
         entry_id: req.body.entryid,
     });
