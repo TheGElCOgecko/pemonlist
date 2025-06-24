@@ -1,1 +1,104 @@
-main{padding:5px}.container{display:flex;justify-content:flex-start;align-items:flex-start;flex-direction:row;flex-wrap:wrap;min-height:100%}.container div{margin:15px;padding:20px;background-color:#334;width:calc(33.3333333333% - 70px);border-radius:20px;min-height:250px;flex-shrink:0}.container div h1{margin:0px;margin-bottom:20px;width:100%;text-align:center}.container div h3{margin:3px;margin-top:20px;padding:3px 0px;border-bottom:1px solid #445}.container div>span{display:flex;justify-content:flex-start;align-items:center;flex-wrap:wrap}.container div>span:not(:last-of-type){margin-bottom:5px}.container div>span>*{padding:.3ch}.container div>span span{display:flex;justify-content:flex-start;align-items:center;flex-direction:row;min-width:calc(100% - 111px);font-size:larger}.container div>span span hr{margin:.2ch;margin-left:.5ch;width:unset;flex-grow:1;border:none;border-top:1px dashed #667;height:0px;padding:0px;position:relative;top:2px}.container div>span span p{margin:0px;color:#ccd}.container div>span a{display:flex;justify-content:center;align-items:center;text-decoration:none;color:#ccd}.container div>span>a{position:relative;top:2px}body:not(.touch) a:hover{color:#eef}body.touch a:active{color:#eef}@media screen and (max-width: 1000px){.container{justify-content:stretch;flex-direction:column}.container div{width:calc(100% - 70px);min-height:unset}.container div span{flex-grow:1}}/*# sourceMappingURL=credits.min.css.map */
+main {
+  padding: 5px;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 100%;
+}
+.container div {
+  margin: 15px;
+  padding: 20px;
+  background-color: #334;
+  width: calc(33.3333333333% - 70px);
+  border-radius: 20px;
+  min-height: 270px;
+  flex-shrink: 0;
+}
+.container div h1 {
+  margin: 0px;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+.container div h3 {
+  margin: 3px;
+  margin-top: 20px;
+  padding: 3px 0px;
+  border-bottom: 1px solid #445;
+}
+.container div > span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container div > span:not(:last-of-type) {
+  margin-bottom: 5px;
+}
+.container div > span > * {
+  padding: 0.3ch;
+}
+.container div > span span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  min-width: calc(100% - 111px);
+  font-size: larger;
+}
+.container div > span span hr {
+  margin: 0.2ch;
+  margin-left: 0.5ch;
+  width: unset;
+  flex-grow: 1;
+  border: none;
+  border-top: 1px dashed #667;
+  height: 0px;
+  padding: 0px;
+  position: relative;
+  top: 2px;
+}
+.container div > span span p {
+  margin: 0px;
+  color: #ccd;
+}
+.container div > span a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #ccd;
+}
+.container div > span > a {
+  position: relative;
+  top: 2px;
+}
+
+body:not(.touch) a:hover {
+  color: #eef;
+}
+
+body.touch a:active {
+  color: #eef;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    justify-content: stretch;
+    flex-direction: column;
+  }
+  .container div {
+    width: calc(100% - 70px);
+    min-height: unset;
+  }
+  .container div span {
+    flex-grow: 1;
+  }
+}
+
+/*# sourceMappingURL=credits.min.css.map */
