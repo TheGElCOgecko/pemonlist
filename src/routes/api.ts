@@ -59,7 +59,7 @@ app.get("/api/level/:id", async (req, res) => {
 				video_id,
 				mobile,
 				rank
-			} filter .status = Status.Approved order by .time, .created_at)
+			} filter .status = Status.Approved order by .time then .created_at)
 	    } filter .level_id = <int64>$id
 	`, { id: Number(req.params.id) }, { timeToLive: 60e3 });
 
