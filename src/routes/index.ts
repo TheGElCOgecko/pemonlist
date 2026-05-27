@@ -15,7 +15,7 @@ app.get("/", async (req, res) => {
                 name := (select .player.name),
                 time_format := (select to_str(.time, "FMHH24:MI:SS")),
                 time_ms := (select to_str(.time, "MS"))
-            } filter .status = Status.Approved  order by .time limit 1),
+            } filter .status = Status.Approved  order by .time, .created_at limit 1),
             placement
         } order by .placement
 	`, null, { serveStaleContent: true });
@@ -60,7 +60,7 @@ app.get("/level/:id", async (req, res) => {
                 video_id,
                 mobile,
                 rank
-            } filter .status = Status.Approved order by .time)
+            } filter .status = Status.Approved order by .time, .created_at)
         } filter .level_id = <int64>$id
     `, { id: Number(req.params.id) }, { serveStaleContent: true });
 
