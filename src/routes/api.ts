@@ -91,7 +91,7 @@ app.get("/api/list", async (req, res) => {
 	                },
 	                timestamp_milliseconds := (select duration_get(<cal::relative_duration>.time, "milliseconds")),
 	                formatted_time := (select to_str(.time, "FMHH24:MI:SS.MS"))
-					} filter .status = Status.Approved  order by .time, .created_at limit 1)
+					} filter .status = Status.Approved  order by .time then .created_at limit 1)
 	        } order by .placement offset {} limit {}
 		`)).map(v => sortObjectKeys<Level>(v)));
 		return;
@@ -131,7 +131,7 @@ app.get("/api/list", async (req, res) => {
 			            },
 			            timestamp_milliseconds := (select duration_get(<cal::relative_duration>.time, "milliseconds")),
 			            formatted_time := (select to_str(.time, "FMHH24:MI:SS.MS"))
-					} filter .status = Status.Approved  order by .time, .created_at limit 1)
+				    } filter .status = Status.Approved  order by .time then .created_at limit 1)
 			    } order by .placement offset <int32>$offset limit <int32>$limit
 			),
 			count := (select count(Level))
