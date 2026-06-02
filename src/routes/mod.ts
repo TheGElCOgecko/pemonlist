@@ -133,6 +133,7 @@ app.get("/mod/records", requireMod, async (req, res) => {
             time_format := (select to_str(.time, "FMHH24:MI:SS")),
             time_ms := (select to_str(.time, "MS")),
             status,
+            reason,
             mobile,
             player: {
                 name,
